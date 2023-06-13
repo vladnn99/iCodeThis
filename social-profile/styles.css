@@ -1,0 +1,157 @@
+/* * {
+  outline: 1px solid rgba(255, 0, 0, 0.7);
+} */
+
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f4f7fe;
+  font-family: "Poppins", sans-serif;
+}
+
+.containerBig {
+  width: 100%;
+  max-width: 50rem;
+  min-width: 300px;
+  height: 36rem;
+  margin: auto;
+  border-radius: 6px;
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container1 {
+  width: 11rem;
+  height: 11rem;
+  background-color: #ffffff;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  align-items: center;
+  box-shadow: 0px 5px 10px 8px #edeffa;
+}
+
+.container2 {
+  width: 15rem;
+  height: 11rem;
+  background-color: #ffffff;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  box-shadow: 0px 5px 10px 8px #edeffa;
+  margin-left: 4rem;
+  margin-top: 2.5rem;
+}
+
+.headerContainer2 {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container3 {
+  width: 20rem;
+  height: 12rem;
+  background-color: #ffffff;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  box-shadow: 0px 5px 10px 8px #edeffa;
+  margin-left: 4rem;
+  margin-top: 2rem;
+}
+
+.imageBox {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4d4c54;
+  margin: 0.7rem 0 0 0;
+}
+
+h2 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #6b6e81;
+  margin: 0rem 0 0 0;
+}
+
+p {
+  color: #67676f;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.button {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  width: 5rem;
+  height: 2.2rem;
+  background: transparent;
+  border: 1px solid #f0eff5;
+  border-width: 2px;
+  border-radius: 2rem;
+  color: #6b6e81;
+}
+
+.footerLight {
+  font-weight: 400;
+}
+
+.footerBold {
+  font-weight: 600;
+}
+
+@media (max-width: 624px) {
+  .containerBig {
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: auto;
+  }
+  .container1 {
+    margin: 0;
+    margin-top: 10rem;
+  }
+  .container2 {
+    margin: 0;
+    margin-top: 2rem;
+  }
+  .container3 {
+    margin: 0;
+    margin-top: 2rem;
+    max-width: 80%;
+  }
+}

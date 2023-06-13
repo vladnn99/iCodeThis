@@ -1,0 +1,292 @@
+/* Add CSS here */
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  /* background-color: #f7f7f7; */
+  background-color: #f7f7f7;
+  margin: auto;
+  width: 1000px;
+  min-width: 768px;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 4px 5px 20px -6px #807f7f;
+}
+
+.leftElement {
+  width: 57%;
+  height: 80%;
+  margin-left: 1.8rem;
+  box-shadow: 4px 5px 20px -6px #807f7f;
+}
+
+.rightElement {
+  width: 30%;
+  height: 80%;
+  margin-right: 1.8rem;
+  box-shadow: 4px 5px 20px -6px #807f7f;
+}
+
+.projectContainer {
+  width: 100%;
+  background-color: white;
+  height: 35%;
+  padding: 0.5rem;
+}
+
+.projectContainer#rightElement {
+  width: 100%;
+  background-color: white;
+  height: 20%;
+  padding: 0.5rem;
+}
+
+.projectTitle {
+  padding-bottom: 0.8rem;
+  font-weight: bold;
+}
+
+.percentageContainer {
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: bold;
+}
+
+.percentageElement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.descriptionPercentageContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  font-size: 0.6rem;
+}
+
+.percentageNumber {
+  position: absolute;
+  padding-top: 1.7rem;
+}
+
+.descriptionParagraph {
+  font-size: 0.6rem;
+  text-align: center;
+}
+
+#percentageDescription {
+  color: gray;
+  padding-top: 0.8rem;
+}
+
+/* .pie {
+--w:75px;
+width: var(--w);
+aspect-ratio: 1;
+position: relative;
+display: inline-grid;
+place-content: center;
+font-size: 1rem;
+font-weight: bold;
+font-family: sans-serif;
+margin-bottom: 5px;
+}
+.pie:before {
+content: "";
+position: absolute;
+border-radius: 50%;
+inset: 0;
+background: conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+-webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+        mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+} */
+
+.revenueContainer {
+  width: 100%;
+  height: 15%;
+  background-color: white;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+#revenue {
+  font-weight: bold;
+  margin-right: 4rem;
+}
+
+#currentAndPreviousWeek {
+  font-size: 0.6rem;
+  color: lightslategray;
+  display: flex;
+  flex-direction: column;
+}
+
+#currentWeek {
+  margin-left: 1rem;
+}
+
+.amountEurCurrent {
+  font-size: 1rem;
+  color: black;
+  font-weight: bold;
+}
+
+.amountEurPrevious {
+  font-size: 1rem;
+  color: gray;
+  font-weight: bold;
+}
+
+.chartContainer {
+  width: 100%;
+  height: 50.1%;
+  padding: 1rem;
+  background-color: white;
+}
+
+.managers {
+  height: 60%;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.6rem;
+  padding: 0.8rem;
+}
+
+.managersElementContainer {
+  width: 100%;
+  height: 40px;
+  display: flex;
+}
+
+.managersElementNameAndBar {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.managersElement {
+  padding-bottom: 0.1rem;
+  font-size: 0.7rem;
+}
+
+.managersElementPercentage {
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding-top: 0.8rem;
+}
+
+.fullBar {
+  width: 90%;
+  height: 8px;
+  background-color: #f3f3f3;
+}
+
+.fullBarBlack1 {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 43%;
+  background-color: black;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 2px 5px -2px #000000;
+}
+
+.fullBarBlack2 {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 24%;
+  background-color: black;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 2px 5px -2px #000000;
+}
+
+.fullBarBlack3 {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 31%;
+  background-color: black;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 2px 5px -2px #000000;
+}
+.fullBarBlack4 {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 12%;
+  background-color: black;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 2px 5px -2px #000000;
+}
+.fullBarBlack5 {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 6%;
+  background-color: black;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 2px 5px -2px #000000;
+}
+.fullBarBlack6 {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 3%;
+  background-color: black;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 2px 5px -2px #000000;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 20.1%;
+}
+
+.button {
+  background-color: #e2000f;
+  color: white;
+  border-radius: 5px;
+  font-size: 0.6rem;
+  padding: 0.3rem 2.5rem;
+}
+
+#myChart1 {
+  width: 80px;
+  height: 80px;
+}
+
+#myChart2 {
+  width: 80px;
+  height: 80px;
+}
+
+#myChart3 {
+  width: 80px;
+  height: 80px;
+}
+
+#myChart4 {
+  width: 80px;
+  height: 80px;
+}
