@@ -1,0 +1,27 @@
+/* * {
+  outline: 1px solid rgba(255, 0, 0, 0.7);
+} */
+
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f2f6ff;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 26rem;
+  min-width: 300px;
+  height: 29rem;
+  background-color: #f8faff;
+  margin: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  align-items: center;
+  box-shadow: 5px 10px 15px 1px #ebebff;
+}
