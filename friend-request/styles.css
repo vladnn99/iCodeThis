@@ -1,0 +1,141 @@
+/* Add CSS here */
+
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f8f5f5;
+  padding: 1rem;
+}
+
+.container {
+  width: 600px;
+  height: 350px;
+  background-color: #ffffff;
+  margin: auto;
+  border-radius: 7px;
+  box-shadow: -0px 15px 40px -30px #ff7676;
+  position: relative;
+  overflow: hidden;
+}
+
+.headerContainer {
+  width: 100%;
+  height: 25%;
+  position: relative;
+}
+
+.title {
+  float: left;
+  font-weight: bold;
+  padding: 2.5rem 0rem 0rem 1.7rem;
+}
+
+.viewAll {
+  float: right;
+  color: white;
+  padding: 2.5rem 1.7rem 0rem 0rem;
+  font-size: 0.9rem;
+  z-index: 5;
+  position: relative;
+}
+
+.rightTopShape {
+  z-index: 1;
+  background: linear-gradient(#ff9a4f, #ff7575);
+  position: absolute;
+  margin-top: -4.5rem;
+  margin-left: 50%;
+  width: 500px;
+  height: 330px;
+  border-radius: 20% 41% 0% 99% / 41% 31% 57% 59%;
+}
+
+.elementContainer {
+  width: 90%;
+  height: 65%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 0.2rem;
+  position: absolute;
+  left: 5%;
+}
+
+.element {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0.5rem;
+}
+
+.imageBox {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.textContainer {
+  z-index: 3;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-left: 0.8rem;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.mutualFriends {
+  font-size: 0.8rem;
+}
+
+.buttonContainer {
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+}
+
+.button {
+  background: #ffffff;
+  padding: 0.4rem 1.8rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  box-shadow: 2px 3px 8px -2px gray;
+}
+
+.leftBottomShape {
+  z-index: 1;
+  background-color: #ff7575;
+  position: absolute;
+  margin-top: 14.3rem;
+  margin-left: -4rem;
+  width: 280px;
+  height: 426px;
+  border-radius: 51% 49% 0% 100% / 18% 21% 79% 82%;
+}

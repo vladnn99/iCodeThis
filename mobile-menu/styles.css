@@ -1,0 +1,190 @@
+/* * {
+  outline: 1px solid rgba(255, 0, 0, 0.7);
+} */
+
+body {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  background-image: url("https://svgshare.com/i/tsj.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 16rem;
+  height: 29rem;
+  background-color: #f8faff;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 15px -1px gray;
+  overflow: hidden;
+  padding-top: 0.8rem;
+}
+
+.imageBox {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.imageContainer {
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: solid #7d96d9 5px;
+  box-shadow: 6px 6px 15px -5px #727272;
+  z-index: 2;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.shapeContainer {
+  display: flex;
+  position: relative;
+  width: 110%;
+  z-index: 0;
+}
+
+.topShape {
+  position: relative;
+  background: linear-gradient(#738ed6, #496ed6);
+  height: 9rem;
+  width: 19rem;
+  margin-top: -8rem;
+  margin-left: 0.2rem;
+  border-radius: 30px 30px 0px 30px;
+  transform: rotate(-10deg);
+}
+
+.topContainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 6.5rem;
+  z-index: 2;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  width: 69%;
+}
+
+h1 {
+  padding-left: 0.5rem;
+  font-size: 0.8rem;
+  color: white;
+  font-weight: 400;
+  margin: 1.1rem 0 0 0;
+}
+
+p {
+  padding-left: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: white;
+  margin: 0;
+}
+
+.buttonContainer {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.button {
+  color: white;
+  background-color: #628cff;
+  padding: 0.2rem 1.4rem 0.2rem 1.4rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-weight: 100;
+  border: 0;
+}
+
+.plus {
+  font-size: 2rem;
+}
+
+.elementContainer {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  align-items: center;
+}
+
+.iconContainer {
+  margin-left: 1.5rem;
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconTextContainer {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.icon {
+  color: #babdc0;
+}
+
+.selectedElement {
+  color: #2574f6;
+}
+
+.whiteElementBorder {
+  width: 1.4%;
+  height: 3.5rem;
+}
+
+.selectedElementBorder {
+  width: 1.4%;
+  height: 3.5rem;
+  background-color: #2574f6;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.closeContainer {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  left: 6rem;
+  top: -2.6rem;
+}
