@@ -11,9 +11,225 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-purple-100 flex justify-center items-center min-h-screen">
+  <body class="flex justify-center items-center h-max text-[#0f0f38]">
     <div
-      class="bg-white text-[#181028] p-8 space-y-6 shadow-lg rounded-xl max-w-md md:max-w-lg"
-    ></div>
+      id="container"
+      class="bg-[#eff0f1] w-full h-[98%] m-4 shadow-2xl rounded-xl flex flex-col p-10 max-w-screen-lg md:h-4/6"
+    >
+      <div
+        id="insideContainer"
+        class="w-full h-full self-center rounded-xl flex flex-col justify-between"
+      >
+        <h1 class="font-semibold text-2xl">Popular Collections</h1>
+        <div
+          id="tagsContainer"
+          class="w-3/6 h-10 flex justify-between items-center"
+        >
+          <button class="px-4 py-2 rounded-md text-xs font-semibold bg-white">
+            Profile
+          </button>
+          <button class="px-4 py-2 rounded-md text-xs font-semibold bg-white">
+            New York
+          </button>
+          <button class="px-4 py-2 rounded-md text-xs font-semibold bg-white">
+            Relaxing
+          </button>
+          <button class="px-4 py-2 rounded-md text-xs font-semibold bg-white">
+            Person
+          </button>
+          <button class="px-4 py-2 rounded-md text-xs font-semibold bg-white">
+            Fashion
+          </button>
+        </div>
+        <div
+          id="elementsContainer"
+          class="w-full h-[75%] rounded-xl flex flex-col items-center justify-between md:items-end md:flex-row"
+        >
+          <div
+            id="element"
+            class="w-full h-full rounded-xl bg-white flex flex-wrap justify-between px-5 pt-5 md:w-[30%]"
+          >
+            <div id="coverImage" class="w-full h-[50%] rounded-xl">
+              <img
+                class="w-full h-full object-cover rounded-xl"
+                src="https://bidunart.com/wp-content/uploads/2019/12/Portrait197a.jpg"
+                alt="coverImage"
+              />
+            </div>
+            <div id="smallImage" class="w-[30%] h-14 rounded-xl">
+              <img
+                class="w-full h-full object-cover rounded-xl"
+                src="https://c.pxhere.com/photos/af/c1/beautiful_blur_close_up_countryside_dress_fall_female_field-1364296.jpg!d"
+                alt="smallImage1"
+              />
+            </div>
+            <div id="smallImage" class="w-[30%] h-14 rounded-xl">
+              <img
+                class="w-full h-full object-cover rounded-xl"
+                src="https://images.unsplash.com/7/girl-flowers.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyNTk3MzMwfHxlbnwwfHx8fHw%3D&w=1000&q=80"
+                alt="smallImage2"
+              />
+            </div>
+            <div id="smallImage" class="w-[30%] h-14 rounded-xl">
+              <img
+                class="w-full h-full object-cover rounded-xl"
+                src="https://www.wallpaperflare.com/static/575/489/105/salma-hayek-girl-face-eyes-wallpaper.jpg"
+                alt="smallImage2"
+              />
+            </div>
+            <div id="footerContainer" class="w-full h-6 flex justify-between">
+              <p class="font-semibold">People</p>
+              <span class="flex justify-between items-center">
+                <span class="mr-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-photo w-5"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M15 8h.01"></path>
+                    <path
+                      d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z"
+                    ></path>
+                    <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5"></path>
+                    <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3"></path>
+                  </svg>
+                </span>
+                <p class="text-xs font-semibold">144</p>
+              </span>
+            </div>
+          </div>
+          <div
+            id="element"
+            class="w-full h-full rounded-xl bg-white flex flex-wrap justify-between px-5 pt-5 md:w-[30%]"
+          >
+            <div id="coverImage" class="w-full h-[50%] rounded-xl">
+              <img
+                class="w-full h-full object-cover rounded-xl"
+                src="https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="coverImage"
+              />
+            </div>
+            <div id="smallImage" class="w-[30%] h-14 rounded-xl">
+              <img
+                class="w-full h-full object-cover rounded-xl"
+                src="https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="smallImage1"
+              />
+            </div>
+            <div id="smallImage" class="w-[30%] h-14 rounded-xl">
+              <img
+                class="w-full h-full object-cover rounded-xl"
+                src="https://images.pexels.com/photos/675764/pexels-photo-675764.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="smallImage2"
+              />
+            </div>
+            <div id="smallImage" class="w-[30%] h-14 rounded-xl">
+              <img
+                class="w-full h-full object-cover rounded-xl"
+                src="https://images.pexels.com/photos/592077/pexels-photo-592077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="smallImage2"
+              />
+            </div>
+            <div id="footerContainer" class="w-full h-6 flex justify-between">
+              <p class="font-semibold">Nature</p>
+              <span class="flex justify-between items-center">
+                <span class="mr-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-photo w-5"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M15 8h.01"></path>
+                    <path
+                      d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z"
+                    ></path>
+                    <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5"></path>
+                    <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3"></path>
+                  </svg>
+                </span>
+                <p class="text-xs font-semibold">431</p>
+              </span>
+            </div>
+          </div>
+          <div
+            id="element"
+            class="w-full h-full rounded-xl bg-white flex flex-wrap justify-between px-5 pt-5 md:w-[30%]"
+          >
+            <div id="coverImage" class="w-full h-[50%] rounded-xl">
+              <img
+                class="w-full h-full object-cover rounded-xl"
+                src="https://images.pexels.com/photos/2863221/pexels-photo-2863221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="coverImage"
+              />
+            </div>
+            <div id="smallImage" class="w-[30%] h-14 rounded-xl">
+              <img
+                class="w-full h-full object-cover rounded-xl"
+                src="https://images.pexels.com/photos/2482333/pexels-photo-2482333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="smallImage1"
+              />
+            </div>
+            <div id="smallImage" class="w-[30%] h-14 rounded-xl">
+              <img
+                class="w-full h-full object-cover rounded-xl"
+                src="https://images.pexels.com/photos/415980/pexels-photo-415980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="smallImage2"
+              />
+            </div>
+            <div id="smallImage" class="w-[30%] h-14 rounded-xl">
+              <img
+                class="w-full h-full object-cover rounded-xl"
+                src="https://images.pexels.com/photos/4066838/pexels-photo-4066838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="smallImage2"
+              />
+            </div>
+            <div id="footerContainer" class="w-full h-6 flex justify-between">
+              <p class="font-semibold">History</p>
+              <span class="flex justify-between items-center">
+                <span class="mr-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-photo w-5"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M15 8h.01"></path>
+                    <path
+                      d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z"
+                    ></path>
+                    <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5"></path>
+                    <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3"></path>
+                  </svg>
+                </span>
+                <p class="text-xs font-semibold">7K</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
