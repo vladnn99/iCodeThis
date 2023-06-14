@@ -11,19 +11,21 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="flex justify-center items-center h-max text-[#0f0f38]">
+  <body
+    class="text-[#0f0f38] h-fit md:items-center md:justify-center md:h-screen md:flex"
+  >
     <div
       id="container"
-      class="bg-[#eff0f1] w-full h-[98%] m-4 shadow-2xl rounded-xl flex flex-col p-10 max-w-screen-lg md:h-4/6"
+      class="bg-[#eff0f1] w-full h-fit m-4 shadow-2xl rounded-xl flex flex-col p-10 max-w-screen-lg md:h-4/6"
     >
       <div
         id="insideContainer"
-        class="w-full h-full self-center rounded-xl flex flex-col justify-between"
+        class="w-full h-fit self-center rounded-xl flex flex-col justify-between md:h-screen"
       >
         <h1 class="font-semibold text-2xl">Popular Collections</h1>
         <div
           id="tagsContainer"
-          class="w-3/6 h-10 flex justify-between items-center"
+          class="w-full h-fit flex flex-wrap justify-start items-center space-x-2 md:h-10 between md:w-4/6"
         >
           <button class="px-4 py-2 rounded-md text-xs font-semibold bg-white">
             Profile
@@ -43,13 +45,16 @@
         </div>
         <div
           id="elementsContainer"
-          class="w-full h-[75%] rounded-xl flex flex-col items-center justify-between md:items-end md:flex-row"
+          class="w-full h-[75%] rounded-xl flex flex-wrap space-y-4 mt-4 items-center justify-between md:items-end md:space-y-0 md:mt-0"
         >
           <div
             id="element"
-            class="w-full h-full rounded-xl bg-white flex flex-wrap justify-between px-5 pt-5 md:w-[30%]"
+            class="w-full h-full rounded-xl bg-white flex flex-wrap justify-between px-4 pt-4 md:w-[30%]"
           >
-            <div id="coverImage" class="w-full h-[50%] rounded-xl">
+            <div
+              id="coverImage"
+              class="w-full h-36 rounded-xl mb-4 md:mb-0 md:h-1/2"
+            >
               <img
                 class="w-full h-full object-cover rounded-xl"
                 src="https://bidunart.com/wp-content/uploads/2019/12/Portrait197a.jpg"
@@ -108,9 +113,12 @@
           </div>
           <div
             id="element"
-            class="w-full h-full rounded-xl bg-white flex flex-wrap justify-between px-5 pt-5 md:w-[30%]"
+            class="w-full h-full rounded-xl bg-white flex flex-wrap justify-between px-4 pt-4 md:w-[30%]"
           >
-            <div id="coverImage" class="w-full h-[50%] rounded-xl">
+            <div
+              id="coverImage"
+              class="w-full h-36 rounded-xl mb-4 md:mb-0 md:h-1/2"
+            >
               <img
                 class="w-full h-full object-cover rounded-xl"
                 src="https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -169,9 +177,12 @@
           </div>
           <div
             id="element"
-            class="w-full h-full rounded-xl bg-white flex flex-wrap justify-between px-5 pt-5 md:w-[30%]"
+            class="w-full h-full rounded-xl bg-white flex flex-wrap justify-between px-4 pt-4 md:w-[30%]"
           >
-            <div id="coverImage" class="w-full h-[50%] rounded-xl">
+            <div
+              id="coverImage"
+              class="w-full h-36 rounded-xl mb-4 md:mb-0 md:h-1/2"
+            >
               <img
                 class="w-full h-full object-cover rounded-xl"
                 src="https://images.pexels.com/photos/2863221/pexels-photo-2863221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
