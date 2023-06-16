@@ -1,6 +1,6 @@
-* {
-  /* outline: 1px solid rgba(255, 0, 0, 0.7); */
-}
+/* * {
+  outline: 1px solid rgba(255, 0, 0, 0.7);
+} */
 
 body {
   display: flex;
@@ -9,4 +9,12 @@ body {
   box-sizing: border-box;
   background-color: #f7fafc;
   font-family: "Poppins", sans-serif;
+}
+
+#progressBar {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #0a174b 0 5px,
+    #263886 5px 10px
+  );
 }
