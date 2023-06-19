@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#ffffff] flex justify-center items-center min-h-screen">
+    <div
+      class="bg-gray-100 text-[#132B50] w-full h-screen flex items-center justify-center lg:w-3/5"
+    >
+      <div
+        id="container"
+        class="bg-white w-full h-full rounded-xl shadow-xl flex flex-col p-10 gap-3 md:w-[50%] md:h-[60%]"
+      >
+        <h1 class="text-xl font-bold">Enter your password</h1>
+        <div
+          id="avatarAndAccountContainer"
+          class="w-4/5 h-24 flex items-center gap-3"
+        >
+          <img
+            src="https://media.istockphoto.com/id/508047977/photo/i-finally-get-to-wear-this-hat.jpg?s=612x612&w=0&k=20&c=CTB52P1lNARUx6OYJ-X7Vzr9ycGXfi9L2znXZ-g7ko8="
+            alt="avatar"
+            class="w-14 h-14 object-cover rounded-full"
+          />
+          <div
+            id="titleAndUserContainer"
+            class="w-fit h-full flex flex-col justify-center"
+          >
+            <p class="text-xs font-semibold">Business Account</p>
+            <h2 class="font-bold">Sarah Bills</h2>
+          </div>
+        </div>
+        <p class="text-xs font-semibold mb-[-0.5rem]">Password</p>
+        <div
+          id="passwordContainer"
+          class="flex items-center relative w-full mb-3"
+        >
+          <input
+            type="password"
+            name="pwd"
+            id="pwd"
+            value="**********"
+            class="border border-1 border-[#132B50] rounded-md w-10/12 h-10 p-4 px-9"
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-lock absolute ml-2"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"
+            ></path>
+            <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
+            <path d="M8 11v-4a4 4 0 1 1 8 0v4"></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-eye-off ml-3"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M10.585 10.587a2 2 0 0 0 2.829 2.828"></path>
+            <path
+              d="M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87"
+            ></path>
+            <path d="M3 3l18 18"></path>
+          </svg>
+        </div>
+        <div id="signedInAndButtonContainer" class="w-full h-10 flex">
+          <div
+            id="innerContainer1"
+            class="w-6/12 h-full flex items-center gap-2"
+          >
+            <div
+              id="toggle"
+              class="w-12 h-[70%] border border-1 border-blue-950 rounded-3xl relative"
+            >
+              <span
+                id="circle"
+                class="w-5 h-5 bg-blue-950 absolute rounded-full m-[0.2rem]"
+              ></span>
+            </div>
+            <p class="text-xs font-semibold">Stay signed in</p>
+          </div>
+          <div
+            id="innerContainer2"
+            class="w-4/12 h-full flex items-center justify-end"
+          >
+            <button
+              class="text-xs font-semibold text-white bg-blue-950 w-20 h-full rounded-md"
+            >
+              Continue
+            </button>
+          </div>
+        </div>
+        <p class="text-xs font-semibold relative w-fit">
+          Reset password
+          <span
+            class="absolute bottom-0 left-0 w-full h-[1px] bg-blue-950"
+          ></span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
