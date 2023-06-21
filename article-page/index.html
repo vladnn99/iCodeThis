@@ -1,0 +1,204 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-300 flex justify-center items-center h-fit md:h-screen">
+    <div
+      id="container"
+      class="bg-white text-blue-950 rounded-xl flex flex-col w-full h-fit md:h-4/5 md:w-5/6"
+    >
+      <div
+        id="headerContainer"
+        class="w-full h-[4rem] rounded-t-xl border-b flex flex-col items-center justify-between md:flex-row md:h-[12%]"
+      >
+        <div id="menu" class="w-full h-full flex gap-7 px-8 md:w-3/5">
+          <button class="font-semibold flex items-center text-sm">
+            Product<svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-chevron-down"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M6 9l6 6l6 -6"></path>
+            </svg>
+          </button>
+          <button class="font-semibold text-sm">Pricing</button>
+          <button class="font-semibold flex items-center text-sm">
+            Use Cases
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-chevron-down"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M6 9l6 6l6 -6"></path>
+            </svg>
+          </button>
+          <button class="font-semibold text-sm">Blog</button>
+        </div>
+        <div
+          id="buttonsHeaderRight"
+          class="flex items-center justify-end gap-5 w-full px-6 h-full md:w-2/5"
+        >
+          <button
+            class="text-sm font-semibold border border-blue-950 px-3 py-1 rounded-full"
+          >
+            Log In
+          </button>
+          <button class="text-sm bg-blue-950 text-white px-3 py-1 rounded-full">
+            Get started
+          </button>
+        </div>
+      </div>
+      <div
+        id="menuExtended"
+        class="w-full h-[10%] flex items-center px-8 gap-2 md:gap-8"
+      >
+        <button class="text-xs font-semibold">Project</button>
+        <button class="text-xs font-semibold">Remote</button>
+        <button class="text-xs font-semibold">Teamwork</button>
+        <button class="text-xs font-semibold">Productivity</button>
+        <button class="text-xs font-semibold">Marketing</button>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-search ml-auto"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+          <path d="M21 21l-6 -6"></path>
+        </svg>
+      </div>
+      <h1 id="bigHeader" class="h-[10%] flex items-end text-2xl font-bold px-8">
+        Productivity
+      </h1>
+      <div
+        id="articleContainer"
+        class="w-[94%] h-[68%] pt-2 flex flex-col self-center gap-8 md:flex-row"
+      >
+        <div
+          id="leftContainer"
+          class="w-full h-full flex flex-col gap-3 md:w-1/2"
+        >
+          <img
+            class="object-cover w-full h-[40%] rounded-sm"
+            src="https://media.istockphoto.com/id/1084949640/photo/curvy-windy-road-in-snow-covered-forest-top-down-aerial-view.jpg?s=612x612&w=0&k=20&c=XrRIfogEaT-6lhKRsRRoyz67VTq-cLB4Nha46fDoZFo="
+            alt="snowyRoad"
+          />
+          <h2 class="text-xl font-bold w-4/5 mt-2">
+            Little Things Do Make A Difference
+          </h2>
+          <p class="text-xs flex w-4/5">
+            Why do you want to motivate yourself? Actually, just answering that
+            question fully can be one of the better ways to get your daily
+            motivation
+          </p>
+          <div id="author" class="flex items-center gap-2 mt-auto mb-3">
+            <img
+              class="w-10 h-10 rounded-full object-cover"
+              src="https://images.unsplash.com/photo-1589156191108-c762ff4b96ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjB3b21hbiUyMHBvcnRyYWl0fGVufDB8fDB8fHww&w=1000&q=80"
+              alt="author"
+            />
+            <p class="text-sm">Kathryn Shelton</p>
+          </div>
+        </div>
+        <div
+          id="rightContainer"
+          class="w-full h-full flex flex-col gap-4 md:w-1/2"
+        >
+          <h3 class="text-xl font-bold">Recent articles</h3>
+          <div id="article1" class="w-full h-[23%] flex gap-4 items-center">
+            <img
+              class="object-cover aspect-square w-24 h-full"
+              src="https://rare-gallery.com/mocahbig/52743-Sunset-Building-City-Skyscraper-USANew-York-4k.jpg"
+              alt="art1"
+            />
+            <div id="titleAndAuthor">
+              <h3 class="text-lg font-bold w-full">
+                Common Symbols And Their Meanings
+              </h3>
+              <div id="author" class="flex items-center gap-2 mt-1">
+                <img
+                  class="w-8 h-8 rounded-full object-cover"
+                  src="https://expertphotography.b-cdn.net/wp-content/uploads/2019/04/female-face-eye-level-portrait.jpg"
+                  alt="author"
+                />
+                <p class="text-xs">Susie Russell</p>
+              </div>
+            </div>
+          </div>
+          <div id="article2" class="w-full h-[23%] flex gap-4 items-center">
+            <img
+              class="object-cover aspect-square w-24 h-full"
+              src="https://img.freepik.com/premium-photo/group-young-friends-sitting-talking-cafe-young-men-women-meeting-coffee-shop_570631-2093.jpg"
+              alt="art2"
+            />
+            <div id="titleAndAuthor">
+              <h3 class="text-lg font-bold w-full">
+                Success StepsFor Your Business
+              </h3>
+              <div id="author" class="flex items-center gap-2 mt-1">
+                <img
+                  class="w-8 h-8 rounded-full object-cover"
+                  src="https://media.istockphoto.com/id/685132245/photo/mature-businessman-smiling-over-white-background.jpg?s=612x612&w=0&k=20&c=OJk6U-oCZ31F3TGmarAAg2jVli8ZWTagAcF4P-kNIqA="
+                  alt="author"
+                />
+                <p class="text-xs">Connor Parsons</p>
+              </div>
+            </div>
+          </div>
+          <div id="article3" class="w-full h-[23%] flex gap-4 items-center">
+            <img
+              class="object-cover aspect-square w-24 h-full"
+              src="https://picjumbo.com/wp-content/uploads/clean-skyscraper-view-from-below-against-a-blue-sky-2210x1474.jpg"
+              alt="art1"
+            />
+            <div id="titleAndAuthor">
+              <h3 class="text-lg font-bold w-full">
+                The Strength Of Your Belief
+              </h3>
+              <div id="author" class="flex items-center gap-2 mt-1">
+                <img
+                  class="w-8 h-8 rounded-full object-cover"
+                  src="https://img.freepik.com/free-photo/cute-smiling-young-man-with-bristle-looking-satisfied_176420-18989.jpg?w=2000"
+                  alt="author"
+                />
+                <p class="text-xs">Jonathan Yates</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
