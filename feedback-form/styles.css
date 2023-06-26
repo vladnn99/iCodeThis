@@ -1,0 +1,13 @@
+/* * {
+  outline: 1px solid rgba(255, 0, 0, 0.7);
+} */
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-image: url("https://svgshare.com/i/ueF.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

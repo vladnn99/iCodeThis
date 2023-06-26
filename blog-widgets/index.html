@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-pink-100 flex justify-center items-center h-fit md:h-screen">
+    <div
+      id="bigContainer"
+      class="w-full h-[90%] relative flex flex-col items-center gap-6 max-w-6xl md:w-[90%]"
+    >
+      <div
+        id="firstContainer"
+        class="w-full h-fit mt-3 rounded-2xl bg-pink-100 border-8 border-white shadow-xl shadow-[#ff9fde53] flex flex-col p-5 md:w-[30rem] md:ml-[-8rem]"
+      >
+        <h1 class="font-semibold text-xl w-full">Tags</h1>
+        <div id="tagsContainer" class="w-full gap-2 flex flex-wrap">
+          <button class="bg-white rounded-lg px-2 py-1 text-xs">Blender</button>
+          <button class="bg-white rounded-lg px-2 py-1 text-xs">Browser</button>
+          <button class="bg-white rounded-lg px-2 py-1 text-xs">
+            cross-platform
+          </button>
+          <button class="bg-white rounded-lg px-2 py-1 text-xs">
+            HoloLens
+          </button>
+          <button class="bg-white rounded-lg px-2 py-1 text-xs">
+            Microsoft
+          </button>
+          <button class="bg-white rounded-lg px-2 py-1 text-xs">
+            Mixed Reality
+          </button>
+          <button class="bg-blue-950 text-white rounded-lg px-2 py-1 text-xs">
+            modelling
+          </button>
+          <button class="bg-white rounded-lg px-2 py-1 text-xs">MR</button>
+          <button class="bg-white rounded-lg px-2 py-1 text-xs">nodejs</button>
+          <button class="bg-white rounded-lg px-2 py-1 text-xs">
+            streamsocket
+          </button>
+          <button class="bg-white rounded-lg px-2 py-1 text-xs">unity</button>
+          <button class="bg-white rounded-lg px-2 py-1 text-xs">unity3D</button>
+          <button class="bg-white rounded-lg px-2 py-1 text-xs">
+            unreal engine
+          </button>
+          <button class="bg-white rounded-lg px-2 py-1 text-xs">VR</button>
+          <button class="bg-white rounded-lg px-2 py-1 text-xs">
+            websockets
+          </button>
+        </div>
+      </div>
+      <div
+        id="secondContainer"
+        class="w-full h-20 rounded-2xl bg-pink-100 border-8 border-white shadow-xl shadow-[#ff9fde53] flex items-center justify-center relative gap-2 md:w-[45%] md:self-end md:mr-2 md:gap-4 md:h-28"
+      >
+        <input
+          type="search"
+          class="w-[75%] h-8 rounded-2xl relative text-xs px-12 md:w-4/6 md:h-12 md:text-sm"
+          placeholder="Search articles, topics, etc."
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-search absolute ml-[-88%] md:ml-[-77%]"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+          <path d="M21 21l-6 -6"></path>
+        </svg>
+        <button
+          class="text-white rounded-xl h-8 bg-blue-950 px-4 text-xs font-light md:h-12"
+        >
+          Search
+        </button>
+      </div>
+      <div
+        id="thirdContainer"
+        class="w-full h-fit rounded-2xl bg-pink-100 border-8 border-white shadow-xl shadow-[#ff9fde53] flex flex-col p-5 gap-2 md:w-[22rem] md:ml-[-22rem] md:mt-[-5rem] md:h-[55%]"
+      >
+        <h1 class="font-semibold text-xl w-full mb-2">Recent posts</h1>
+        <button class="text-sm py-2 rounded-xl w-full flex px-2">
+          Azure Speech Studio for Miexed Reality
+        </button>
+        <button class="text-sm py-2 rounded-xl w-full flex px-2 bg-white">
+          HoloLens 2 Unreal Project Template
+        </button>
+        <button class="text-sm py-2 rounded-xl w-full flex px-2">
+          Simplygon in Azure
+        </button>
+        <button class="text-sm py-2 rounded-xl w-full flex px-2">
+          Blender in Azure
+        </button>
+        <button class="text-sm py-2 rounded-xl w-full flex px-2">
+          AAD Login on HoloLens 2
+        </button>
+      </div>
+    </div>
+    <div
+      id="whiteBehind"
+      class="bg-white w-64 h-[26rem] rounded-xl absolute z-[-1]"
+    ></div>
+  </body>
+</html>
