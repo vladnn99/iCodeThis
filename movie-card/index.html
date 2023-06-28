@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-blue-50 h-fit flex justify-center items-center md:h-screen">
+    <div
+      id="container"
+      class="bg-white w-[96%] h-fit shadow-xl p-12 max-w-3xl md:h-[68%] xl:w-3/5"
+    >
+      <div
+        id="headerContainer"
+        class="flex flex-col items-center justify-between md:flex-row"
+      >
+        <h1 class="font-semibold text-2xl text-center md:text-left">
+          Star Wars: The Last Jedi
+        </h1>
+        <p class="text-sm text-gray-400">
+          <span class="font-bold text-sky-600">7.4</span> / 10
+        </p>
+      </div>
+      <p class="text-sm text-sky-600 mt-1">Action & Adventure</p>
+      <div
+        id="innerContainer"
+        class="flex flex-col mt-2 gap-8 h-[75%] md:flex-row"
+      >
+        <div id="leftContainer" class="flex flex-col w-full h-full md-w-[40%]">
+          <img
+            class="h-[87%] w-full object-cover"
+            src="https://myhotposters.com/cdn/shop/products/mL0291_grande.jpg?v=1571444811"
+            alt="poster"
+          />
+          <div
+            id="footerLeftContainer"
+            class="flex items-center justify-between h-[13%]"
+          >
+            <p class="text-sm font-semibold">$19.00</p>
+            <button
+              class="text-xs font-semibold flex items-center border-2 border-black px-5 py-1 rounded-full"
+            >
+              BUY
+            </button>
+          </div>
+        </div>
+        <div id="rightContainer" class="flex flex-col w-full">
+          <h2 class="font-semibold">About the Movie</h2>
+          <p class="text-sm w-full mt-2 md:w-11/12">
+            In Lucasfilm's Star Wars: The Last Jedi, the Skywalker saga
+            continues as the heroes of The Force Awakens join the galactic
+            legends in an epic adventure that unlocks new mysteries of the Force
+            and shocking revelations of the past.
+          </p>
+          <div
+            id="movieDetails"
+            class="w-full h-fit flex flex-col gap-2 pt-8 justify-between md:h-48 md:flex-row md:w-11/12"
+          >
+            <div
+              id="col1"
+              class="w-full h-full flex flex-col items-center gap-1 md:w-1/4 md:items-start"
+            >
+              <h2 class="font-semibold">Actors</h2>
+              <p class="text-xs text-sky-600">Oscar Isaac</p>
+              <p class="text-xs text-sky-600">Mark Hamill</p>
+              <p class="text-xs text-sky-600">Daisy Ridley</p>
+              <p class="text-xs text-sky-600">John Boyega</p>
+              <p class="text-xs text-sky-600">Kelly Marie Tran</p>
+              <p class="text-sm text-sky-600 font-semibold underline">More</p>
+            </div>
+            <div
+              id="col2"
+              class="w-full h-full flex flex-col items-center gap-1 md:w-1/4 md:items-start"
+            >
+              <h2 class="font-semibold">Director</h2>
+              <p class="text-xs text-sky-600">Rian Johnson</p>
+              <h2 class="font-semibold mt-4">Screenwriter</h2>
+              <p class="text-xs text-sky-600">Rian Johnson</p>
+            </div>
+            <div
+              id="col3"
+              class="w-full h-full flex flex-col items-center gap-1 md:w-1/4 md:items-start"
+            >
+              <h2 class="font-semibold">Producers</h2>
+              <p class="text-xs text-sky-600">Kathleen Kennedy</p>
+              <p class="text-xs text-sky-600">Ram Bergman</p>
+            </div>
+          </div>
+          <div id="buttonContainer" class="w-full h-[13%] self-end"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
