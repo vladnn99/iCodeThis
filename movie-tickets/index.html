@@ -15,7 +15,7 @@
   <body class="bg-blue-50 flex justify-center items-center h-screen">
     <div
       id="container"
-      class="bg-white rounded-t-lg w-[18rem] h-fit flex flex-col justify-between shadow-xl lg:h-[30rem]"
+      class="bg-white rounded-t-lg w-[20rem] h-fit flex flex-col justify-between shadow-xl lg:h-[30rem]"
     >
       <div
         id="imageContainer"
@@ -149,15 +149,27 @@
       </div>
       <div
         id="seatsContainer"
-        class="w-[90%] h-40 self-center flex gap-8 mt-4 justify-center"
+        class="w-[90%] h-40 self-center flex gap-4 mt-4 justify-center relative"
       >
         <div
+          id="seatRows"
+          class="w-5 h-full flex flex-col leading-tight ml-[-1rem] text-gray-400 mt-[0.2rem] text-sm"
+        >
+          <p class="w-5 h-6 text-center">G</p>
+          <p class="w-5 h-6 text-center">F</p>
+          <p class="w-5 h-6 text-center">E</p>
+          <p class="w-5 h-6 text-center">D</p>
+          <p class="w-5 h-6 text-center">C</p>
+          <p class="w-5 h-6 text-center">B</p>
+          <p class="w-5 h-6 text-center">A</p>
+        </div>
+        <div
           id="leftSeatsContainer"
-          class="w-1/2 h-full grid grid-cols-4 grid-rows-6 items-center justify-items-center"
+          class="w-[45%] h-full grid grid-cols-4 grid-rows-6 items-center justify-items-center ml-[-1rem]"
         ></div>
         <div
           id="rightSeatsContainer"
-          class="w-1/2 h-full grid grid-cols-4 grid-rows-6 items-center justify-items-center gap-1"
+          class="w-[45%] h-full grid grid-cols-4 grid-rows-6 items-center justify-items-center"
         ></div>
       </div>
       <p class="text-xs text-[#CAD9DF] self-center mt-2">Screen</p>
@@ -181,15 +193,15 @@
           id="middleFooter"
           class="w-[45%] h-full bg-pink-500 flex flex-col items-start justify-center text-white px-3"
         >
-          <p>Jull 11, 19:15</p>
-          <p>3</p>
-          <p>$31</p>
+          <p id="currentDate"></p>
+          <p id="ticketsNr"></p>
+          <p id="total">$</p>
         </div>
         <div
           id="rightFooter"
           class="w-[30%] h-full bg-pink-500 flex items-center justify-end pr-3"
         >
-          <div class="w-fit h-fit relative">
+          <!-- <div class="w-fit h-fit relative">
             <button
               class="bg-white py-3 pl-3 pr-7 rounded-lg shadow-xl text-xs"
             >
@@ -210,6 +222,30 @@
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
               <path d="M9 6l6 6l-6 6"></path>
             </svg>
+          </div> -->
+          <div class="w-fit h-fit relative">
+            <div class="group inline-block">
+              <button
+                class="bg-white py-3 pl-3 pr-7 rounded-lg shadow-xl text-xs"
+              >
+                Next
+              </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-chevron-right w-8 h-8 absolute mt-[-2.25rem] ml-9 transform translate-x-0 transition-transform duration-300 group-hover:translate-x-1"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M9 6l6 6l-6 6"></path>
+              </svg>
+            </div>
           </div>
         </div>
       </div>

@@ -1,6 +1,34 @@
 let bookedSeatsNumber = [5, 6, 7, 17, 18, 20, 22, 23, 34, 35, 37, 38, 44, 45];
 let preSelectedSeats = [13, 14, 15];
 
+// Setting date
+(function () {
+  const currentDate = new Date();
+
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  const monthIndex = currentDate.getMonth();
+  const month = months[monthIndex];
+  const day = currentDate.getDate();
+  const hours = currentDate.getHours();
+  const minutes = currentDate.getMinutes();
+  const formattedDate = `${month} ${day}, ${hours}:${minutes}`;
+  let shownDate = document.getElementById("currentDate");
+  shownDate.innerText = formattedDate;
+})();
+
 const leftSeatsContainer = document.getElementById("leftSeatsContainer");
 const rightSeatsContainer = document.getElementById("rightSeatsContainer");
 
@@ -47,8 +75,21 @@ function selectSeat() {
     alert("That seat is booked");
   } else {
     this.classList.toggle("selected");
+    countTickets();
   }
 }
 
 setBookedSeats();
 preSelectSeats();
+countTickets();
+
+function countTickets() {
+  let count = 0;
+  let ticketsNr = document.getElementById("ticketsNr");
+  seats.forEach((seat) => {
+    if (seat.classList.value.includes("selected")) count++;
+  });
+  ticketsNr.innerText = count;
+  let ticketTotal = document.getElementById("total");
+  ticketTotal.innerText = `$${count * 10}`;
+}
