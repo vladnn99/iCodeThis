@@ -35,7 +35,7 @@ const rightSeatsContainer = document.getElementById("rightSeatsContainer");
 for (let i = 0; i < 28; i++) {
   leftSeatsContainer.innerHTML = rightSeatsContainer.innerHTML += `<svg
 xmlns="http://www.w3.org/2000/svg"
-class="icon icon-tabler icon-tabler-armchair-2 w-6 h-6 seat"
+class="icon icon-tabler icon-tabler-armchair-2 w-6 h-6 seat cursor-pointer"
 width="24"
 height="24"
 viewBox="0 0 24 24"
@@ -57,8 +57,10 @@ stroke-linejoin="round"
 let seats = document.querySelectorAll(".seat");
 
 function setBookedSeats() {
-  for (let i = 0; i < bookedSeatsNumber.length; i++)
+  for (let i = 0; i < bookedSeatsNumber.length; i++) {
     seats[bookedSeatsNumber[i]].classList.add("booked");
+    seats[bookedSeatsNumber[i]].classList.remove("cursor-pointer");
+  }
 }
 
 function preSelectSeats() {
