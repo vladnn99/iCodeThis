@@ -124,7 +124,6 @@ function loadPosterTitle(clickedButtonId) {
 function goBackAddListener() {
   const back = document.getElementById("headerBack");
   back.addEventListener("click", function () {
-    console.log(back);
     titlesContainer.classList.add("opacity-100");
     titlesContainer.classList.remove("opacity-0");
     container.classList.add("opacity-0");
