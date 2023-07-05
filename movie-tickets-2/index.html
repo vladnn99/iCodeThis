@@ -17,7 +17,7 @@
   >
     <div
       id="titlesContainer"
-      class="w-6/12 h-fit flex flex-col text-white gap-1 transition-opacity duration-500 max-w-xl absolute"
+      class="w-[90%] h-fit flex flex-col text-white gap-1 transition-opacity duration-500 max-w-xl absolute md:w-6/12"
     ></div>
     <div
       id="container"
@@ -26,36 +26,32 @@
       <div
         id="imageContainer"
         class="w-full h-1/3 rounded-t-lg flex flex-col justify-between bg-cover relative p-3"
-        style="
-          background-image: url(https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_FMjpg_UX1000_.jpg);
-          background-position: 0% 35%;
-        "
       >
         <div
           id="gradient"
           class="absolute rounded-t-lg inset-0 bg-gradient-to-r from-teal-950 to-teal-50 opacity-60"
         ></div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-arrow-left z-10 w-10 h-10 text-white flex ml-[-0.5rem]"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          stroke-width="1"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M5 12l14 0"></path>
-          <path d="M5 12l6 6"></path>
-          <path d="M5 12l6 -6"></path>
-        </svg>
+        <button id="headerBack" class="w-10 h-10 z-10">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-arrow-left z-10 w-10 h-10 text-white flex ml-[-0.5rem]"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M5 12l14 0"></path>
+            <path d="M5 12l6 6"></path>
+            <path d="M5 12l6 -6"></path>
+          </svg>
+        </button>
         <div id="titleAndLocation" class="flex flex-col">
-          <h1 class="text-white z-10 text-sm">
-            Guardians of the Galaxy Vol. 2
-          </h1>
+          <h1 id="title" class="text-white z-10 text-sm"></h1>
           <div id="location" class="flex gap-1 items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -207,28 +203,6 @@
           id="rightFooter"
           class="w-[30%] h-full bg-pink-500 flex items-center justify-end pr-3"
         >
-          <!-- <div class="w-fit h-fit relative">
-            <button
-              class="bg-white py-3 pl-3 pr-7 rounded-lg shadow-xl text-xs"
-            >
-              Next
-            </button>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-chevron-right w-8 h-8 absolute mt-[-2.25rem] ml-9"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M9 6l6 6l-6 6"></path>
-            </svg>
-          </div> -->
           <div class="w-fit h-fit relative">
             <div class="group inline-block">
               <button

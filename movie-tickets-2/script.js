@@ -5,7 +5,6 @@ const movies = [
     headerPoster:
       "https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_FMjpg_UX1000_.jpg",
     seats: "",
-    nrSeats: 0,
     nrTickets: 0,
     totalPrice: "",
     bookedSeats: [5, 6, 7, 17, 18, 20, 22, 23, 34, 35, 37, 38, 44, 45],
@@ -17,7 +16,6 @@ const movies = [
     headerPoster:
       "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/80C64C0B63382CD3ED2653356125F275F63D036028A77D38DC3286AD851A6833/scale?width=1200&aspectRatio=1.78&format=jpeg",
     seats: "",
-    nrSeats: 0,
     nrTickets: 0,
     totalPrice: "",
     bookedSeats: [5, 6, 7, 17, 18, 20, 22, 23, 34, 35, 37, 38, 44, 45],
@@ -29,7 +27,6 @@ const movies = [
     headerPoster:
       "https://w0.peakpx.com/wallpaper/622/658/HD-wallpaper-transformers-1-the-saga-begins-hot-new-movies-cars.jpg",
     seats: "",
-    nrSeats: 0,
     nrTickets: 0,
     totalPrice: "",
     bookedSeats: [5, 6, 7, 17, 18, 20, 22, 23, 34, 35, 37, 38, 44, 45],
@@ -41,7 +38,6 @@ const movies = [
     headerPoster:
       "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
     seats: "",
-    nrSeats: 0,
     nrTickets: 0,
     totalPrice: "",
     bookedSeats: [5, 6, 7, 17, 18, 20, 22, 23, 34, 35, 37, 38, 44, 45],
@@ -49,7 +45,9 @@ const movies = [
   },
 ];
 
-console.log(movies);
+movies.forEach((movie) => {
+  movie.nrTickets = movie.preselectedSeats.length;
+});
 
 // Setting date
 (function setDate() {
@@ -74,32 +72,72 @@ const container = document.getElementById("container");
   movies.forEach((movie, index) => {
     const buttonElement = document.createElement("button");
     buttonElement.className =
-      "bg-pink-400 py-2 rounded-lg hover:translate-x-2 transition-transform duration-300 ease-in-out button";
+      "py-2 rounded-lg hover:translate-x-2 transition-transform duration-300 ease-in-out button object-cover";
     buttonElement.textContent = movie.title;
     buttonElement.id = index;
-    // console.log(buttonElement);
+    buttonElement.style = ` background-image: url(${movie.headerPoster});
+    background-position: 50% 35%;`;
     titlesContainer.appendChild(buttonElement);
-    // console.log(buttonElement);
   });
 })();
 
+goBackAddListener();
 (function addClickToButton() {
   buttons = Array.from(document.getElementsByClassName("button"));
   buttons.forEach((button) => {
     button.addEventListener("click", function (event) {
       const clickedButtonId = +event.target.id;
+      loadPosterTitle(clickedButtonId);
+      populateSeatContainers();
+      addSeatId(clickedButtonId);
       setBookedSeats(clickedButtonId);
       preselectSeats(clickedButtonId);
       handleButtonClick(event, clickedButtonId);
-      addSeatId(clickedButtonId);
     });
   });
 })();
 
+const leftSeatsContainer = document.getElementById("leftSeatsContainer");
+const rightSeatsContainer = document.getElementById("rightSeatsContainer");
+populateSeatContainers();
+
+function resetSeats() {
+  const seats = document.querySelectorAll(".seat");
+  seats.forEach((seat) => {
+    if (seat.classList.contains("booked")) seat.classList.remove("booked");
+    if (seat.classList.contains("selected")) seat.classList.remove("selected");
+    if (!seat.classList.contains("cursor-pointer"))
+      seat.classList.add("cursor-pointer");
+    leftSeatsContainer.innerHTML = "";
+    rightSeatsContainer.innerHTML = "";
+  });
+}
+
+function loadPosterTitle(clickedButtonId) {
+  const poster = document.getElementById("imageContainer");
+  const title = document.getElementById("title");
+  poster.style = `background-image: url(${movies[clickedButtonId].headerPoster});
+  background-position: 0% 35%;`;
+  title.textContent = movies[clickedButtonId].title;
+}
+
+function goBackAddListener() {
+  const back = document.getElementById("headerBack");
+  back.addEventListener("click", function () {
+    console.log(back);
+    titlesContainer.classList.add("opacity-100");
+    titlesContainer.classList.remove("opacity-0");
+    container.classList.add("opacity-0");
+    container.classList.remove("opacity-100");
+    container.classList.add("hidden");
+    resetSeats();
+  });
+}
+
 function handleButtonClick(event, clickedButtonId) {
   titlesContainer.classList.add("opacity-0");
   setTimeout(() => {
-    titlesContainer.remove();
+    titlesContainer.classList.remove("opacity-100");
   }, 250);
 
   container.classList.remove("hidden");
@@ -110,10 +148,9 @@ function handleButtonClick(event, clickedButtonId) {
   }, 250);
 }
 
-const leftSeatsContainer = document.getElementById("leftSeatsContainer");
-const rightSeatsContainer = document.getElementById("rightSeatsContainer");
-
-(function populateSeatContainers() {
+function populateSeatContainers() {
+  leftSeatsContainer.innerHTML = "";
+  rightSeatsContainer.innerHTML = "";
   for (let i = 0; i < 28; i++) {
     leftSeatsContainer.innerHTML = rightSeatsContainer.innerHTML += `<svg
 xmlns="http://www.w3.org/2000/svg"
@@ -135,11 +172,10 @@ stroke-linejoin="round"
 <path d="M17 19v2"></path>
 </svg>`;
   }
-})();
-
-let seats = document.querySelectorAll(".seat");
+}
 
 function addSeatId(clickedButtonId) {
+  const seats = document.querySelectorAll(".seat");
   seats.forEach((seat, index) => {
     seat.addEventListener("click", function () {
       const boundSelectSeat = selectSeat.bind(this);
@@ -148,23 +184,26 @@ function addSeatId(clickedButtonId) {
     seat.id = index;
   });
 }
+
 function selectSeat(clickedButtonId) {
-  // console.log(this);
-  console.log(clickedButtonId);
   if (this.classList.value.includes("booked")) {
+    console.log("hello");
     alert("That seat is booked");
   } else {
     this.classList.toggle("selected");
     if (!movies[clickedButtonId].preselectedSeats.includes(+this.id))
       movies[clickedButtonId].preselectedSeats.push(+this.id);
-    else if (movies[clickedButtonId].preselectedSeats.includes(+this.id))
-      movies[clickedButtonId].preselectedSeats.pop(+this.id);
-    console.log(movies);
+    else {
+      movies[clickedButtonId].preselectedSeats = movies[
+        clickedButtonId
+      ].preselectedSeats.filter((id) => id !== +this.id);
+    }
     countTickets();
   }
 }
 
 function setBookedSeats(clickedButtonId) {
+  const seats = document.querySelectorAll(".seat");
   for (let i = 0; i < movies[clickedButtonId].bookedSeats.length; i++) {
     seats[movies[clickedButtonId].bookedSeats[i]].classList.add("booked");
     seats[movies[clickedButtonId].bookedSeats[i]].classList.remove(
@@ -174,17 +213,17 @@ function setBookedSeats(clickedButtonId) {
 }
 
 function preselectSeats(clickedButtonId) {
+  const seats = document.querySelectorAll(".seat");
   for (let i = 0; i < movies[clickedButtonId].preselectedSeats.length; i++)
     seats[movies[clickedButtonId].preselectedSeats[i]].classList.add(
       "selected"
     );
 }
 
-// setBookedSeats();
-// preSelectSeats();
 countTickets();
 
 function countTickets() {
+  const seats = document.querySelectorAll(".seat");
   let count = 0;
   let ticketsNr = document.getElementById("ticketsNr");
   seats.forEach((seat) => {
