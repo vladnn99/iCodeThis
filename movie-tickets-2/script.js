@@ -4,6 +4,7 @@ const movies = [
     title: "Guardians of the Galaxy Vol. 2",
     headerPoster:
       "https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_FMjpg_UX1000_.jpg",
+    headerPosterPosition: "0% 35%",
     seats: "",
     nrTickets: 0,
     totalPrice: "",
@@ -15,6 +16,7 @@ const movies = [
     title: "Iron Man",
     headerPoster:
       "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/80C64C0B63382CD3ED2653356125F275F63D036028A77D38DC3286AD851A6833/scale?width=1200&aspectRatio=1.78&format=jpeg",
+    headerPosterPosition: "0% 35%",
     seats: "",
     nrTickets: 0,
     totalPrice: "",
@@ -26,6 +28,7 @@ const movies = [
     title: "Transformers",
     headerPoster:
       "https://w0.peakpx.com/wallpaper/622/658/HD-wallpaper-transformers-1-the-saga-begins-hot-new-movies-cars.jpg",
+    headerPosterPosition: "0% 35%",
     seats: "",
     nrTickets: 0,
     totalPrice: "",
@@ -37,6 +40,7 @@ const movies = [
     title: "Interstellar",
     headerPoster:
       "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+    headerPosterPosition: "0% 10%",
     seats: "",
     nrTickets: 0,
     totalPrice: "",
@@ -75,8 +79,8 @@ const container = document.getElementById("container");
       "py-2 rounded-lg hover:translate-x-2 transition-transform duration-300 ease-in-out button object-cover";
     buttonElement.textContent = movie.title;
     buttonElement.id = index;
-    buttonElement.style = ` background-image: url(${movie.headerPoster});
-    background-position: 50% 35%;`;
+    buttonElement.style = `background-image: linear-gradient(rgba(6, 78, 88, 0.9), rgba(230, 255, 250, 0.4)),
+    url(${movie.headerPoster}) ; background-position: 50% 35%;`;
     titlesContainer.appendChild(buttonElement);
   });
 })();
@@ -93,6 +97,7 @@ goBackAddListener();
       setBookedSeats(clickedButtonId);
       preselectSeats(clickedButtonId);
       handleButtonClick(event, clickedButtonId);
+      countTickets();
     });
   });
 })();
@@ -117,7 +122,7 @@ function loadPosterTitle(clickedButtonId) {
   const poster = document.getElementById("imageContainer");
   const title = document.getElementById("title");
   poster.style = `background-image: url(${movies[clickedButtonId].headerPoster});
-  background-position: 0% 35%;`;
+  background-position: ${movies[clickedButtonId].headerPosterPosition};`;
   title.textContent = movies[clickedButtonId].title;
 }
 
@@ -186,7 +191,6 @@ function addSeatId(clickedButtonId) {
 
 function selectSeat(clickedButtonId) {
   if (this.classList.value.includes("booked")) {
-    console.log("hello");
     alert("That seat is booked");
   } else {
     this.classList.toggle("selected");
@@ -218,8 +222,6 @@ function preselectSeats(clickedButtonId) {
       "selected"
     );
 }
-
-countTickets();
 
 function countTickets() {
   const seats = document.querySelectorAll(".seat");
