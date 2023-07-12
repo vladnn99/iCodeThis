@@ -7,3 +7,34 @@ body {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+/* Hide the default checkbox */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #a7bbe9;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Custom checkbox design */
+input[type="checkbox"]:checked {
+  background-color: #06b1d4; /* Set the desired background color */
+}
+
+/* Custom checkmark */
+input[type="checkbox"]:checked::before {
+  content: "\2713";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}

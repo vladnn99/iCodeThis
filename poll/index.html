@@ -10,11 +10,14 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
   </head>
-  <body class="bg-[#456e76] flex justify-center items-center h-screen">
+  <body
+    class="bg-[#456e76] flex justify-center items-center h-screen text-[#406870]"
+  >
     <div
       id="container"
-      class="bg-white rounded-xl shadow-2xl w-2/5 h-3/5 flex flex-col gap-5"
+      class="bg-white rounded-xl shadow-2xl w-full h-[90%] flex flex-col gap-5 max-w-md md:w-1/2 lg:h-3/5"
     >
       <div
         id="headerContainer"
@@ -27,11 +30,96 @@
       </div>
       <div
         id="pollOptionContainer"
-        class="w-full h-20 px-5 flex flex-col justify-center text-xs"
+        class="w-full h-3/5 px-5 flex flex-col text-sm"
       >
-        <div id="checkAndText" class="w-full h-1/2 flex items-center gap-3">
-          <input type="checkbox" class="w-10 h-10 text-pink-500" />
+        <div
+          id="option1"
+          class="flex flex-col items-center justify-center w-full h-1/3"
+        >
+          <div id="checkAndText1" class="w-full h-1/2 flex items-center gap-3">
+            <label for="check1" class="flex items-center gap-2"
+              ><input type="checkbox" class="checkbox" name="check1" checked />
+              <button class="button">Definitely a success.</button>
+            </label>
+          </div>
+          <div id="pollContainer1" class="flex w-full h-8 items-center gap-3">
+            <div
+              id="pollBg1"
+              class="w-[85%] h-3 rounded-full mt-1 bg-gray-100 relative"
+            >
+              <div
+                id="pollColor1"
+                class="absolute w-[65%] h-[90%] bg-green-500 rounded-full shadow-green-700 shadow-sm"
+              ></div>
+            </div>
+            <div id="percentage1">
+              <p class="font-semibold text-lg mt-1">65%</p>
+            </div>
+          </div>
         </div>
+        <div
+          id="option2"
+          class="flex flex-col items-center justify-center w-full h-1/3"
+        >
+          <div id="checkAndText2" class="w-full h-1/2 flex items-center gap-3">
+            <label for="check1" class="flex items-center gap-2"
+              ><input type="checkbox" class="checkbox" name="check1" />
+              <button class="button">No.</button>
+            </label>
+          </div>
+          <div id="pollContainer2" class="flex w-full h-8 items-center gap-3">
+            <div
+              id="pollBg2"
+              class="w-[85%] h-3 rounded-full mt-1 bg-gray-100 relative"
+            >
+              <div
+                id="pollColor2"
+                class="absolute w-[12%] h-[90%] bg-pink-500 rounded-full shadow-pink-600 shadow-sm"
+              ></div>
+            </div>
+            <div id="percentage2">
+              <p class="font-semibold text-lg mt-1">12%</p>
+            </div>
+          </div>
+        </div>
+        <div
+          id="option2"
+          class="flex flex-col items-center justify-center w-full h-1/3"
+        >
+          <div id="checkAndText2" class="w-full h-1/2 flex items-center gap-3">
+            <label for="check1" class="flex items-center gap-2"
+              ><input type="checkbox" class="checkbox" name="check1" />
+              <button class="button">
+                Only if it's in the How To section of the library.
+              </button>
+            </label>
+          </div>
+          <div id="pollContainer2" class="flex w-full h-8 items-center gap-3">
+            <div
+              id="pollBg2"
+              class="w-[85%] h-3 rounded-full mt-1 bg-gray-100 relative"
+            >
+              <div
+                id="pollColor2"
+                class="absolute w-[23%] h-[90%] bg-orange-400 rounded-full shadow-orange-600 shadow-sm"
+              ></div>
+            </div>
+            <div id="percentage3">
+              <p class="font-semibold text-lg mt-1">23%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="buttonContainer"
+        class="w-[90%] h-20 flex items-center justify-center self-center"
+      >
+        <button
+          id="submit"
+          class="text-sm bg-sky-400 text-white px-6 py-2 rounded-md shadow-md"
+        >
+          Submit
+        </button>
       </div>
     </div>
   </body>
