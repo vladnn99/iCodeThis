@@ -1,0 +1,21 @@
+* {
+  outline: 1px solid rgba(255, 0, 0, 0.7);
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.bg-radial {
+  background: radial-gradient(circle, rgb(39, 187, 168), rgba(17, 94, 89, 1));
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid rgba(23, 37, 84, 0.7);
+}
