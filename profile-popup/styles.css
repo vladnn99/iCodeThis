@@ -1,0 +1,25 @@
+* {
+  outline: 1px solid rgba(255, 0, 0, 0.7);
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #ffffff;
+}
+
+.triangle2 {
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-left: 8px solid rgb(23, 37, 84);
+  border-bottom: 6px solid transparent;
+}
