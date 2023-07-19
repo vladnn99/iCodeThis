@@ -1,0 +1,362 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-[#1c2333] flex justify-center items-center h-screen text-[#1c2333]"
+  >
+    <div
+      id="container"
+      class="bg-white w-11/12 h-[85%] md:w-10/12 flex flex-col px-7 pt-2 max-w-3xl"
+    >
+      <div id="headerDescription" class="w-full h-1/3 flex gap-3">
+        <div id="leftContainer" class="w-1/4 h-full relative">
+          <img
+            class="h-44 w-full object-cover absolute top-[-1.5rem] shadow-gray-500 shadow-md"
+            src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?w=2000"
+            alt="profilePic"
+          />
+        </div>
+        <div id="rightContainer" class="w-3/4 h-full py-0 flex flex-col">
+          <div
+            id="upperContainer"
+            class="w-full h-[35%] flex border-b min-h-[3.5rem]"
+          >
+            <div
+              id="nameContainer"
+              class="w-[40%] h-full flex flex-col border-r"
+            >
+              <h1 class="italic font-semibold">Joan Doe</h1>
+              <p class="text-[0.6rem] text-gray-400 mt-[-0.3rem]">
+                - Photography
+              </p>
+              <p class="text-[0.6rem] text-gray-400 mt-1 flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-map-pin w-3 h-3"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                  <path
+                    d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+                  ></path>
+                </svg>
+                Timisoara, RO
+              </p>
+            </div>
+            <div
+              id="pictograms"
+              class="w-[35%] h-full flex justify-evenly border-r"
+            >
+              <div
+                id="pictures"
+                class="flex flex-col items-center justify-center hover:text-yellow-500 transition duration-300 cursor-pointer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-photo w-5 h-5"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M15 8h.01"></path>
+                  <path
+                    d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z"
+                  ></path>
+                  <path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5"></path>
+                  <path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3"></path>
+                </svg>
+                <h1 class="font-bold">127</h1>
+              </div>
+              <div
+                id="likesContainer"
+                class="flex flex-col items-center justify-center hover:text-yellow-500 transition duration-300 cursor-pointer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-heart w-5 h-5"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"
+                  ></path>
+                </svg>
+                <h1 class="font-bold">354</h1>
+              </div>
+              <div
+                id="profileViewsContainer"
+                class="flex flex-col items-center justify-center hover:text-yellow-500 transition duration-300 cursor-pointer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-user-circle w-5 h-5"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                  <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                  <path
+                    d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"
+                  ></path>
+                </svg>
+                <h1 class="font-bold">470</h1>
+              </div>
+            </div>
+            <div
+              id="followButtonContainer"
+              class="w-[25%] h-full flex items-center justify-center"
+            >
+              <button
+                class="flex items-center justify-center bg-yellow-300 text-white px-4 py-2 text-xs rounded-sm shadow-sm gap-1 hover:bg-yellow-500 transition duration-300"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-user-plus w-4 h-4"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                  <path d="M16 19h6"></path>
+                  <path d="M19 16v6"></path>
+                  <path d="M6 21v-2a4 4 0 0 1 4 -4h4"></path>
+                </svg>
+                Follow
+              </button>
+            </div>
+          </div>
+          <div id="lowerContainer" class="w-full h-[65%] flex justify-between">
+            <div
+              id="lowerLeftContainer"
+              class="w-3/4 h-full flex flex-col pt-2"
+            >
+              <h2 class="text-sm font-semibold">About me</h2>
+              <p class="text-[0.55rem] text-gray-400 w-[90%]">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Debitis ipsam voluptate ad quaerat praesentium iure maxime
+                ducimus quis dolor provident!
+              </p>
+              <p class="text-[0.55rem] text-gray-400 mt-1 w-[90%]">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Architecto, tenetur amet? Officia corporis aliquid voluptate!
+              </p>
+            </div>
+            <div
+              id="lowerRightContainer"
+              class="w-1/4 h-full flex flex-col pt-2"
+            >
+              <h2 class="text-sm font-semibold pl-3">Skills</h2>
+              <div id="row1" class="w-full h-1/4 flex items-center">
+                <div
+                  id="row1Left"
+                  class="w-1/2 h-full flex items-center justify-end pr-1"
+                >
+                  <p class="text-[0.55rem]">Equipment</p>
+                </div>
+                <div
+                  id="row1BarContainer"
+                  class="w-1/2 h-full flex items-center"
+                >
+                  <div
+                    id="row1BarBg"
+                    class="w-full h-[2px] bg-gray-400 relative"
+                  >
+                    <div
+                      id="row1BarCompleted"
+                      class="w-[69%] h-[3px] bg-blue-950 absolute bottom-[-0.5px]"
+                    ></div>
+                    <div
+                      id="row1CompletedDot"
+                      class="w-2 h-2 absolute bg-blue-950 rounded-full left-[70%] bottom-[-3px]"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div id="row2" class="w-full h-1/4 flex items-center">
+                <div
+                  id="row2Left"
+                  class="w-1/2 h-full flex items-center justify-end pr-1"
+                >
+                  <p class="text-[0.55rem]">Editing</p>
+                </div>
+                <div
+                  id="row2BarContainer"
+                  class="w-1/2 h-full flex items-center"
+                >
+                  <div
+                    id="row2BarBg"
+                    class="w-full h-[2px] bg-gray-400 relative"
+                  >
+                    <div
+                      id="row2BarCompleted"
+                      class="w-[55%] h-[3px] bg-blue-950 absolute bottom-[-0.5px]"
+                    ></div>
+                    <div
+                      id="row2CompletedDot"
+                      class="w-2 h-2 absolute bg-blue-950 rounded-full left-[55%] bottom-[-3px]"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div id="row3" class="w-full h-1/4 flex items-center">
+                <div
+                  id="row3Left"
+                  class="w-1/2 h-full flex items-center justify-end pr-1"
+                >
+                  <p class="text-[0.55rem]">Marketing</p>
+                </div>
+                <div
+                  id="row3BarContainer"
+                  class="w-1/2 h-full flex items-center"
+                >
+                  <div
+                    id="row3BarBg"
+                    class="w-full h-[2px] bg-gray-400 relative"
+                  >
+                    <div
+                      id="row3BarCompleted"
+                      class="w-[45%] h-[3px] bg-blue-950 absolute bottom-[-0.5px]"
+                    ></div>
+                    <div
+                      id="row3CompletedDot"
+                      class="w-2 h-2 absolute bg-blue-950 rounded-full left-[45%] bottom-[-3px]"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div id="row4" class="w-full h-1/4 flex items-center">
+                <div
+                  id="row4Left"
+                  class="w-1/2 h-full flex items-center justify-end pr-1"
+                >
+                  <p class="text-[0.55rem]">Retouching</p>
+                </div>
+                <div
+                  id="row4BarContainer"
+                  class="w-1/2 h-full flex items-center"
+                >
+                  <div
+                    id="row4BarBg"
+                    class="w-full h-[2px] bg-gray-400 relative"
+                  >
+                    <div
+                      id="row4BarCompleted"
+                      class="w-[85%] h-[3px] bg-blue-950 absolute bottom-[-0.5px]"
+                    ></div>
+                    <div
+                      id="row4CompletedDot"
+                      class="w-2 h-2 absolute bg-blue-950 rounded-full left-[80%] bottom-[-3px]"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="contentContainer"
+        class="w-full h-2/3 grid grid-cols-6 grid-rows-6 grid-flow-col gap-3"
+      >
+        <img
+          id="01"
+          class="object-cover w-full h-full row-span-2 col-span-2"
+          src="https://mcn-images.bauersecure.com/wp-images/59488/1440x960/ducati.jpg?mode=max&quality=90&scale=down"
+          alt=""
+        />
+        <img
+          id="02"
+          class="object-cover w-full h-full row-span-4 col-span-2"
+          src="https://mcn-images.bauersecure.com/wp-images/59488/1440x960/ducati.jpg?mode=max&quality=90&scale=down"
+          alt=""
+        />
+        <img
+          id="03"
+          class="object-cover w-full h-full col-span-3"
+          src="https://mcn-images.bauersecure.com/wp-images/59488/1440x960/ducati.jpg?mode=max&quality=90&scale=down"
+          alt=""
+        />
+        <img
+          id="04"
+          class="object-cover w-full h-full row-span-3 col-span-2"
+          src="https://mcn-images.bauersecure.com/wp-images/59488/1440x960/ducati.jpg?mode=max&quality=90&scale=down"
+          alt=""
+        />
+        <img
+          id="05"
+          class="object-cover w-full h-full row-span-2 col-span-2"
+          src="https://mcn-images.bauersecure.com/wp-images/59488/1440x960/ducati.jpg?mode=max&quality=90&scale=down"
+          alt=""
+        />
+        <img
+          id="06"
+          class="object-cover w-full h-full row-span-5"
+          src="https://mcn-images.bauersecure.com/wp-images/59488/1440x960/ducati.jpg?mode=max&quality=90&scale=down"
+          alt=""
+        />
+        <img
+          id="07"
+          class="object-cover w-full h-full row-span-2"
+          src="https://mcn-images.bauersecure.com/wp-images/59488/1440x960/ducati.jpg?mode=max&quality=90&scale=down"
+          alt=""
+        />
+        <img
+          id="08"
+          class="object-cover w-full h-full row-span-4"
+          src="https://mcn-images.bauersecure.com/wp-images/59488/1440x960/ducati.jpg?mode=max&quality=90&scale=down"
+          alt=""
+        />
+        <!-- <img
+          id="09"
+          class="object-cover w-full h-full"
+          src="https://mcn-images.bauersecure.com/wp-images/59488/1440x960/ducati.jpg?mode=max&quality=90&scale=down"
+          alt=""
+        /> -->
+      </div>
+    </div>
+  </body>
+</html>
