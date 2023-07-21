@@ -12,28 +12,187 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body
-    class="bg-[#1c2333] flex justify-center items-center h-screen text-[#1c2333]"
+    class="bg-[#1c2333] flex justify-center items-center h-fit md:h-screen text-[#1c2333]"
   >
     <div
       id="container"
-      class="bg-white w-11/12 h-[85%] md:w-10/12 flex flex-col px-7 pt-2 max-w-3xl"
+      class="bg-white w-11/12 h-fit md:h-full lg:h-[90%] md:w-10/12 flex flex-col px-7 pt-2 max-w-3xl gap-2 relative"
     >
-      <div id="headerDescription" class="w-full h-1/3 flex gap-3">
-        <div id="leftContainer" class="w-1/4 h-full relative">
+      <div
+        id="socialBar"
+        class="hidden md:flex md:flex-col items-center absolute md:w-8 md:h-40 md:right-[-2rem] md:top-0 bg-gray-300 drop-shadow-xl shadow-inner shadow-gray-400 justify-around md:pt-2"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler cursor-pointer icon-tabler-dots-vertical hover:text-yellow-500 transition duration-300"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+          <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+          <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler cursor-pointer icon-tabler-bell hover:text-yellow-500 transition duration-300"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path
+            d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"
+          ></path>
+          <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler cursor-pointer icon-tabler-pencil hover:text-yellow-500 transition duration-300"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4"></path>
+          <path d="M13.5 6.5l4 4"></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler cursor-pointer icon-tabler-share hover:text-yellow-500 transition duration-300"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+          <path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+          <path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+          <path d="M8.7 10.7l6.6 -3.4"></path>
+          <path d="M8.7 13.3l6.6 3.4"></path>
+        </svg>
+      </div>
+
+      <div
+        id="headerDescription"
+        class="w-full h-fit md:h-[35%] flex flex-col md:flex-row gap-3 mb-5 md:mb-0"
+      >
+        <div id="leftContainer" class="w-full md:w-1/4 h-full relative flex">
           <img
-            class="h-44 w-full object-cover absolute top-[-1.5rem] shadow-gray-500 shadow-md"
+            class="lg:h-44 h-full object-cover lg:absolute lg:top-[-1.5rem] shadow-gray-500 shadow-md"
             src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?w=2000"
             alt="profilePic"
           />
+          <div
+            id="socialBar"
+            class="md:hidden flex items-center absolute w-40 h-8 bg-white bg-opacity-40 justify-around right-0 bottom-0"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler cursor-pointer icon-tabler-dots-vertical hover:text-yellow-500 transition duration-300"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="1"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+              <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+              <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler cursor-pointer icon-tabler-bell hover:text-yellow-500 transition duration-300"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="1"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"
+              ></path>
+              <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler cursor-pointer icon-tabler-pencil hover:text-yellow-500 transition duration-300"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="1"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4"
+              ></path>
+              <path d="M13.5 6.5l4 4"></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler cursor-pointer icon-tabler-share hover:text-yellow-500 transition duration-300"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="1"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+              <path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+              <path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+              <path d="M8.7 10.7l6.6 -3.4"></path>
+              <path d="M8.7 13.3l6.6 3.4"></path>
+            </svg>
+          </div>
         </div>
-        <div id="rightContainer" class="w-3/4 h-full py-0 flex flex-col">
+        <div
+          id="rightContainer"
+          class="w-full md:w-3/4 h-full py-0 flex flex-col"
+        >
           <div
             id="upperContainer"
-            class="w-full h-[35%] flex border-b min-h-[3.5rem]"
+            class="w-full h-[35%] flex flex-col md:flex-row border-b min-h-[3.5rem] items-center gap-2"
           >
             <div
               id="nameContainer"
-              class="w-[40%] h-full flex flex-col border-r"
+              class="md:w-[40%] h-full flex flex-col md:border-r"
             >
               <h1 class="italic font-semibold">Joan Doe</h1>
               <p class="text-[0.6rem] text-gray-400 mt-[-0.3rem]">
@@ -63,7 +222,7 @@
             </div>
             <div
               id="pictograms"
-              class="w-[35%] h-full flex justify-evenly border-r"
+              class="w-[35%] h-full flex justify-evenly md:border-r"
             >
               <div
                 id="pictures"
@@ -142,7 +301,7 @@
             </div>
             <div
               id="followButtonContainer"
-              class="w-[25%] h-full flex items-center justify-center"
+              class="w-[25%] h-full flex items-center justify-center mb-2 md:mb-0"
             >
               <button
                 class="flex items-center justify-center bg-yellow-300 text-white px-4 py-2 text-xs rounded-sm shadow-sm gap-1 hover:bg-yellow-500 transition duration-300"
@@ -172,7 +331,7 @@
           <div id="lowerContainer" class="w-full h-[65%] flex justify-between">
             <div
               id="lowerLeftContainer"
-              class="w-3/4 h-full flex flex-col pt-2"
+              class="w-3/4 h-full flex flex-col lg:pt-2"
             >
               <h2 class="text-sm font-semibold">About me</h2>
               <p class="text-[0.55rem] text-gray-400 w-[90%]">
@@ -187,7 +346,7 @@
             </div>
             <div
               id="lowerRightContainer"
-              class="w-1/4 h-full flex flex-col pt-2"
+              class="w-1/4 h-full flex flex-col lg:pt-2"
             >
               <h2 class="text-sm font-semibold pl-3">Skills</h2>
               <div id="row1" class="w-full h-1/4 flex items-center">
@@ -300,62 +459,264 @@
       </div>
       <div
         id="contentContainer"
-        class="w-full h-2/3 grid grid-cols-6 grid-rows-6 grid-flow-col gap-3"
+        class="w-full h-fit md:h-[65%] grid grid-cols-1 md:grid-cols-6 md:grid-rows-6 md:grid-flow-col gap-3 pb-2"
       >
-        <img
-          id="01"
-          class="object-cover w-full h-full row-span-2 col-span-2"
-          src="https://mcn-images.bauersecure.com/wp-images/59488/1440x960/ducati.jpg?mode=max&quality=90&scale=down"
-          alt=""
-        />
-        <img
-          id="02"
-          class="object-cover w-full h-full row-span-4 col-span-2"
-          src="https://mcn-images.bauersecure.com/wp-images/59488/1440x960/ducati.jpg?mode=max&quality=90&scale=down"
-          alt=""
-        />
-        <img
-          id="03"
-          class="object-cover w-full h-full col-span-3"
-          src="https://mcn-images.bauersecure.com/wp-images/59488/1440x960/ducati.jpg?mode=max&quality=90&scale=down"
-          alt=""
-        />
-        <img
-          id="04"
-          class="object-cover w-full h-full row-span-3 col-span-2"
-          src="https://mcn-images.bauersecure.com/wp-images/59488/1440x960/ducati.jpg?mode=max&quality=90&scale=down"
-          alt=""
-        />
-        <img
-          id="05"
-          class="object-cover w-full h-full row-span-2 col-span-2"
-          src="https://mcn-images.bauersecure.com/wp-images/59488/1440x960/ducati.jpg?mode=max&quality=90&scale=down"
-          alt=""
-        />
-        <img
-          id="06"
-          class="object-cover w-full h-full row-span-5"
-          src="https://mcn-images.bauersecure.com/wp-images/59488/1440x960/ducati.jpg?mode=max&quality=90&scale=down"
-          alt=""
-        />
-        <img
-          id="07"
-          class="object-cover w-full h-full row-span-2"
-          src="https://mcn-images.bauersecure.com/wp-images/59488/1440x960/ducati.jpg?mode=max&quality=90&scale=down"
-          alt=""
-        />
-        <img
-          id="08"
-          class="object-cover w-full h-full row-span-4"
-          src="https://mcn-images.bauersecure.com/wp-images/59488/1440x960/ducati.jpg?mode=max&quality=90&scale=down"
-          alt=""
-        />
-        <!-- <img
-          id="09"
-          class="object-cover w-full h-full"
-          src="https://mcn-images.bauersecure.com/wp-images/59488/1440x960/ducati.jpg?mode=max&quality=90&scale=down"
-          alt=""
-        /> -->
+        <div class="md:row-span-2 md:col-span-2 relative">
+          <img
+            id="01"
+            class="object-cover w-full cursor-pointer h-full md:hover:opacity-60 transition-opacity duration-500"
+            src="https://images.pexels.com/photos/4424141/pexels-photo-4424141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <div
+            class="absolute w-16 h-5 bg-[#1c2333] bottom-0 opacity-90 flex items-center justify-center text-[0.6rem] text-gray-300 gap-1 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-heart-filled w-4 h-4 text-red-600"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"
+                stroke-width="0"
+                fill="currentColor"
+              ></path>
+            </svg>
+            <p>43 likes</p>
+          </div>
+        </div>
+        <div class="md:row-span-4 md:col-span-2 relative">
+          <img
+            id="02"
+            class="object-cover w-full cursor-pointer h-full md:hover:opacity-60 transition-opacity duration-500"
+            src="https://images.pexels.com/photos/17535285/pexels-photo-17535285/free-photo-of-woman-in-dress-standing-among-plants.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <div
+            class="absolute w-16 h-5 bg-[#1c2333] bottom-0 opacity-90 flex items-center justify-center text-[0.6rem] text-gray-300 gap-1 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-heart-filled w-4 h-4 text-red-600"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"
+                stroke-width="0"
+                fill="currentColor"
+              ></path>
+            </svg>
+            <p>24 likes</p>
+          </div>
+        </div>
+        <div class="md:col-span-3 relative">
+          <img
+            id="03"
+            class="object-cover w-full cursor-pointer h-full md:hover:opacity-60 transition-opacity duration-500"
+            src="https://images.pexels.com/photos/1554663/pexels-photo-1554663.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <div
+            class="absolute w-16 h-5 bg-[#1c2333] bottom-0 opacity-90 flex items-center justify-center text-[0.6rem] text-gray-300 gap-1 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-heart-filled w-4 h-4 text-red-600"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"
+                stroke-width="0"
+                fill="currentColor"
+              ></path>
+            </svg>
+            <p>9 likes</p>
+          </div>
+        </div>
+        <div class="md:row-span-3 md:col-span-2 relative">
+          <img
+            id="04"
+            class="object-cover w-full cursor-pointer h-full md:hover:opacity-60 transition-opacity duration-500"
+            src="https://mcn-images.bauersecure.com/wp-images/59488/1440x960/ducati.jpg?mode=max&quality=90&scale=down"
+            alt=""
+          />
+          <div
+            class="absolute w-16 h-5 bg-[#1c2333] bottom-0 opacity-90 flex items-center justify-center text-[0.6rem] text-gray-300 gap-1 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-heart-filled w-4 h-4 text-red-600"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"
+                stroke-width="0"
+                fill="currentColor"
+              ></path>
+            </svg>
+            <p>62 likes</p>
+          </div>
+        </div>
+        <div class="md:row-span-2 md:col-span-2 relative">
+          <img
+            id="05"
+            class="object-cover w-full cursor-pointer h-full md:hover:opacity-60 transition-opacity duration-500"
+            src="https://images.pexels.com/photos/1085718/pexels-photo-1085718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <div
+            class="absolute w-16 h-5 bg-[#1c2333] bottom-0 opacity-90 flex items-center justify-center text-[0.6rem] text-gray-300 gap-1 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-heart-filled w-4 h-4 text-red-600"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"
+                stroke-width="0"
+                fill="currentColor"
+              ></path>
+            </svg>
+            <p>78 likes</p>
+          </div>
+        </div>
+        <div class="md:row-span-5 relative">
+          <img
+            id="06"
+            class="object-cover w-full cursor-pointer h-full md:hover:opacity-60 transition-opacity duration-500"
+            src="https://images.pexels.com/photos/17655313/pexels-photo-17655313/free-photo-of-venice-italy.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <div
+            class="absolute w-16 h-5 bg-[#1c2333] bottom-0 opacity-90 flex items-center justify-center text-[0.6rem] text-gray-300 gap-1 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-heart-filled w-4 h-4 text-red-600"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"
+                stroke-width="0"
+                fill="currentColor"
+              ></path>
+            </svg>
+            <p>36 likes</p>
+          </div>
+        </div>
+        <div class="md:row-span-2 relative">
+          <img
+            id="07"
+            class="object-cover w-full cursor-pointer h-full md:hover:opacity-60 transition-opacity duration-500"
+            src="https://images.pexels.com/photos/3410536/pexels-photo-3410536.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <div
+            class="absolute w-16 h-5 bg-[#1c2333] bottom-0 opacity-90 flex items-center justify-center text-[0.6rem] text-gray-300 gap-1 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-heart-filled w-4 h-4 text-red-600"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"
+                stroke-width="0"
+                fill="currentColor"
+              ></path>
+            </svg>
+            <p>43 likes</p>
+          </div>
+        </div>
+        <div class="md:row-span-4 relative">
+          <img
+            id="08"
+            class="object-cover w-full cursor-pointer h-full md:hover:opacity-60 transition-opacity duration-500"
+            src="https://images.pexels.com/photos/17539223/pexels-photo-17539223/free-photo-of-vintage-peugeot-bicycle.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <div
+            class="absolute w-16 h-5 bg-[#1c2333] bottom-0 opacity-90 flex items-center justify-center text-[0.6rem] text-gray-300 gap-1 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-heart-filled w-4 h-4 text-red-600"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z"
+                stroke-width="0"
+                fill="currentColor"
+              ></path>
+            </svg>
+            <p>98 likes</p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
