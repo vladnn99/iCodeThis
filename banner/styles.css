@@ -1,0 +1,23 @@
+* {
+  /* outline: 1px solid rgba(255, 0, 0, 0.7); */
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+#containerOne {
+  background-repeat: no-repeat;
+  background-size: 200% auto;
+  background-position-x: 125%;
+  background-position-y: 15%;
+}
+
+#containerThree {
+  background-repeat: no-repeat;
+  background-size: 400% auto;
+  background-position-x: 40%;
+  background-position-y: 0%;
+}
