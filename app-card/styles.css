@@ -1,0 +1,23 @@
+* {
+  /* outline: 1px solid rgba(255, 0, 0, 0.7); */
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  body::after {
+    content: " ";
+    border-bottom: 1850vh solid transparent;
+    border-left: 100vw solid rgb(23, 37, 84);
+    transform: translate(0%, 0%);
+    width: 0;
+    position: absolute;
+    z-index: -1;
+  }
+}
