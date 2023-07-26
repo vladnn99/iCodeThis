@@ -1,0 +1,136 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-900 flex justify-center items-center h-screen">
+    <div
+      id="container"
+      class="bg-gray-700 rounded-xl w-full sm:w-[45%] h-[94%] lg:w-1/5 lg:h-4/6 flex flex-col min-w-[24rem]"
+    >
+      <div
+        id="blueHeader"
+        class="w-full h-[10%] rounded-t-xl bg-blue-300 flex items-center justify-center relative"
+      >
+        <h1 class="text-white">Haleakala Crater</h1>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-chevron-left text-white absolute left-2 w-7 h-7 cursor-pointer"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M15 6l-6 6l6 6"></path>
+        </svg>
+      </div>
+      <div id="imageContainer" class="w-full h-[25%] flex relative">
+        <img
+          class="object-cover w-full"
+          src="https://cdn.outsideonline.com/wp-content/uploads/2022/12/haleakala-crater-slidingsands_h.jpg"
+          alt="Haleakala"
+        />
+        <button
+          class="absolute bg-white text-white bg-opacity-30 rounded-full right-3 bottom-2 text-xs px-3 py-1"
+        >
+          Tap to view images
+        </button>
+      </div>
+      <div
+        id="nameLocation"
+        class="w-full h-[8%] bg-gray-800 flex flex-col justify-center pl-6"
+      >
+        <h2 class="text-white text-sm">Haleakala Crater</h2>
+        <p class="text-[0.6rem] text-gray-400 flex">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-map-pin-filled w-3 h-3"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
+              stroke-width="0"
+              fill="currentColor"
+            ></path>
+          </svg>
+          Shield volcano in Hawaii
+        </p>
+      </div>
+      <div
+        id="textAndVisitors"
+        class="w-full h-[57%] rounded-b-xl flex flex-col px-6 pt-4 gap-2"
+      >
+        <p class="text-gray-200 text-[0.6rem] lg:text-xs leading-[1.1rem]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat illum
+          perferendis libero quibusdam, inventore dolorum natus vitae officia
+          accusantium impedit iure aliquid non nemo, odio illo ea ratione nobis
+          eos consequuntur animi maxime ut fugit quae ullam. Repellat, illum
+          voluptatem maiores fuga enim hic dicta tempore ipsum rem. Rerum,
+          iusto.
+        </p>
+        <div id="avatars" class="w-full h-12 lg:mt-2 flex items-center">
+          <img
+            class="w-11 h-11 object-cover rounded-full"
+            src="https://images.pexels.com/photos/4927361/pexels-photo-4927361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <img
+            class="w-11 h-11 object-cover rounded-full ml-[-0.6rem]"
+            src="https://images.pexels.com/photos/4757976/pexels-photo-4757976.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <img
+            class="w-11 h-11 object-cover rounded-full ml-[-0.6rem]"
+            src="https://images.pexels.com/photos/511313/pexels-photo-511313.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <img
+            class="w-11 h-11 object-cover rounded-full ml-[-0.6rem]"
+            src="https://images.pexels.com/photos/1868684/pexels-photo-1868684.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <img
+            class="w-11 h-11 object-cover rounded-full ml-[-0.6rem]"
+            src="https://images.pexels.com/photos/2430921/pexels-photo-2430921.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <img
+            class="w-11 h-11 object-cover rounded-full ml-[-0.6rem]"
+            src="https://images.pexels.com/photos/3656518/pexels-photo-3656518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+          <div id="extraUsers" class="h-full flex flex-col justify-center ml-2">
+            <p class="text-blue-300 text-[0.6rem] font-semibold">+16 users</p>
+            <p class="text-gray-300 text-[0.6rem]">visited this place</p>
+          </div>
+        </div>
+        <button
+          class="bg-blue-300 text-white text-sm w-full py-3 mt-1 lg:mt-4 rounded-full hover:bg-blue-400 duration-300"
+        >
+          BOOK A TRIP
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
