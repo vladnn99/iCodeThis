@@ -10,5 +10,16 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: "Satoshi", sans-serif;
-  overflow-x: hidden;
+}
+
+/* Styles for the initial state */
+nav.initial {
+  transform: translatey(0);
+  opacity: 1;
+}
+
+/* Styles for the scrolled state */
+nav.scrolled {
+  transform: translateY(-100%);
+  opacity: 0.8; /* Adjust the opacity as needed */
 }

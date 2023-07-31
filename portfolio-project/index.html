@@ -8,9 +8,12 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="script.js"></script>
   </head>
-  <body class="flex flex-col w-screen h-fit min-h-screen items-center">
-    <nav class="w-full h-40 flex justify-between pt-8 px-8">
+  <body class="flex flex-col w-full h-fit min-h-screen items-center">
+    <nav
+      class="w-full h-40 flex justify-between pt-8 px-8 transition-opacity opacity-100 duration-500 bg-white"
+    >
       <div id="avatarAndName" class="w-2/5 h-full flex items-center gap-2">
         <img
           class="w-32 h-32 rounded-full object-cover"
