@@ -1,4 +1,3 @@
-console.log(`Hello world`);
 const nav = document.querySelector("nav");
 const avatar = document.getElementById("avatar");
 const slider = document.getElementById("slider");
@@ -9,6 +8,7 @@ const targetSections = [];
 console.log(avatar);
 console.log(slider);
 console.log(menu);
+console.log(menuLinks);
 
 function addIds(menuLinks) {
   menuLinks.forEach((link, index) => {
@@ -18,8 +18,9 @@ function addIds(menuLinks) {
 
 function getTargetSections() {
   menuLinks.forEach((link) => {
+    console.log(link);
     const targetId =
-      link.getAttribute("href") !== "#" ? link.getAttribute("href") : null;
+      link.getAttribute("href") !== "#" ? link.getAttribute("href") : "null";
     const targetSection = document.querySelector(targetId);
     targetSections.push({ targetSection: targetSection, targetOffset: "" });
   });
@@ -41,7 +42,6 @@ function scrollToSection(event, clickedLinkId) {
     top: targetSections[clickedLinkId - 1].targetOffset,
     behavior: "smooth",
   });
-  console.log(targetSections[clickedLinkId - 1]);
 }
 
 menuLinks.forEach((link) => {
@@ -98,6 +98,27 @@ function handleScroll() {
     nav.classList.remove("shadow-lg");
     nav.classList.add("h-40");
   }
+  const currentSection = getCurrentSection();
+  console.log(`The scrollbar is in section with ID: ${currentSection}`);
 }
 
 window.addEventListener("scroll", handleScroll);
+
+function getCurrentSection() {
+  const sections = targetSections.map((section) => {
+    const rect = section.targetSection.getBoundingClientRect();
+    return {
+      id: section.targetSection.id,
+      distance: rect.top,
+    };
+  });
+
+  // Filter out sections with negative distance (i.e., above the viewport)
+  const visibleSections = sections.filter((section) => section.distance >= 0);
+
+  // Sort the visibleSections array by distance (closest to top of viewport)
+  visibleSections.sort((a, b) => a.distance - b.distance);
+
+  // Return the first section in the sorted array (closest to top of viewport)
+  return visibleSections[0].id;
+}
