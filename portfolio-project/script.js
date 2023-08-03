@@ -4,11 +4,70 @@ const slider = document.getElementById("slider");
 const menu = document.getElementById("menu");
 const menuLinks = [...document.getElementsByClassName("links")];
 const targetSections = [];
+const filterButtons = [...document.getElementsByClassName("filter-buttons")];
+const projects = [
+  {
+    coverImage:
+      "https://github.com/vladnn99/iCodeThis/blob/main/portfolio-project/files/image33.png?raw=true",
+    Name: "UIDeli.com",
+    Type: "Design + Development",
+    Year: 2023,
+    Description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia aliquid quas itaque, adipisci neque nihil tempore, nulla dolorem ad fugit officiis saepe reiciendis non nesciunt, dolor eligendi a sapiente dignissimos impedit doloremque optio nostrum omnis rem nam! Iure molestias animi excepturi temporibus alias incidunt distinctio provident praesentium dolorum dolore. Cumque.",
+  },
+  {
+    coverImage:
+      "https://github.com/vladnn99/iCodeThis/blob/main/portfolio-project/files/koto-studio.png?raw=true",
+    Name: "Koto Studio",
+    Type: "Design + Development",
+    Year: 2023,
+    Description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia aliquid quas itaque, adipisci neque nihil tempore, nulla dolorem ad fugit officiis saepe reiciendis non nesciunt, dolor eligendi a sapiente dignissimos impedit doloremque optio nostrum omnis rem nam! Iure molestias animi excepturi temporibus alias incidunt distinctio provident praesentium dolorum dolore. Cumque.",
+  },
+  {
+    coverImage:
+      "https://raw.githubusercontent.com/vladnn99/iCodeThis/d71ebea43880af266744a4361a5f0e5732527796/portfolio-project/files/switch-black.png",
+    Name: "Switch Black",
+    Type: "Design",
+    Year: 2023,
+    Description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia aliquid quas itaque, adipisci neque nihil tempore, nulla dolorem ad fugit officiis saepe reiciendis non nesciunt, dolor eligendi a sapiente dignissimos impedit doloremque optio nostrum omnis rem nam! Iure molestias animi excepturi temporibus alias incidunt distinctio provident praesentium dolorum dolore. Cumque.",
+  },
+  {
+    coverImage:
+      "https://raw.githubusercontent.com/vladnn99/iCodeThis/38012c94698ab35e5fba7d887a825c745a046be5/portfolio-project/files/image-34.png",
+    Name: "Remarket",
+    Type: "Development",
+    Year: 2023,
+    Description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia aliquid quas itaque, adipisci neque nihil tempore, nulla dolorem ad fugit officiis saepe reiciendis non nesciunt, dolor eligendi a sapiente dignissimos impedit doloremque optio nostrum omnis rem nam! Iure molestias animi excepturi temporibus alias incidunt distinctio provident praesentium dolorum dolore. Cumque.",
+  },
+  {
+    coverImage:
+      "https://raw.githubusercontent.com/vladnn99/iCodeThis/38012c94698ab35e5fba7d887a825c745a046be5/portfolio-project/files/image-34.png",
+    Name: "Another One",
+    Type: "Development",
+    Year: 2023,
+    Description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia aliquid quas itaque, adipisci neque nihil tempore, nulla dolorem ad fugit officiis saepe reiciendis non nesciunt, dolor eligendi a sapiente dignissimos impedit doloremque optio nostrum omnis rem nam! Iure molestias animi excepturi temporibus alias incidunt distinctio provident praesentium dolorum dolore. Cumque.",
+  },
+  {
+    coverImage:
+      "https://raw.githubusercontent.com/vladnn99/iCodeThis/4e279cfeef60d73a5322c98ee8281c20b663b081/portfolio-project/files/blender-renders.png",
+    Name: "Blender Renders",
+    Type: "Development",
+    Year: 2023,
+    Description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia aliquid quas itaque, adipisci neque nihil tempore, nulla dolorem ad fugit officiis saepe reiciendis non nesciunt, dolor eligendi a sapiente dignissimos impedit doloremque optio nostrum omnis rem nam! Iure molestias animi excepturi temporibus alias incidunt distinctio provident praesentium dolorum dolore. Cumque.",
+  },
+];
 
 console.log(avatar);
 console.log(slider);
 console.log(menu);
 console.log(menuLinks);
+console.log(filterButtons);
+console.log(projects);
 
 function addIds(menuLinks) {
   menuLinks.forEach((link, index) => {
@@ -24,12 +83,14 @@ function getTargetSections() {
     const targetSection = document.querySelector(targetId);
     targetSections.push({ targetSection: targetSection, targetOffset: "" });
   });
-  targetSections.shift();
-  targetSections[0].targetOffset =
-    targetSections[0].targetSection.offsetTop - 76;
+  const navTargetId = document.getElementById("navTop");
+  console.log(navTargetId);
+  targetSections[0].targetOffset = 0;
+  targetSections[0].targetSection = navTargetId;
+  // targetSections.shift();
   targetSections[1].targetOffset =
-    targetSections[1].targetSection.offsetTop + 296;
-
+    targetSections[1].targetSection.offsetTop - 88;
+  targetSections[2].targetOffset = targetSections[2].targetSection.offsetTop;
   console.log(targetSections);
 }
 
@@ -39,7 +100,7 @@ addIds(menuLinks);
 function scrollToSection(event, clickedLinkId) {
   event.preventDefault();
   window.scrollTo({
-    top: targetSections[clickedLinkId - 1].targetOffset,
+    top: targetSections[clickedLinkId].targetOffset,
     behavior: "smooth",
   });
 }
@@ -47,6 +108,7 @@ function scrollToSection(event, clickedLinkId) {
 menuLinks.forEach((link) => {
   link.addEventListener("click", function (event) {
     const clickedLinkId = +event.target.id;
+    console.log(clickedLinkId);
     if (clickedLinkId === 1) {
       slider.classList.add("left-1/3");
       slider.classList.remove("left-0", "left-2/3");
@@ -71,13 +133,13 @@ menuLinks.forEach((link) => {
       menuLinks[clickedLinkId].classList.add("text-white");
       menuLinks[clickedLinkId + 1].classList.remove("text-white");
       menuLinks[clickedLinkId + 2].classList.remove("text-white");
+      scrollToSection(event, clickedLinkId);
     }
   });
 });
 
 console.log(menuLinks);
 
-// console.log(nav.childNodes[3].childNodes[1].childNodes[1].childNodes);
 let moveMenu = false;
 
 function handleScroll() {
@@ -91,34 +153,34 @@ function handleScroll() {
   }
   if (scrollY === 0 && moveMenu) {
     moveMenu = false;
-    // nav.classList.add("opacity-0");
     avatar.classList.remove("w-16", "h-16");
     avatar.classList.add("w-32", "h-32");
     nav.classList.remove("h-[5.5rem]");
     nav.classList.remove("shadow-lg");
     nav.classList.add("h-40");
   }
-  const currentSection = getCurrentSection();
-  console.log(`The scrollbar is in section with ID: ${currentSection}`);
 }
 
 window.addEventListener("scroll", handleScroll);
 
-function getCurrentSection() {
-  const sections = targetSections.map((section) => {
-    const rect = section.targetSection.getBoundingClientRect();
-    return {
-      id: section.targetSection.id,
-      distance: rect.top,
-    };
+filterButtons.forEach((button, index) => {
+  button.addEventListener("click", function () {
+    if (index === 0) {
+      button.classList.add("bg-[#1F1E26]", "text-white");
+      filterButtons[1].classList.remove("text-white", "bg-[#1F1E26]");
+      filterButtons[2].classList.remove("text-white", "bg-[#1F1E26]");
+    }
+    if (index === 1) {
+      button.classList.add("bg-[#1F1E26]", "text-white");
+      filterButtons[0].classList.remove("text-white", "bg-[#1F1E26]");
+      filterButtons[2].classList.remove("text-white", "bg-[#1F1E26]");
+    }
+    if (index === 2) {
+      button.classList.add("bg-[#1F1E26]", "text-white");
+      filterButtons[0].classList.remove("text-white", "bg-[#1F1E26]");
+      filterButtons[1].classList.remove("text-white", "bg-[#1F1E26]");
+    }
   });
+});
 
-  // Filter out sections with negative distance (i.e., above the viewport)
-  const visibleSections = sections.filter((section) => section.distance >= 0);
-
-  // Sort the visibleSections array by distance (closest to top of viewport)
-  visibleSections.sort((a, b) => a.distance - b.distance);
-
-  // Return the first section in the sorted array (closest to top of viewport)
-  return visibleSections[0].id;
-}
+// Incearca 2 coloane cu grid si inauntru flex pt afisare portfolio in foma din figma

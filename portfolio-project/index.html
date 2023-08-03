@@ -12,6 +12,7 @@
   </head>
   <body class="flex flex-col w-full h-fit min-h-screen items-center">
     <nav
+      id="navTop"
       class="w-full h-40 flex items-center justify-between px-8 transition-all duration-200 ease-in bg-white fixed top-0"
     >
       <div id="avatarAndName" class="w-2/5 h-full flex items-center gap-2">
@@ -146,11 +147,21 @@
           id="workFilters"
           class="w-fit h-full flex items-center text-xs font-medium gap-3"
         >
-          <button class="px-5 h-10 rounded-full text-white bg-[#1F1E26]">
+          <button
+            class="px-5 h-10 rounded-full text-white bg-[#1F1E26] filter-buttons transition-colors duration-300"
+          >
             All
           </button>
-          <button class="px-5 h-10 rounded-full border">Design</button>
-          <button class="px-5 h-10 rounded-full border">Development</button>
+          <button
+            class="px-5 h-10 rounded-full border transition-colors duration-300 filter-buttons"
+          >
+            Design
+          </button>
+          <button
+            class="px-5 h-10 rounded-full border transition-colors duration-300 filter-buttons"
+          >
+            Development
+          </button>
         </div>
         <div id="viewType" class="h-10 flex gap-2">
           <button
