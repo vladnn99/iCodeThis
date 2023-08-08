@@ -1,5 +1,5 @@
 * {
-  outline: 1px solid rgba(255, 0, 0, 0.7);
+  /* outline: 1px solid rgba(255, 0, 0, 0.7); */
 }
 
 html {
@@ -10,4 +10,15 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: "Satoshi", sans-serif;
+}
+
+.custom-columns {
+  column-count: 1;
+  column-gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .custom-columns {
+    column-count: 2;
+  }
 }
