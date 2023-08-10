@@ -308,3 +308,16 @@ function renderProjectsList(clickedIndex) {
     renderProjectList(project);
   });
 }
+
+const closeModalBtn = document.getElementById("closeModal");
+const modalWindow = document.getElementById("modalWindow");
+const body = document.body;
+
+console.log(closeModalBtn);
+closeModalBtn.addEventListener("click", function () {
+  modalWindow.classList.add("opacity-0");
+  setTimeout(function () {
+    // body.classList.remove("overflow-hidden");
+    modalWindow.classList.add("hidden");
+  }, 300);
+});
