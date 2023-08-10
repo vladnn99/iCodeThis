@@ -1,5 +1,5 @@
 * {
-  /* outline: 1px solid rgba(255, 0, 0, 0.7); */
+  outline: 1px solid rgba(255, 0, 0, 0.7);
 }
 
 html {
@@ -21,4 +21,8 @@ body {
   .custom-columns {
     column-count: 2;
   }
+}
+
+.column-item {
+  break-inside: avoid-column;
 }

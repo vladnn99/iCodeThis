@@ -13,7 +13,7 @@ const projects = [
     Type: "Design + Development",
     Year: 2023,
     Description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia aliquid quas itaque, adipisci neque nihil tempore, nulla dolorem ad fugit officiis saepe reiciendis non nesciunt, dolor eligendi a sapiente dignissimos impedit doloremque optio nostrum omnis rem nam! Iure molestias animi excepturi temporibus alias incidunt distinctio provident praesentium dolorum dolore. Cumque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus ad exercitationem inventore, ipsam neque quidem animi sapiente magni necessitatibus.",
   },
   {
     coverImage:
@@ -22,7 +22,7 @@ const projects = [
     Type: "Design + Development",
     Year: 2023,
     Description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia aliquid quas itaque, adipisci neque nihil tempore, nulla dolorem ad fugit officiis saepe reiciendis non nesciunt, dolor eligendi a sapiente dignissimos impedit doloremque optio nostrum omnis rem nam! Iure molestias animi excepturi temporibus alias incidunt distinctio provident praesentium dolorum dolore. Cumque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus ad exercitationem inventore, ipsam neque quidem animi sapiente magni necessitatibus.",
   },
   {
     coverImage:
@@ -31,7 +31,7 @@ const projects = [
     Type: "Design",
     Year: 2023,
     Description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia aliquid quas itaque, adipisci neque nihil tempore, nulla dolorem ad fugit officiis saepe reiciendis non nesciunt, dolor eligendi a sapiente dignissimos impedit doloremque optio nostrum omnis rem nam! Iure molestias animi excepturi temporibus alias incidunt distinctio provident praesentium dolorum dolore. Cumque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus ad exercitationem inventore, ipsam neque quidem animi sapiente magni necessitatibus.",
   },
   {
     coverImage:
@@ -40,7 +40,7 @@ const projects = [
     Type: "Development",
     Year: 2023,
     Description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia aliquid quas itaque, adipisci neque nihil tempore, nulla dolorem ad fugit officiis saepe reiciendis non nesciunt, dolor eligendi a sapiente dignissimos impedit doloremque optio nostrum omnis rem nam! Iure molestias animi excepturi temporibus alias incidunt distinctio provident praesentium dolorum dolore. Cumque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus ad exercitationem inventore, ipsam neque quidem animi sapiente magni necessitatibus.",
   },
   {
     coverImage:
@@ -49,7 +49,7 @@ const projects = [
     Type: "Development",
     Year: 2023,
     Description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia aliquid quas itaque, adipisci neque nihil tempore, nulla dolorem ad fugit officiis saepe reiciendis non nesciunt, dolor eligendi a sapiente dignissimos impedit doloremque optio nostrum omnis rem nam! Iure molestias animi excepturi temporibus alias incidunt distinctio provident praesentium dolorum dolore. Cumque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus ad exercitationem inventore, ipsam neque quidem animi sapiente magni necessitatibus.",
   },
   {
     coverImage:
@@ -58,30 +58,37 @@ const projects = [
     Type: "Development",
     Year: 2023,
     Description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia aliquid quas itaque, adipisci neque nihil tempore, nulla dolorem ad fugit officiis saepe reiciendis non nesciunt, dolor eligendi a sapiente dignissimos impedit doloremque optio nostrum omnis rem nam! Iure molestias animi excepturi temporibus alias incidunt distinctio provident praesentium dolorum dolore. Cumque.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus ad exercitationem inventore, ipsam neque quidem animi sapiente magni necessitatibus.",
   },
 ];
 const projectsContainer = document.getElementById("projectsContainer");
 const projectTypes = ["Design + Development", "Design", "Development"];
+const viewTypeButtons = [
+  ...document.getElementsByClassName("change-view-button"),
+];
 let clickedIndex = 0;
+let moveMenu = false;
+
+function initialize() {
+  assignProjectId();
+  renderProjectsGrid(clickedIndex);
+  getTargetSections();
+  addIds(menuLinks);
+  slidingFocusMenu();
+  window.addEventListener("scroll", handleScroll);
+  setFilterButtons();
+  setViewButtons();
+  viewTypeButtons[0].classList.add("button-pressed");
+}
+
+initialize();
 
 function assignProjectId() {
   projects.forEach((project, index) => (project.id = index));
 }
 
-assignProjectId();
-
-// console.log(avatar);
-// console.log(slider);
-// console.log(menu);
-// console.log(menuLinks);
-// console.log(filterButtons);
-// console.log(projects);
-// console.log(projectsContainer);
-
-// Generate project view
-function renderProjects(clickedIndex) {
-  const filteredProjects = projects.filter((project) => {
+function filterProjects(projects, clickedIndex) {
+  const fProjects = projects.filter((project) => {
     if (clickedIndex === 0) {
       return (
         project.Type === projectTypes[0] ||
@@ -93,26 +100,36 @@ function renderProjects(clickedIndex) {
       return project.Type === projectTypes[clickedIndex];
     }
   });
-  // console.log(filteredProjects);
-  filteredProjects.forEach((project) => {
-    const projectDiv = document.createElement("div");
-    const img = document.createElement("img");
-    const h2 = document.createElement("h2");
-    const p = document.createElement("p");
-    img.className = "object-contain w-full";
-    img.src = `${project.coverImage}`;
-    h2.innerText = `${project.Name}`;
-    p.className = "text-xs";
-    p.innerHTML = `${project.Type} <span class="ml-2">2023</span>`;
-    projectDiv.className = "flex flex-col gap-2 mb-8";
-    projectDiv.appendChild(img);
-    projectDiv.appendChild(h2);
-    projectDiv.appendChild(p);
-    projectsContainer.appendChild(projectDiv);
-  });
+  return fProjects;
 }
 
-renderProjects(clickedIndex);
+function renderProjectGrid(project) {
+  const projectDiv = document.createElement("div");
+  const img = document.createElement("img");
+  const h2 = document.createElement("h2");
+  const p = document.createElement("p");
+  img.className =
+    "object-contain w-full hover:opacity-70 transition-opacity duration-300";
+  img.src = `${project.coverImage}`;
+  h2.innerText = `${project.Name}`;
+  p.className = "text-xs font-semibold";
+  p.innerHTML = `${project.Type} <span class="ml-2">2023</span>`;
+  projectDiv.className = "flex flex-col gap-2 mb-8 column-item cursor-pointer";
+  projectDiv.appendChild(img);
+  projectDiv.appendChild(h2);
+  projectDiv.appendChild(p);
+  projectsContainer.appendChild(projectDiv);
+}
+
+// Generate project view
+function renderProjectsGrid(clickedIndex) {
+  projectsContainer.classList.remove("opacity-0");
+  projectsContainer.innerHTML = "";
+  const filteredProjects = filterProjects(projects, clickedIndex);
+  filteredProjects.forEach((project) => {
+    renderProjectGrid(project);
+  });
+}
 
 function addIds(menuLinks) {
   menuLinks.forEach((link, index) => {
@@ -139,9 +156,6 @@ function getTargetSections() {
   // console.log(targetSections);
 }
 
-getTargetSections();
-addIds(menuLinks);
-
 function scrollToSection(event, clickedLinkId) {
   event.preventDefault();
   window.scrollTo({
@@ -151,42 +165,40 @@ function scrollToSection(event, clickedLinkId) {
 }
 
 // Sliding focus on the menu
-menuLinks.forEach((link) => {
-  link.addEventListener("click", function (event) {
-    const clickedLinkId = +event.target.id;
-    console.log(clickedLinkId);
-    if (clickedLinkId === 1) {
-      slider.classList.add("left-1/3");
-      slider.classList.remove("left-0", "left-2/3");
-      menuLinks[clickedLinkId].classList.add("text-white");
-      menuLinks[clickedLinkId - 1].classList.remove("text-white");
-      menuLinks[clickedLinkId + 1].classList.remove("text-white");
-      scrollToSection(event, clickedLinkId);
-    }
+function slidingFocusMenu() {
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      const clickedLinkId = +event.target.id;
+      console.log(clickedLinkId);
+      if (clickedLinkId === 1) {
+        slider.classList.add("left-1/3");
+        slider.classList.remove("left-0", "left-2/3");
+        menuLinks[clickedLinkId].classList.add("text-white");
+        menuLinks[clickedLinkId - 1].classList.remove("text-white");
+        menuLinks[clickedLinkId + 1].classList.remove("text-white");
+        scrollToSection(event, clickedLinkId);
+      }
 
-    if (clickedLinkId === 2) {
-      slider.classList.add("left-2/3");
-      slider.classList.remove("left-0", "left-1/3");
-      menuLinks[clickedLinkId].classList.add("text-white");
-      menuLinks[clickedLinkId - 1].classList.remove("text-white");
-      menuLinks[clickedLinkId - 2].classList.remove("text-white");
-      scrollToSection(event, clickedLinkId);
-    }
+      if (clickedLinkId === 2) {
+        slider.classList.add("left-2/3");
+        slider.classList.remove("left-0", "left-1/3");
+        menuLinks[clickedLinkId].classList.add("text-white");
+        menuLinks[clickedLinkId - 1].classList.remove("text-white");
+        menuLinks[clickedLinkId - 2].classList.remove("text-white");
+        scrollToSection(event, clickedLinkId);
+      }
 
-    if (clickedLinkId === 0) {
-      slider.classList.add("left-0");
-      slider.classList.remove("left-1/3", "left-2/3");
-      menuLinks[clickedLinkId].classList.add("text-white");
-      menuLinks[clickedLinkId + 1].classList.remove("text-white");
-      menuLinks[clickedLinkId + 2].classList.remove("text-white");
-      scrollToSection(event, clickedLinkId);
-    }
+      if (clickedLinkId === 0) {
+        slider.classList.add("left-0");
+        slider.classList.remove("left-1/3", "left-2/3");
+        menuLinks[clickedLinkId].classList.add("text-white");
+        menuLinks[clickedLinkId + 1].classList.remove("text-white");
+        menuLinks[clickedLinkId + 2].classList.remove("text-white");
+        scrollToSection(event, clickedLinkId);
+      }
+    });
   });
-});
-
-// console.log(menuLinks);
-
-let moveMenu = false;
+}
 
 function handleScroll() {
   const scrollY = window.scrollY;
@@ -207,8 +219,6 @@ function handleScroll() {
   }
 }
 
-window.addEventListener("scroll", handleScroll);
-
 function setFilterButtons() {
   filterButtons.forEach((button, index) => {
     button.addEventListener("click", function (event) {
@@ -222,17 +232,79 @@ function setFilterButtons() {
       clickedIndex = index;
       projectsContainer.classList.add("opacity-0");
       setTimeout(function () {
-        projectsContainer.innerHTML = "";
-        renderProjects(clickedIndex);
-        projectsContainer.classList.remove("opacity-0");
-      }, 300);
-      setTimeout(function () {
-        console.log(projectsContainer.className);
+        if (viewTypeButtons[0].classList.contains("button-pressed")) {
+          renderProjectsGrid(clickedIndex);
+        }
+        if (viewTypeButtons[1].classList.contains("button-pressed")) {
+          renderProjectsList(clickedIndex);
+        }
       }, 300);
     });
   });
 }
 
-setFilterButtons();
+function setViewButtons() {
+  viewTypeButtons.forEach((button, index) => {
+    button.addEventListener("click", function (event) {
+      viewTypeButtons.forEach((btn, idx) => {
+        if (idx === index) {
+          btn.classList.add("bg-[#1F1E26]", "text-white", "button-pressed");
+        } else {
+          btn.classList.remove("bg-[#1F1E26]", "text-white", "button-pressed");
+        }
+      });
+      if (viewTypeButtons[0].className.includes("button-pressed")) {
+        projectsContainer.classList.add("opacity-0");
+        setTimeout(function () {
+          projectsContainer.classList.add("custom-columns");
+          renderProjectsGrid(clickedIndex);
+        }, 300);
+      }
+      if (viewTypeButtons[1].className.includes("button-pressed")) {
+        projectsContainer.classList.add("opacity-0");
+        setTimeout(function () {
+          projectsContainer.classList.remove("custom-columns");
+          renderProjectsList(clickedIndex);
+        }, 300);
+      }
+    });
+  });
+}
 
-// Mai trebuie sa fac animatiile din tailwind pt filtrarea proiectelor si sa vad de ce nu se extinde containerul mai jos
+function renderProjectList(project) {
+  const projectDiv = document.createElement("div");
+  const img = document.createElement("img");
+  const imgContainer = document.createElement("div");
+  const h2 = document.createElement("h2");
+  const p = document.createElement("p");
+  const description = document.createElement("p");
+  const rightContainer = document.createElement("div");
+  imgContainer.className = "w-2/5 h-full flex";
+  img.className = "object-cover w-full h-full";
+  img.src = `${project.coverImage}`;
+  img.style = "object-position: center top;";
+  h2.innerText = `${project.Name}`;
+  rightContainer.className = "w-3/5 flex flex-col gap-3 justify-center";
+  rightContainer.id = "rightContainer";
+  p.className = "text-xs font-semibold";
+  p.innerHTML = `${project.Type} <span class="ml-2">2023</span>`;
+  description.innerText = project.Description;
+  description.className = "text-xs";
+  projectDiv.className = "flex gap-14 mb-8 h-56";
+  rightContainer.appendChild(h2);
+  rightContainer.appendChild(p);
+  rightContainer.appendChild(description);
+  imgContainer.appendChild(img);
+  projectDiv.appendChild(imgContainer);
+  projectDiv.appendChild(rightContainer);
+  projectsContainer.appendChild(projectDiv);
+}
+
+function renderProjectsList(clickedIndex) {
+  projectsContainer.classList.remove("opacity-0");
+  projectsContainer.innerHTML = "";
+  const filteredProjects = filterProjects(projects, clickedIndex);
+  filteredProjects.forEach((project) => {
+    renderProjectList(project);
+  });
+}
