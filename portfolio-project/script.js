@@ -309,15 +309,117 @@ function renderProjectsList(clickedIndex) {
   });
 }
 
-const closeModalBtn = document.getElementById("closeModal");
-const modalWindow = document.getElementById("modalWindow");
-const body = document.body;
+// const closeModalBtn = document.getElementById("closeModal");
 
-console.log(closeModalBtn);
-closeModalBtn.addEventListener("click", function () {
-  modalWindow.classList.add("opacity-0");
-  setTimeout(function () {
-    // body.classList.remove("overflow-hidden");
-    modalWindow.classList.add("hidden");
-  }, 300);
-});
+// const modalWindow = document.getElementById("modalWindow");
+// console.log(closeModalBtn);
+// closeModalBtn.addEventListener("click", function () {
+//   modalWindow.classList.add("opacity-0");
+//   setTimeout(function () {
+//     modalWindow.classList.add("hidden");
+//   }, 300);
+// });
+
+function generateProjectModalWindow() {
+  const modalWindow = document.getElementById("modalWindow");
+  const modalContainer = document.createElement("div");
+  const modalHeader = document.createElement("div");
+  const closeModalBtn = document.createElement("button");
+  const svg = `<svg
+  xmlns="http://www.w3.org/2000/svg"
+  class="icon icon-tabler icon-tabler-x w-3 h-3 transition duration-300 group-hover:rotate-90 ease-in"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M18 6l-12 12"></path>
+  <path d="M6 6l12 12"></path>
+</svg>`;
+  const modalContent = document.createElement("div");
+  const contentUp = document.createElement("div");
+  const h1AndPContainer = document.createElement("div");
+  const h1 = document.createElement("h1");
+  const p = document.createElement("p");
+  const imgContainer = document.createElement("div");
+  const img = document.createElement("img");
+  const contentDown = document.createElement("div");
+  const leftDown = document.createElement("div");
+  const a = document.createElement("a");
+  const svgLink = `<svg
+  xmlns="http://www.w3.org/2000/svg"
+  class="icon icon-tabler icon-tabler-arrow-up-right w-3 h-3 transition duration-300 group-hover:rotate-45"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  stroke-width="2"
+  stroke="currentColor"
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M17 7l-10 10"></path>
+  <path d="M8 7l9 0l0 9"></path>
+</svg>`;
+  const span = document.createElement("span");
+
+  modalWindow.classList.remove("hidden", "opacity-0");
+  modalWindow.classList.add("flex");
+  modalContainer.id = "modalContainer";
+  modalContainer.className =
+    "w-full md:w-3/4 h-full bg-white md:max-w-3xl flex flex-col";
+  modalHeader.id = "modalHeader";
+  modalHeader.className =
+    "w-full h-[8%] bg-[#1F1E26] flex items-center shadow-lg";
+  closeModalBtn.id = "closeModal";
+  closeModalBtn.className =
+    "text-white ml-auto mr-12 w-10 h-10 flex items-center justify-center border border-gray-400 rounded-full group";
+  modalContent.id = "modalContent";
+  modalContent.className = "w-full h-[92%] flex flex-col p-20 pt-12 gap-4";
+  contentUp.id = "contentUp";
+  contentUp.className = "w-full h-[55%] flex flex-col";
+  h1AndPContainer.id = "h1AndPContainer";
+  h1AndPContainer.className = "w-full flex flex-col h-1/6 gap-3";
+  h1.className = "font-medium text-lg";
+  h1.innerText =
+    "Helping UIDeli.com give their users the best online experience";
+  p.className = "text-xs font-medium";
+  p.innerText = "UIDeli.com";
+  imgContainer.className = "w-full flex h-5/6 mt-auto";
+  img.src =
+    "https://github.com/vladnn99/iCodeThis/blob/main/portfolio-project/files/image33.png?raw=true";
+  img.className = "w-full object-cover";
+  img.style = "object-position: center top";
+  contentDown.id = "contentDown";
+  contentDown.className = "w-full h-[45%] flex gap-16";
+  leftDown.id = "leftDown";
+  leftDown.className = "w-1/5 h-full flex flex-col";
+  a.href = "#";
+  a.className = "text-xs underline flex items-center gap-2 group font-medium";
+  a.innerText = "Visit website";
+
+  // a.innerHTML += svgLink;
+
+  closeModalBtn.innerHTML += svg;
+  modalHeader.appendChild(closeModalBtn);
+  h1AndPContainer.appendChild(p);
+  h1AndPContainer.appendChild(h1);
+  contentUp.appendChild(h1AndPContainer);
+  contentUp.appendChild(imgContainer);
+  imgContainer.appendChild(img);
+  modalContent.appendChild(contentUp);
+  leftDown.appendChild(a);
+  contentDown.appendChild(leftDown);
+  modalContent.appendChild(contentDown);
+  modalContainer.appendChild(modalHeader);
+  modalContainer.appendChild(modalContent);
+  modalWindow.appendChild(modalContainer);
+}
+
+generateProjectModalWindow();
