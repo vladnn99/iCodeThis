@@ -114,7 +114,8 @@ function renderProjectGrid(project) {
   h2.innerText = `${project.Name}`;
   p.className = "text-xs font-semibold";
   p.innerHTML = `${project.Type} <span class="ml-2">2023</span>`;
-  projectDiv.className = "flex flex-col gap-2 mb-8 column-item cursor-pointer";
+  projectDiv.className =
+    "flex flex-col gap-2 mb-8 column-item cursor-pointer project";
   projectDiv.appendChild(img);
   projectDiv.appendChild(h2);
   projectDiv.appendChild(p);
@@ -129,6 +130,7 @@ function renderProjectsGrid(clickedIndex) {
   filteredProjects.forEach((project) => {
     renderProjectGrid(project);
   });
+  visibleProjectsAddEventListener(filteredProjects);
 }
 
 function addIds(menuLinks) {
@@ -368,6 +370,14 @@ function generateProjectModalWindow() {
   <path d="M8 7l9 0l0 9"></path>
 </svg>`;
   const span = document.createElement("span");
+  const rightDown = document.createElement("div");
+  const h2_1 = document.createElement("h2");
+  const pD_1 = document.createElement("p");
+  const h2_2 = document.createElement("h2");
+  const pD_2 = document.createElement("p");
+  const tags = document.createElement("div");
+  const tag1 = document.createElement("button");
+  const tag2 = document.createElement("button");
 
   modalWindow.classList.remove("hidden", "opacity-0");
   modalWindow.classList.add("flex");
@@ -403,8 +413,29 @@ function generateProjectModalWindow() {
   a.href = "#";
   a.className = "text-xs underline flex items-center gap-2 group font-medium";
   a.innerText = "Visit website";
-
-  // a.innerHTML += svgLink;
+  span.className =
+    "flex items-center w-5 h-5 justify-center bg-[#483ED0] text-white rounded-full transition duration-300 group-hover:bg-[#7166FF]";
+  span.innerHTML += svgLink;
+  rightDown.id = "rightDown";
+  rightDown.className = "w-4/5 h-full flex flex-col gap-3";
+  h2_1.className = "font-medium";
+  h2_1.innerText = "About uideli.com";
+  pD_1.className = "text-xs";
+  pD_1.innerText = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+  praesentium nostrum sapiente mollitia, quia voluptas quam rem
+  architecto ipsam sit neque tenetur at asperiores aspernatur
+  quod! Harum aut eos quis iure velit reiciendis ipsum, tempora
+  voluptates fugit sit eius porro ut hic tempore esse ipsa nihil
+  repudiandae nisi quae suscipit.`;
+  h2_2.className = "font-medium mt-4";
+  h2_2.innerText = "The Project";
+  pD_2.className = "text-xs";
+  pD_2.innerText = `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste
+  atque temporibus eius deleniti nam praesentium.`;
+  tags.className = "flex gap-2 items-center text-xs mt-4";
+  tag1.className = tag2.className = "px-5 h-10 rounded-full border";
+  tag1.innerText = "Design";
+  tag2.innerText = "Development";
 
   closeModalBtn.innerHTML += svg;
   modalHeader.appendChild(closeModalBtn);
@@ -414,12 +445,31 @@ function generateProjectModalWindow() {
   contentUp.appendChild(imgContainer);
   imgContainer.appendChild(img);
   modalContent.appendChild(contentUp);
+  a.appendChild(span);
   leftDown.appendChild(a);
   contentDown.appendChild(leftDown);
+  rightDown.appendChild(h2_1);
+  rightDown.appendChild(pD_1);
+  rightDown.appendChild(h2_2);
+  rightDown.appendChild(pD_2);
+  tags.appendChild(tag1);
+  tags.appendChild(tag2);
+  rightDown.appendChild(tags);
+
+  contentDown.appendChild(rightDown);
   modalContent.appendChild(contentDown);
   modalContainer.appendChild(modalHeader);
   modalContainer.appendChild(modalContent);
   modalWindow.appendChild(modalContainer);
 }
 
-generateProjectModalWindow();
+function visibleProjectsAddEventListener() {
+  const visibleProjects = [...document.getElementsByClassName("project")];
+  visibleProjects.forEach((project, index) => {
+    project.addEventListener("click", function () {
+      console.log(`Hello project ${index}`);
+    });
+  });
+}
+
+// generateProjectModalWindow();
