@@ -44,7 +44,7 @@ const projects = [
   },
   {
     coverImage:
-      "https://raw.githubusercontent.com/vladnn99/iCodeThis/38012c94698ab35e5fba7d887a825c745a046be5/portfolio-project/files/image-34.png",
+      "https://github.com/vladnn99/iCodeThis/blob/main/portfolio-project/files/another-one.png?raw=true",
     Name: "Another One",
     Type: "Development",
     Year: 2023,
@@ -141,21 +141,18 @@ function addIds(menuLinks) {
 
 function getTargetSections() {
   menuLinks.forEach((link) => {
-    // console.log(link);
     const targetId =
       link.getAttribute("href") !== "#" ? link.getAttribute("href") : "null";
     const targetSection = document.querySelector(targetId);
     targetSections.push({ targetSection: targetSection, targetOffset: "" });
   });
   const navTargetId = document.getElementById("navTop");
-  // console.log(navTargetId);
   targetSections[0].targetOffset = 0;
   targetSections[0].targetSection = navTargetId;
-  // targetSections.shift();
   targetSections[1].targetOffset =
     targetSections[1].targetSection.offsetTop - 88;
   targetSections[2].targetOffset = targetSections[2].targetSection.offsetTop;
-  // console.log(targetSections);
+  console.log(targetSections);
 }
 
 function scrollToSection(event, clickedLinkId) {
@@ -282,7 +279,8 @@ function renderProjectList(project) {
   const description = document.createElement("p");
   const rightContainer = document.createElement("div");
   imgContainer.className = "w-2/5 h-full flex";
-  img.className = "object-cover w-full h-full";
+  img.className =
+    "object-cover w-full h-full hover:opacity-70 transition-opacity duration-300";
   img.src = `${project.coverImage}`;
   img.style = "object-position: center top;";
   h2.innerText = `${project.Name}`;
@@ -292,7 +290,7 @@ function renderProjectList(project) {
   p.innerHTML = `${project.Type} <span class="ml-2">2023</span>`;
   description.innerText = project.Description;
   description.className = "text-xs";
-  projectDiv.className = "flex gap-14 mb-8 h-56";
+  projectDiv.className = "flex gap-14 mb-8 h-56 z-10 cursor-pointer project";
   rightContainer.appendChild(h2);
   rightContainer.appendChild(p);
   rightContainer.appendChild(description);
@@ -309,20 +307,12 @@ function renderProjectsList(clickedIndex) {
   filteredProjects.forEach((project) => {
     renderProjectList(project);
   });
+  visibleProjectsAddEventListener(filteredProjects);
 }
 
-// const closeModalBtn = document.getElementById("closeModal");
-
-// const modalWindow = document.getElementById("modalWindow");
-// console.log(closeModalBtn);
-// closeModalBtn.addEventListener("click", function () {
-//   modalWindow.classList.add("opacity-0");
-//   setTimeout(function () {
-//     modalWindow.classList.add("hidden");
-//   }, 300);
-// });
-
-function generateProjectModalWindow() {
+function generateProjectModalWindow(clickedForModalIndex) {
+  const filteredProjects = filterProjects(projects, clickedIndex);
+  console.log(filteredProjects);
   const modalWindow = document.getElementById("modalWindow");
   const modalContainer = document.createElement("div");
   const modalHeader = document.createElement("div");
@@ -397,13 +387,11 @@ function generateProjectModalWindow() {
   h1AndPContainer.id = "h1AndPContainer";
   h1AndPContainer.className = "w-full flex flex-col h-1/6 gap-3";
   h1.className = "font-medium text-lg";
-  h1.innerText =
-    "Helping UIDeli.com give their users the best online experience";
+  h1.innerText = `Helping ${filteredProjects[clickedForModalIndex].Name} give their users the best online experience`;
   p.className = "text-xs font-medium";
-  p.innerText = "UIDeli.com";
+  p.innerText = filteredProjects[clickedForModalIndex].Name;
   imgContainer.className = "w-full flex h-5/6 mt-auto";
-  img.src =
-    "https://github.com/vladnn99/iCodeThis/blob/main/portfolio-project/files/image33.png?raw=true";
+  img.src = filteredProjects[clickedForModalIndex].coverImage;
   img.className = "w-full object-cover";
   img.style = "object-position: center top";
   contentDown.id = "contentDown";
@@ -419,14 +407,9 @@ function generateProjectModalWindow() {
   rightDown.id = "rightDown";
   rightDown.className = "w-4/5 h-full flex flex-col gap-3";
   h2_1.className = "font-medium";
-  h2_1.innerText = "About uideli.com";
+  h2_1.innerText = `About ${filteredProjects[clickedForModalIndex].Name}`;
   pD_1.className = "text-xs";
-  pD_1.innerText = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
-  praesentium nostrum sapiente mollitia, quia voluptas quam rem
-  architecto ipsam sit neque tenetur at asperiores aspernatur
-  quod! Harum aut eos quis iure velit reiciendis ipsum, tempora
-  voluptates fugit sit eius porro ut hic tempore esse ipsa nihil
-  repudiandae nisi quae suscipit.`;
+  pD_1.innerText = `${filteredProjects[clickedForModalIndex].Description}`;
   h2_2.className = "font-medium mt-4";
   h2_2.innerText = "The Project";
   pD_2.className = "text-xs";
@@ -461,15 +444,39 @@ function generateProjectModalWindow() {
   modalContainer.appendChild(modalHeader);
   modalContainer.appendChild(modalContent);
   modalWindow.appendChild(modalContainer);
+
+  // Close modal
+  closeModalBtn.addEventListener("click", function () {
+    modalWindow.classList.add("opacity-0");
+    setTimeout(function () {
+      modalWindow.classList.add("hidden");
+      modalWindow.innerHTML = "";
+    }, 300);
+  });
+
+  // Prevent the click event from reaching the modalWindow
+  modalContainer.addEventListener("click", function (event) {
+    event.stopPropagation();
+  });
+
+  modalWindow.addEventListener("click", function () {
+    modalWindow.classList.add("opacity-0");
+    setTimeout(function () {
+      modalWindow.classList.add("hidden");
+      modalWindow.innerHTML = "";
+    }, 300);
+  });
 }
 
 function visibleProjectsAddEventListener() {
+  let clickedForModalIndex = 0;
   const visibleProjects = [...document.getElementsByClassName("project")];
   visibleProjects.forEach((project, index) => {
     project.addEventListener("click", function () {
       console.log(`Hello project ${index}`);
+      clickedForModalIndex = index;
+      console.log(clickedForModalIndex);
+      generateProjectModalWindow(clickedForModalIndex);
     });
   });
 }
-
-// generateProjectModalWindow();
