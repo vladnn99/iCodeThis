@@ -5,6 +5,7 @@ const menu = document.getElementById("menu");
 const menuLinks = [...document.getElementsByClassName("links")];
 const targetSections = [];
 const filterButtons = [...document.getElementsByClassName("filter-buttons")];
+const sections = [...document.querySelectorAll("section")];
 const projects = [
   {
     coverImage:
@@ -72,8 +73,6 @@ let moveMenu = false;
 function initialize() {
   assignProjectId();
   renderProjectsGrid(clickedIndex);
-  getTargetSections();
-  addIds(menuLinks);
   slidingFocusMenu();
   window.addEventListener("scroll", handleScroll);
   setFilterButtons();
@@ -133,49 +132,20 @@ function renderProjectsGrid(clickedIndex) {
   visibleProjectsAddEventListener(filteredProjects);
 }
 
-function addIds(menuLinks) {
-  menuLinks.forEach((link, index) => {
-    link.id = index;
-  });
-}
-
-function getTargetSections() {
-  menuLinks.forEach((link) => {
-    const targetId =
-      link.getAttribute("href") !== "#" ? link.getAttribute("href") : "null";
-    const targetSection = document.querySelector(targetId);
-    targetSections.push({ targetSection: targetSection, targetOffset: "" });
-  });
-  const navTargetId = document.getElementById("navTop");
-  targetSections[0].targetOffset = 0;
-  targetSections[0].targetSection = navTargetId;
-  targetSections[1].targetOffset =
-    targetSections[1].targetSection.offsetTop - 88;
-  targetSections[2].targetOffset = targetSections[2].targetSection.offsetTop;
-  console.log(targetSections);
-}
-
-function scrollToSection(event, clickedLinkId) {
-  event.preventDefault();
-  window.scrollTo({
-    top: targetSections[clickedLinkId].targetOffset,
-    behavior: "smooth",
-  });
-}
-
 // Sliding focus on the menu
 function slidingFocusMenu() {
-  menuLinks.forEach((link) => {
+  menuLinks.forEach((link, index) => {
     link.addEventListener("click", function (event) {
-      const clickedLinkId = +event.target.id;
-      console.log(clickedLinkId);
+      event.preventDefault();
+      const clickedLinkId = index;
       if (clickedLinkId === 1) {
         slider.classList.add("left-1/3");
         slider.classList.remove("left-0", "left-2/3");
         menuLinks[clickedLinkId].classList.add("text-white");
         menuLinks[clickedLinkId - 1].classList.remove("text-white");
         menuLinks[clickedLinkId + 1].classList.remove("text-white");
-        scrollToSection(event, clickedLinkId);
+        nav.classList.remove("expanded");
+        scrollToSection(clickedLinkId);
       }
 
       if (clickedLinkId === 2) {
@@ -184,7 +154,8 @@ function slidingFocusMenu() {
         menuLinks[clickedLinkId].classList.add("text-white");
         menuLinks[clickedLinkId - 1].classList.remove("text-white");
         menuLinks[clickedLinkId - 2].classList.remove("text-white");
-        scrollToSection(event, clickedLinkId);
+        nav.classList.remove("expanded");
+        scrollToSection(clickedLinkId);
       }
 
       if (clickedLinkId === 0) {
@@ -193,9 +164,31 @@ function slidingFocusMenu() {
         menuLinks[clickedLinkId].classList.add("text-white");
         menuLinks[clickedLinkId + 1].classList.remove("text-white");
         menuLinks[clickedLinkId + 2].classList.remove("text-white");
-        scrollToSection(event, clickedLinkId);
+        nav.classList.add("expanded");
+        scrollToSection(clickedLinkId);
       }
     });
+  });
+}
+
+function calculateTargetPosition(sectionId) {
+  const targetSection = document.getElementById(sectionId);
+  const navHeight = 5.5 * 16;
+  const sectionOffset = targetSection.offsetTop;
+  const scrollPosition = sectionOffset - navHeight;
+  return scrollPosition;
+}
+
+function scrollToSection(clickedLinkId) {
+  const scrollPosition =
+    clickedLinkId === 2
+      ? calculateTargetPosition(`section${clickedLinkId + 1}`) - 15
+      : clickedLinkId === 0
+      ? 0
+      : calculateTargetPosition(`section${clickedLinkId + 1}`) - 15;
+  window.scrollTo({
+    top: scrollPosition,
+    behavior: "smooth",
   });
 }
 
@@ -205,7 +198,7 @@ function handleScroll() {
     moveMenu = true;
     avatar.classList.remove("w-32", "h-32");
     avatar.classList.add("w-16", "h-16");
-    nav.classList.remove("h-40");
+    nav.classList.remove("h-40", "expanded");
     nav.classList.add("h-[5.5rem]", "shadow-lg");
   }
   if (scrollY === 0 && moveMenu) {
@@ -214,7 +207,7 @@ function handleScroll() {
     avatar.classList.add("w-32", "h-32");
     nav.classList.remove("h-[5.5rem]");
     nav.classList.remove("shadow-lg");
-    nav.classList.add("h-40");
+    nav.classList.add("h-40", "expanded");
   }
 }
 
@@ -312,7 +305,6 @@ function renderProjectsList(clickedIndex) {
 
 function generateProjectModalWindow(clickedForModalIndex) {
   const filteredProjects = filterProjects(projects, clickedIndex);
-  console.log(filteredProjects);
   const modalWindow = document.getElementById("modalWindow");
   const modalContainer = document.createElement("div");
   const modalHeader = document.createElement("div");
@@ -473,9 +465,7 @@ function visibleProjectsAddEventListener() {
   const visibleProjects = [...document.getElementsByClassName("project")];
   visibleProjects.forEach((project, index) => {
     project.addEventListener("click", function () {
-      console.log(`Hello project ${index}`);
       clickedForModalIndex = index;
-      console.log(clickedForModalIndex);
       generateProjectModalWindow(clickedForModalIndex);
     });
   });
