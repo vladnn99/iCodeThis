@@ -69,6 +69,7 @@ const viewTypeButtons = [
 ];
 let clickedIndex = 0;
 let moveMenu = false;
+let clickedOnMenu = false;
 
 function initialize() {
   assignProjectId();
@@ -139,6 +140,7 @@ function slidingFocusMenu() {
       event.preventDefault();
       const clickedLinkId = index;
       if (clickedLinkId === 1) {
+        clickedOnMenu = true;
         slider.classList.add("left-1/3");
         slider.classList.remove("left-0", "left-2/3");
         menuLinks[clickedLinkId].classList.add("text-white");
@@ -149,6 +151,7 @@ function slidingFocusMenu() {
       }
 
       if (clickedLinkId === 2) {
+        clickedOnMenu = true;
         slider.classList.add("left-2/3");
         slider.classList.remove("left-0", "left-1/3");
         menuLinks[clickedLinkId].classList.add("text-white");
@@ -159,6 +162,7 @@ function slidingFocusMenu() {
       }
 
       if (clickedLinkId === 0) {
+        clickedOnMenu = true;
         slider.classList.add("left-0");
         slider.classList.remove("left-1/3", "left-2/3");
         menuLinks[clickedLinkId].classList.add("text-white");
@@ -167,6 +171,9 @@ function slidingFocusMenu() {
         nav.classList.add("expanded");
         scrollToSection(clickedLinkId);
       }
+      setTimeout(function () {
+        clickedOnMenu = false;
+      }, 500);
     });
   });
 }
@@ -208,6 +215,33 @@ function handleScroll() {
     nav.classList.remove("h-[5.5rem]");
     nav.classList.remove("shadow-lg");
     nav.classList.add("h-40", "expanded");
+  }
+  if (!clickedOnMenu) {
+    const sectionInView = checkSectionsInView();
+    if (sectionInView === "section1") {
+      slider.classList.add("left-0");
+      slider.classList.remove("left-1/3", "left-2/3");
+      menuLinks[0].classList.add("text-white");
+      menuLinks[1].classList.remove("text-white");
+      menuLinks[2].classList.remove("text-white");
+      nav.classList.remove("expanded");
+    }
+    if (sectionInView === "section2") {
+      slider.classList.add("left-1/3");
+      slider.classList.remove("left-0", "left-2/3");
+      menuLinks[1].classList.add("text-white");
+      menuLinks[2].classList.remove("text-white");
+      menuLinks[0].classList.remove("text-white");
+      nav.classList.remove("expanded");
+    }
+    if (sectionInView === "section3") {
+      slider.classList.add("left-2/3");
+      slider.classList.remove("left-0", "left-1/3");
+      menuLinks[2].classList.add("text-white");
+      menuLinks[0].classList.remove("text-white");
+      menuLinks[1].classList.remove("text-white");
+      nav.classList.remove("expanded");
+    }
   }
 }
 
@@ -470,3 +504,36 @@ function visibleProjectsAddEventListener() {
     });
   });
 }
+
+function isSectionThirdInView(sectionId) {
+  const section = document.getElementById(sectionId);
+  const rect = section.getBoundingClientRect();
+
+  // Calculate the height of the section
+  const sectionHeight = rect.bottom - rect.top;
+
+  // Check if at least a third of the section is within the viewport's height
+  const isThirdInView =
+    rect.top >= -sectionHeight / 3 &&
+    rect.bottom <= window.innerHeight + (sectionHeight / 3) * 2;
+
+  return isThirdInView;
+}
+
+// Check if each section is at least half in view
+function checkSectionsInView() {
+  let sectionInView = null;
+
+  sections.forEach((section) => {
+    if (!sectionInView && isSectionThirdInView(section.id)) {
+      sectionInView = section.id;
+      // console.log(`${section.id} is at least half in view`);
+    }
+  });
+
+  return sectionInView;
+}
+
+// sections.forEach((section) => {
+//   console.log(section.id);
+// });
