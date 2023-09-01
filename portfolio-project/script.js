@@ -77,11 +77,13 @@ const body = document.querySelector("body");
 const hamburgerMenuContainer = document.querySelector(
   "#hamburgerMenuContainer"
 );
+let viewportWidth;
 let clickedIndex = 0;
 let moveMenu = false;
 let clickedOnMenu = false;
 
 function initialize() {
+  handleViewportChange();
   assignProjectId();
   renderProjectsGrid(clickedIndex);
   slidingFocusMenu();
@@ -211,14 +213,14 @@ function scrollToSection(clickedLinkId) {
 
 function handleScroll() {
   const scrollY = window.scrollY;
-  if (scrollY > 0 && !moveMenu) {
+  if (scrollY > 0 && !moveMenu && viewportWidth >= 768) {
     moveMenu = true;
     avatar.classList.remove("w-32", "h-32");
     avatar.classList.add("w-16", "h-16");
     nav.classList.remove("h-40", "expanded");
     nav.classList.add("h-[5.5rem]", "shadow-lg");
   }
-  if (scrollY === 0 && moveMenu) {
+  if (scrollY === 0 && moveMenu && viewportWidth >= 768) {
     moveMenu = false;
     avatar.classList.remove("w-16", "h-16");
     avatar.classList.add("w-32", "h-32");
@@ -580,6 +582,13 @@ hamburgerLinks.forEach((link, index) => {
     }, 500);
   });
 });
+
+function handleViewportChange() {
+  viewportWidth = window.innerWidth;
+  // console.log(`Viewport width changed to: ${viewportWidth}`);
+}
+
+window.addEventListener("resize", handleViewportChange);
 
 // sections.forEach((section) => {
 //   console.log(section.id);
