@@ -10,10 +10,48 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="script.js"></script>
   </head>
-  <body class="flex flex-col w-full h-fit items-center">
+  <body
+    id="body"
+    class="flex flex-col w-full h-fit items-center overflow-x-hidden"
+  >
+    <div
+      id="hamburgerButtonContainer"
+      class="w-screen h-40 bg-transparent z-40 absolute top-0 flex items-center justify-end px-6"
+    >
+      <div
+        id="hamburgerButton"
+        class="cursor-pointer w-8 h-8 md:hidden flex flex-col items-center justify-center gap-2"
+      >
+        <span
+          id="line1"
+          class="w-full h-[3px] bg-black transition-all duration-500 ease-out"
+        ></span>
+        <span
+          id="line2"
+          class="w-full h-[3px] bg-black transition-all duration-500 ease-out"
+        ></span>
+        <span
+          id="line3"
+          class="w-full h-[3px] bg-black transition-all duration-500 ease-out"
+        ></span>
+      </div>
+    </div>
+    <div
+      id="hamburgerMenuContainer"
+      class="w-screen h-screen flex absolute top-0 -z-10 md:hidden overflow-hidden"
+    >
+      <div
+        id="hamburgerMenu"
+        class="w-full h-full bg-[#483ED0] opacity-90 transition-transform translate-x-full duration-500 z-30 ease-in-out flex flex-col items-center justify-center gap-10"
+      >
+        <button class="text-white text-4xl hamburger-links">About</button>
+        <button class="text-white text-4xl hamburger-links">Work</button>
+        <button class="text-white text-4xl hamburger-links">Solutions</button>
+      </div>
+    </div>
     <div
       id="modalWindow"
-      class="fixed inset-0 overflow-hidden w-full h-screen bg-black bg-opacity-30 z-30 items-center justify-center transition duration-300 hidden"
+      class="fixed inset-0 overflow-hidden w-full h-screen bg-black bg-opacity-30 z-50 items-center justify-center transition duration-300 hidden"
     >
       <!-- <div
         id="modalContainer"
@@ -120,7 +158,7 @@
     </div>
     <nav
       id="navTop"
-      class="w-full h-40 flex items-center justify-between px-8 transition-all duration-200 ease-in bg-white fixed top-0 z-20 expanded"
+      class="w-full h-40 flex items-center justify-between px-8 transition-all duration-200 ease-in bg-white md:fixed top-0 z-10 md:z-50 expanded"
     >
       <div id="avatarAndName" class="w-2/5 h-full flex items-center gap-2">
         <img
@@ -133,7 +171,7 @@
       </div>
       <div
         id="menu"
-        class="w-2/5 h-fit flex items-center justify-center font-medium"
+        class="w-2/5 h-fit hidden md:flex items-center justify-center font-medium"
       >
         <div class="text-sm flex justify-center rounded-full w-60 relative">
           <div
@@ -165,7 +203,7 @@
     </nav>
     <section
       id="section1"
-      class="w-full h-fit max-w-3xl flex flex-col gap-4 pt-4 pb-4 px-8 mt-48"
+      class="w-full h-fit max-w-3xl flex flex-col gap-4 pt-4 pb-4 px-8 md:mt-48"
     >
       <h1 class="font-medium w-1/2 text-xl">
         I'm Vlad, and i turn ideas into digital experiences that people love.

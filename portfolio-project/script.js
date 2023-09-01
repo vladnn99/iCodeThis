@@ -67,6 +67,16 @@ const projectTypes = ["Design + Development", "Design", "Development"];
 const viewTypeButtons = [
   ...document.getElementsByClassName("change-view-button"),
 ];
+const hamburgerButton = document.querySelector("#hamburgerButton");
+const hamburgerMenu = document.querySelector("#hamburgerMenu");
+const line1 = document.querySelector("#line1");
+const line2 = document.querySelector("#line2");
+const line3 = document.querySelector("#line3");
+const hamburgerLinks = [...document.querySelectorAll(".hamburger-links")];
+const body = document.querySelector("body");
+const hamburgerMenuContainer = document.querySelector(
+  "#hamburgerMenuContainer"
+);
 let clickedIndex = 0;
 let moveMenu = false;
 let clickedOnMenu = false;
@@ -533,6 +543,43 @@ function checkSectionsInView() {
 
   return sectionInView;
 }
+
+function transformHamburgerButton() {
+  if (!line2.classList.contains("opacity-0")) {
+    line2.classList.add("opacity-0");
+    line1.classList.add("rotate-45", "translate-y-[0.67rem]", "bg-white");
+    line3.classList.add("-rotate-45", "-translate-y-[0.67rem]", "bg-white");
+    hamburgerMenuContainer.classList.remove("-z-10");
+    hamburgerMenuContainer.classList.add("z-30");
+    hamburgerMenu.classList.remove("translate-x-full");
+    body.classList.add("no-scroll");
+  } else {
+    line2.classList.remove("opacity-0");
+    line1.classList.remove("rotate-45", "translate-y-[0.67rem]", "bg-white");
+    line3.classList.remove("-rotate-45", "-translate-y-[0.67rem]", "bg-white");
+    hamburgerMenu.classList.add("translate-x-full");
+    setTimeout(function () {
+      hamburgerMenuContainer.classList.remove("z-30");
+      hamburgerMenuContainer.classList.add("-z-10");
+    }, 500);
+
+    body.classList.remove("no-scroll");
+  }
+}
+
+// function goToHamburgerLinks(link) {
+//   transformHamburgerButton();
+// }
+
+hamburgerButton.addEventListener("click", transformHamburgerButton);
+hamburgerLinks.forEach((link, index) => {
+  link.addEventListener("click", function () {
+    transformHamburgerButton();
+    setTimeout(function () {
+      scrollToSection(index);
+    }, 500);
+  });
+});
 
 // sections.forEach((section) => {
 //   console.log(section.id);
