@@ -1,0 +1,155 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body class="flex flex-col justify-center items-center h-fit">
+    <nav
+      id="navTop"
+      class="w-full h-32 flex items-center justify-between px-8 transition-all duration-400 ease-in-out bg-zinc-700 fixed top-0 z-10 md:z-50 expanded"
+    >
+      <div id="avatarAndName" class="w-2/5 h-full flex items-center gap-2">
+        <img
+          id="logo"
+          class="h-20 object-cover transition-all duration-200 ease-in"
+          src="files/Logo.png"
+          alt="avatar"
+        />
+      </div>
+      <div
+        id="menu"
+        class="w-fit h-fit flex items-center justify-end font-medium gap-12"
+      >
+          <a
+            href="#section1"
+            class="h-10 rounded-md z-20 flex items-center justify-center links text-white transition-all duration-300 hover:text-[#ED1C24] hover:tracking-widest ease-in-out"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+              <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
+              <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path>
+           </svg>
+           Home</a
+          >
+          <a
+            href="#section2"
+            class="h-10 rounded-md z-20 flex items-center justify-center links text-white transition-all duration-300 hover:text-[#ED1C24] hover:tracking-widest ease-in-out"
+            >Servicii</a
+          >
+          <a
+            href="#section3"
+            class="h-10 rounded-md z-20 flex items-center justify-center links text-white transition-all duration-300 hover:text-[#ED1C24] hover:tracking-widest ease-in-out"
+            >Despre noi</a
+          >
+          <a
+            href="#footer"
+            class="h-10 rounded-md z-20 flex items-center justify-center links text-white transition-all duration-300 hover:text-[#ED1C24] hover:tracking-widest ease-in-out"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+    <div id="section1" class="w-full h-full flex text-zinc-800 mt-32 pb-16 justify-center">
+      <img src="https://images.pexels.com/photos/3305/numbers-money-calculating-calculation.jpg" class="w-full h-full" alt="">
+    </div>
+    <div id="section2" class="w-full h-full flex text-zinc-800 pt-44 px-1 pb-16 justify-center">
+      <div id="containerServicii" class="w-full xl:w-4/5 h-full flex gap-10">
+        <div id="contabilitate" class="w-1/3 h-full rounded-xl flex flex-col p-10 items-center z-10 relative gap-4 border border-zinc-700 ">
+          <div id="iconContabilitate" class="absolute -mt-[4.8rem] bg-white rounded-full z-20 px-2 text-[#ED1C24]"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-files w-16 h-16" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M15 3v4a1 1 0 0 0 1 1h4"></path>
+          <path d="M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2z"></path>
+          <path d="M16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"></path>
+       </svg></div><h1 class="text-3xl font-light text-center text-[#ED1C24] h-20">Contabilitate și consultanță
+       </h1>
+      <!-- <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae pariatur tenetur error aut. Saepe fuga quaerat debitis odio dolor voluptate id, placeat atque numquam doloribus sint amet aut omnis, voluptatem dolore non commodi incidunt ad quam voluptas cupiditate sed fugiat! Ad consequatur fugit in voluptatem illo magni quidem natus, mollitia eius commodi inventore, itaque eveniet esse omnis officiis quam nostrum sequi vitae totam, soluta nesciunt aspernatur aut nulla? Obcaecati voluptatem dolore veritatis asperiores distinctio ipsam sit enim eum at unde deserunt esse facere quidem, rem sint voluptas dolorem aperiam natus? Consequatur delectus voluptatem repellat praesentium culpa laborum, fugiat iure facilis.</p> -->
+      <ul class="text-lg self-start">
+        <li class="list-disc">Societăți comerciale</li>
+        <li class="list-disc">Profesii liberale</li>
+        <li class="list-disc">Profesii liberale în asociere</li>
+        <li class="list-disc">Organizații fără scop patrimonial</li>
+      </ul>
+      <button class="mt-auto bg-[#ED1C24] text-white px-4 py-1 font-light rounded-md transition-all duration-300 hover:tracking-widest ease-in-out">Vezi detalii</button>
+      </div>
+        <div id="salarizare" class="w-1/3 h-full border border-zinc-700 rounded-xl flex flex-col p-10 items-center z-10 relative gap-4 "><div id="iconSalarizare" class="absolute -mt-[4.8rem] bg-white z-20 px-2 text-[#ED1C24]"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users-group w-16 h-16" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+          <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1"></path>
+          <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+          <path d="M17 10h2a2 2 0 0 1 2 2v1"></path>
+          <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+          <path d="M3 13v-1a2 2 0 0 1 2 -2h2"></path>
+       </svg></div><h1 class="text-3xl font-light text-center text-[#ED1C24] h-20 w-72">Salarizare și personal</h1>
+       <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae pariatur tenetur error aut. Saepe fuga quaerat debitis odio dolor voluptate id, placeat atque numquam doloribus sint amet aut omnis, voluptatem dolore non commodi incidunt ad quam voluptas cupiditate sed fugiat! Ad consequatur fugit in voluptatem illo magni quidem natus, mollitia eius commodi inventore, itaque eveniet esse omnis officiis quam nostrum sequi vitae totam, soluta nesciunt aspernatur aut nulla? Obcaecati voluptatem dolore veritatis asperiores distinctio ipsam sit enim eum at unde deserunt esse facere quidem, rem sint voluptas dolorem aperiam natus? Consequatur delectus voluptatem repellat praesentium culpa laborum, fugiat iure facilis.</p>
+       <button class="mt-auto bg-[#ED1C24] text-white px-4 py-1 font-light rounded-md transition-all duration-300 hover:tracking-widest ease-in-out">Vezi detalii</button>
+      </div>
+        <div id="contracte" class="w-1/3 h-full border border-zinc-700 rounded-xl flex flex-col p-10 items-center z-10 relative gap-4 ">
+          <div id="iconSalarizare" class="absolute -mt-[4.8rem] bg-white z-20 px-2 text-[#ED1C24]"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-article w-16 h-16" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
+            <path d="M7 8h10"></path>
+            <path d="M7 12h10"></path>
+            <path d="M7 16h10"></path>
+         </svg></div>
+          <h1 class="text-3xl font-light text-center text-[#ED1C24] h-20">Contracte de muncă și ReviSal</h1>
+          <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae pariatur tenetur error aut. Saepe fuga quaerat debitis odio dolor voluptate id, placeat atque numquam doloribus sint amet aut omnis, voluptatem dolore non commodi incidunt ad quam voluptas cupiditate sed fugiat! Ad consequatur fugit in voluptatem illo magni quidem natus, mollitia eius commodi inventore, itaque eveniet esse omnis officiis quam nostrum sequi vitae totam, soluta nesciunt aspernatur aut nulla? Obcaecati voluptatem dolore veritatis asperiores distinctio ipsam sit enim eum at unde deserunt esse facere quidem, rem sint voluptas dolorem aperiam natus? Consequatur delectus voluptatem repellat praesentium culpa laborum, fugiat iure facilis.</p>
+          <button class="mt-auto bg-[#ED1C24] text-white px-4 py-1 font-light rounded-md transition-all duration-300 hover:tracking-widest ease-in-out">Vezi detalii</button>
+        </div>
+      </div>
+    
+    </div>
+    
+    </div>
+    <div id="section3" class="w-full h-screen flex flex-col text-zinc-800 pt-28 px-1 items-center gap-5">
+      <h1 class="text-3xl text-[#ED1C24]">Despre noi</h1>
+      <div id="aboutContainer" class="w-full max-w-6xl px-10 py-6 flex text-sm gap-10">
+        <div id="aboutLeft" class="w-1/2 h-fit">
+          <img id="despreNoiImg" src="https://images.pexels.com/photos/6177607/pexels-photo-6177607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="despreNoi" class="w-full h-full max-h-[36rem] object-cover">
+        </div>
+        <div id="aboutRight" class="w-1/2 flex flex-col ">
+          <p class="mb-3">Misiunea noastră este adaptarea serviciilor oferite în funcție de solicitările clientului, în vederea unei colaborări eficiente și de durată. Ca obiectiv ne-am propus externalizarea serviciilor financiar-contabile a clientului spre <span class="font-semibold"><span class="text-[#ED1C24]">NEGREAN</span> Accounting</span>, pentru a-l ajuta pe acesta să se concentreze în direcția dezvoltării constante a afacerii sale.</p>
+          <p class="mb-3">Suntem o echipă dinamică și adaptabilă cu o vastă experiență în organizarea și conducerea contabilității, fiind în permanență la curent cu modificările legislative apărute, dispunând de informațiile și resursele necesare.</p>
+          <p class="mb-3">Respectăm cu fidelitate regulile deontologiei profesionale și confidențialitatea datelor clientului, ambele fiind incluse în termenii și condițiile contractului de prestare servicii pe toată perioada desfășurării acestuia, cât și ulterior. De asemenea, societatea noastră este membră autorizată de către CECCAR, angajații noștri participând constant la stagiile de pregătire organizate de această entitate.</p>
+          <p class="mb-3">Avem un portofoliu diversificat de clienți, ceea ce ne avantajează în oferirea de soluții personalizate nevoilor fiecărui client. Principalele noastre atuuri sunt profesionalismul, promptitudinea și consecvența în relațiile cu clienții noștri și instituțiile statului român.</p>
+          <p class="mb-3">Datorită faptului că piața este un mediu concurențial instabil pentru desfășurarea oricărei activități economice, adiacent și indispensabil serviciilor de organizare și conducere a contabilității este serviciul de consultanță economică și financiară, serviciu care oferă sprijin clientului în cel mai scurt timp posibil de la luarea la cunoștință a problemelor sale, având ca scop îmbunătățirea performanței activității economice desfășurate de către client.</p>
+        </div>
+    </div>
+    </div>
+    <footer id="footer" class="w-full h-1/2 bg-zinc-800 flex flex-col text-white font-extralight px-8 gap-2">
+      <h1 class="text-3xl  self-center pt-6">
+        Contactează-ne</h1>
+      <a class="mt-10 flex items-center" href="mailto:office@negreanaccounting.com"><span class="mr-2"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
+        <path d="M3 7l9 6l9 -6"></path>
+     </svg></span>office@<span class="font-normal">NEGREAN</span>accounting.com</a>
+      <p class="flex items-center"><span class="mr-2"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
+     </svg></span>+40744 978 464</p>
+      <p class="flex center"><span class="mr-2"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
+     </svg></span>Str. Septiumiu Albini, nr. 23, Ap.17, Cluj-Napoca, jud. Cluj</p>
+     <a href="https://www.linkedin.com/company/negrean-accounting/" class="flex items-center" target="_blank"><span class="mr-2"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+      <path d="M8 11l0 5"></path>
+      <path d="M8 8l0 .01"></path>
+      <path d="M12 16l0 -5"></path>
+      <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+   </svg></span>LinkedIN</a>
+    </footer>
+  </body>
+</html>

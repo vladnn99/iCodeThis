@@ -1,0 +1,19 @@
+* {
+  /* outline: 1px solid rgba(255, 0, 0, 0.7); */
+}
+
+.bg-my-image {
+  background-image: url("https://images.pexels.com/photos/3305/numbers-money-calculating-calculation.jpg");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* bg-my-image bg-cover */
