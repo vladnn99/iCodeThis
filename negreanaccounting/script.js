@@ -1,6 +1,20 @@
 const nav = document.querySelector("nav");
 const logo = document.querySelector("#logo");
 const menu = document.querySelector("#menu");
+const sliderImages = [
+  {
+    img: "files/img_1",
+    alt: "NEGREANaccounting.com slider image 1 contabilitate",
+  },
+  {
+    img: "files/img_2",
+    alt: "NEGREANaccounting.com slider image 2 salarizare",
+  },
+  {
+    img: "files/img_3",
+    alt: "NEGREANaccounting.com slider image 3 contracte de muncă",
+  },
+];
 let moveMenu = false;
 let viewportWidth;
 
