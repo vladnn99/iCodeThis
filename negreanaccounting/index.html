@@ -75,9 +75,12 @@
     >
       <div
         id="containerSection1"
-        class="w-full h-full flex relative overflow-hidden transition-transform duration-500 ease-in-out"
+        class="w-full h-full flex relative overflow-hidden"
       >
-        <div id="sliderContainerImg1" class="w-full h-full flex absolute">
+        <div
+          id="sliderContainerImg1"
+          class="w-full h-full flex slider-element absolute transition-transform duration-1000 ease-in-out"
+        >
           <img
             src="files/img_1.jpg"
             class="w-full h-full object-cover"
@@ -92,7 +95,7 @@
         </div>
         <div
           id="sliderContainerImg2"
-          class="w-full h-full flex absolute translate-x-[200%]"
+          class="w-full h-full flex slider-element absolute translate-x-full transition-transform duration-1000 ease-in-out"
         >
           <img
             src="files/img_2.jpg"
@@ -102,7 +105,7 @@
         </div>
         <div
           id="sliderContainerImg3"
-          class="w-full h-full flex absolute translate-x-full"
+          class="w-full h-full flex slider-element absolute translate-x-full transition-transform duration-1000 ease-in-out"
         >
           <img
             src="files/img_3.jpg"
@@ -372,7 +375,7 @@
     </div>
     <footer
       id="footer"
-      class="w-full h-1/2 bg-zinc-800 flex flex-col text-white font-extralight px-8 gap-2"
+      class="w-full h-1/2 bg-zinc-700 flex flex-col text-white font-extralight px-8 gap-2"
     >
       <h1 class="text-3xl self-center pt-6">Contactează-ne</h1>
       <a
