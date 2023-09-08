@@ -21,12 +21,26 @@ const sliderImages = [
     Ana3 are si pere`,
   },
 ];
+const sliderElements = [...document.querySelectorAll(".slider-element")];
+const sliderGotoServicesButtons = [
+  ...document.querySelectorAll(".slider-gotoservices-button"),
+];
+const tabbedComponentsButtons = [
+  ...document.querySelectorAll(".tabbed-component-button"),
+];
+const tabbedComponentsContentContainers = document.querySelectorAll(
+  ".tabbed-component-container"
+);
 let moveMenu = false;
 let viewportWidth;
 
 function initialize() {
   handleViewportChange();
   window.addEventListener("scroll", handleScroll);
+  window.addEventListener("resize", handleViewportChange);
+  handleSliderButtonsClick();
+  handleTabbedComponentsButtonsClick();
+  setInterval(imageSlider, 7000);
 }
 
 initialize();
@@ -55,11 +69,6 @@ function handleViewportChange() {
   // console.log(`Viewport width changed to: ${viewportWidth}`);
 }
 
-window.addEventListener("resize", handleViewportChange);
-
-const sliderElements = [...document.querySelectorAll(".slider-element")];
-console.log(sliderElements);
-
 function imageSlider() {
   sliderElements[0].classList.add("-translate-x-full");
   sliderElements[1].classList.remove("translate-x-full");
@@ -72,4 +81,55 @@ function imageSlider() {
   sliderElements[1].classList.remove("hidden");
 }
 
-setInterval(imageSlider, 7000);
+function renderClickedService(indexButtons) {
+  setTimeout(function () {
+    tabbedComponentsContentContainers[indexButtons].classList.remove(
+      "opacity-0",
+      "hidden"
+    );
+  }, 350);
+  tabbedComponentsContentContainers.forEach((container, indexContainers) => {
+    if (indexButtons !== indexContainers) {
+      container.classList.add("opacity-0");
+      setTimeout(function () {
+        container.classList.add("hidden");
+      }, 350);
+    }
+  });
+  tabbedComponentsButtons.forEach((button, index) => {
+    if (indexButtons === index) {
+      button.classList.add("border-b-[#ED1C24]", "text-[#ED1C24]");
+    } else {
+      button.classList.remove("border-b-[#ED1C24]", "text-[#ED1C24]");
+    }
+  });
+}
+
+function handleTabbedComponentsButtonsClick() {
+  tabbedComponentsButtons.forEach((button, indexButtons) => {
+    button.addEventListener("click", function () {
+      renderClickedService(indexButtons);
+    });
+  });
+}
+
+function handleSliderButtonsClick() {
+  sliderGotoServicesButtons.forEach((button, indexButtons) => {
+    button.addEventListener("click", function () {
+      renderClickedService(indexButtons);
+      window.location.href = "#section2";
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  function insertCopyright() {
+    let copyright = "© " + new Date().getFullYear() + ", NEGREANaccounting.com";
+    const copyrightContainer = document.createElement("p");
+    copyrightContainer.className = "text-white text-sm self-end pb-4";
+    copyrightContainer.textContent = copyright;
+    const footer = document.querySelector("footer");
+    footer.appendChild(copyrightContainer);
+  }
+  insertCopyright();
+});
