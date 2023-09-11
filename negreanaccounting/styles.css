@@ -16,6 +16,11 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.no-scroll {
+  position: fixed;
+  overflow-y: scroll;
+}
+
 .custom-columns {
   column-count: 1;
   column-gap: 2rem;

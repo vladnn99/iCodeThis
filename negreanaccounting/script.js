@@ -31,6 +31,14 @@ const tabbedComponentsButtons = [
 const tabbedComponentsContentContainers = document.querySelectorAll(
   ".tabbed-component-container"
 );
+const hamburgerMenuContainer = document.querySelector(
+  "#hamburgerMenuContainer"
+);
+const hamburgerButtonContainer = document.querySelector(
+  "#hamburgerButtonContainer"
+);
+const hamburgerLinks = [...document.querySelectorAll(".hamburger-links")];
+const body = document.querySelector("body");
 let moveMenu = false;
 let viewportWidth;
 
@@ -51,7 +59,7 @@ function handleScroll() {
     moveMenu = true;
     logo.classList.remove("h-20");
     logo.classList.add("h-14");
-    nav.classList.remove("h-32", "expanded");
+    nav.classList.remove("md:h-32", "expanded");
     nav.classList.add("h-[5.5rem]", "shadow-lg");
   }
   if (scrollY === 0 && moveMenu && viewportWidth >= 768) {
@@ -60,7 +68,7 @@ function handleScroll() {
     logo.classList.add("h-20");
     nav.classList.remove("h-[5.5rem]");
     nav.classList.remove("shadow-lg");
-    nav.classList.add("h-32", "expanded");
+    nav.classList.add("md:h-32", "expanded");
   }
 }
 
@@ -133,3 +141,52 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   insertCopyright();
 });
+
+function transformHamburgerButton() {
+  if (!line2.classList.contains("opacity-0")) {
+    line2.classList.add("opacity-0");
+    line1.classList.add("rotate-45", "translate-y-[0.67rem]", "bg-white");
+    line3.classList.add("-rotate-45", "-translate-y-[0.67rem]", "bg-white");
+    hamburgerMenuContainer.classList.remove("-z-10");
+    hamburgerMenuContainer.classList.add("z-30");
+    hamburgerMenu.classList.remove("translate-x-full");
+    body.classList.add("no-scroll");
+  } else {
+    line2.classList.remove("opacity-0");
+    line1.classList.remove("rotate-45", "translate-y-[0.67rem]", "bg-white");
+    line3.classList.remove("-rotate-45", "-translate-y-[0.67rem]", "bg-white");
+    hamburgerMenu.classList.add("translate-x-full");
+    setTimeout(function () {
+      hamburgerMenuContainer.classList.remove("z-30");
+      hamburgerMenuContainer.classList.add("-z-10");
+    }, 500);
+    body.classList.remove("no-scroll");
+  }
+}
+
+hamburgerButton.addEventListener("click", transformHamburgerButton);
+hamburgerLinks.forEach((link, index) => {
+  link.addEventListener("click", function () {
+    transformHamburgerButton();
+    setTimeout(function () {
+      scrollToSection(index);
+    }, 500);
+  });
+});
+
+function scrollToSection(index) {
+  let scrollPosition;
+  if (index === 0) {
+    scrollPosition = 0;
+  }
+  if (index === 1 || index === 2) {
+    scrollPosition = document.querySelector(`#section${index + 1}`).offsetTop;
+  }
+  if (index === 3) {
+    scrollPosition = document.querySelector("#footer").offsetTop;
+  }
+  window.scrollTo({
+    top: scrollPosition,
+    behavior: "smooth",
+  });
+}

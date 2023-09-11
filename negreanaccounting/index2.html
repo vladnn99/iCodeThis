@@ -13,45 +13,9 @@
     <script defer src="script.js"></script>
   </head>
   <body class="flex flex-col justify-center items-center h-fit">
-    <div
-      id="hamburgerButtonContainer"
-      class="w-1/2 h-20 bg-transparent fixed top-0 right-0 flex items-center justify-end px-6 z-50"
-    >
-      <div
-        id="hamburgerButton"
-        class="cursor-pointer w-8 h-8 md:hidden flex flex-col items-center justify-center gap-2"
-      >
-        <span
-          id="line1"
-          class="w-full h-[3px] bg-[#ED1C24] transition-all duration-500 ease-out"
-        ></span>
-        <span
-          id="line2"
-          class="w-full h-[3px] bg-[#ED1C24] transition-all duration-500 ease-out"
-        ></span>
-        <span
-          id="line3"
-          class="w-full h-[3px] bg-[#ED1C24] transition-all duration-500 ease-out"
-        ></span>
-      </div>
-    </div>
-    <div
-      id="hamburgerMenuContainer"
-      class="w-screen h-screen flex absolute top-0 -z-10 md:hidden overflow-hidden"
-    >
-      <div
-        id="hamburgerMenu"
-        class="w-full h-full bg-[#ED1C24] opacity-90 transition-transform translate-x-full duration-500 z-30 ease-in-out flex flex-col items-center justify-center gap-10"
-      >
-        <button class="text-white text-4xl hamburger-links">Home</button>
-        <button class="text-white text-4xl hamburger-links">Servicii</button>
-        <button class="text-white text-4xl hamburger-links">Despre noi</button>
-        <button class="text-white text-4xl hamburger-links">Contact</button>
-      </div>
-    </div>
-    <nav
+    <!-- <nav
       id="navTop"
-      class="w-full h-20 md:h-32 flex items-center justify-between px-8 transition-all duration-400 ease-in-out bg-zinc-700 fixed top-0 z-10 md:z-50 expanded"
+      class="w-full h-32 flex items-center justify-between px-8 transition-all duration-400 ease-in-out bg-zinc-700 fixed top-0 z-10 md:z-50 expanded"
     >
       <div
         id="avatarAndName"
@@ -109,15 +73,12 @@
           >Contact</a
         >
       </div>
-    </nav>
+    </nav> -->
     <div
       id="section1"
       class="w-full h-screen flex text-zinc-800 mt-16 pb-16 justify-center"
     >
-      <div
-        id="containerSection1"
-        class="w-full h-full flex relative overflow-hidden"
-      >
+      <div id="containerSection1" class="w-full h-full flex relative">
         <div
           id="sliderContainerImg1"
           class="w-full h-full flex slider-element absolute transition-transform duration-1000 ease-in-out"
@@ -131,14 +92,14 @@
             id="img1Description"
             class="absolute w-full lg:w-1/2 h-full bg-white bg-opacity-80 lg:left-1/2 flex items-center justify-center flex-col gap-3"
           >
-            <h1 class="text-4xl mb-6 max-w-xl text-center">
+            <h1 class="md:text-4xl mb-6 max-w-xl text-center">
               Contabilitate și consultanță
             </h1>
-            <p class="text-center">Societăți comerciale</p>
-            <p class="text-center">Profesii liberale</p>
-            <p class="text-center">Profesii liberale în asociere</p>
+            <p>Societăți comerciale</p>
+            <p>Profesii liberale</p>
+            <p>Profesii liberale în asociere</p>
             <button
-              class="bg-[#ED1C24] text-white py-2 mt-2 px-3 text-sm font-light rounded-md md:hover:tracking-widest transition-all duration-300 ease-in-out slider-gotoservices-button"
+              class="bg-[#ED1C24] text-white py-2 mt-2 px-3 text-sm font-light rounded-md hover:tracking-widest transition-all duration-300 ease-in-out slider-gotoservices-button"
             >
               Vezi detalii
             </button>
@@ -157,16 +118,12 @@
             id="img2Description"
             class="absolute w-full lg:w-1/2 h-full bg-white bg-opacity-80 lg:left-1/2 flex items-center justify-center flex-col gap-3"
           >
-            <h1 class="text-4xl mb-6 max-w-xl text-center">Salarizare</h1>
-            <p class="text-center">Întocmirea statelor de plată/fluturașilor</p>
-            <p class="text-center">
-              Întocmirea și depunerea electronică a Declarației 112
-            </p>
-            <p class="text-center">
-              Întocmirea adeverințelor de venit pentru salariați
-            </p>
+            <h1 class="md:text-4xl mb-6 max-w-xl text-center">Salarizare</h1>
+            <p>Întocmirea statelor de plată/fluturașilor</p>
+            <p>Întocmirea și depunerea electronică a Declarației 112</p>
+            <p>Întocmirea adeverințelor de venit pentru salariați</p>
             <button
-              class="bg-[#ED1C24] text-white py-2 mt-2 px-3 text-sm font-light rounded-md md:hover:tracking-widest transition-all duration-300 ease-in-out slider-gotoservices-button"
+              class="bg-[#ED1C24] text-white py-2 mt-2 px-3 text-sm font-light rounded-md hover:tracking-widest transition-all duration-300 ease-in-out slider-gotoservices-button"
             >
               Vezi detalii
             </button>
@@ -185,15 +142,13 @@
             id="img3Description"
             class="absolute w-full lg:w-1/2 h-full bg-white bg-opacity-80 lg:left-1/2 flex items-center justify-center flex-col gap-3"
           >
-            <h1 class="text-4xl mb-6 max-w-xl text-center">
+            <h1 class="md:text-4xl mb-6 max-w-xl text-center">
               Contracte de muncă și ReviSal
             </h1>
-            <p class="text-center">
-              Întocmire contracte de muncă/decizii/acte adiționale
-            </p>
-            <p class="text-center">Transmiteri și alte operațiuni ReviSal</p>
+            <p>Întocmire contracte de muncă/decizii/acte adiționale</p>
+            <p>Transmiteri și alte operațiuni ReviSal</p>
             <button
-              class="bg-[#ED1C24] text-white py-2 mt-2 px-3 text-sm font-light rounded-md md:hover:tracking-widest transition-all duration-300 ease-in-out slider-gotoservices-button"
+              class="bg-[#ED1C24] text-white py-2 mt-2 px-3 text-sm font-light rounded-md hover:tracking-widest transition-all duration-300 ease-in-out slider-gotoservices-button"
             >
               Vezi detalii
             </button>
@@ -241,19 +196,19 @@
         </div> -->
       </div>
     </div>
-    <div
+    <!-- <div
       id="section2"
-      class="w-full h-fit lg:h-full flex text-zinc-800 px-1 pb-16 justify-center"
+      class="w-full h-full flex text-zinc-800 px-1 pb-16 justify-center"
     >
       <div id="containerServicii" class="w-full h-full flex flex-col">
         <div id="buttonContainer" class="w-full h-1/5 flex items-end">
           <button
             id="tabbedComponentButton1"
-            class="flex w-1/3 items-center justify-center gap-1 font-light h-14 transition-all md:hover:tracking-widest duration-500 tabbed-component-button border-r border-b border-b-[#ED1C24] text-[#ED1C24]"
+            class="flex w-1/3 items-center justify-center gap-1 font-light h-14 transition-all hover:tracking-widest duration-500 tabbed-component-button border-r border-b border-b-[#ED1C24] text-[#ED1C24]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-files w-12 h-12 hidden md:block"
+              class="icon icon-tabler icon-tabler-files w-10 h-10"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -272,15 +227,15 @@
                 d="M16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"
               ></path>
             </svg>
-            Contabilitate
+            Contabilitate și consultanță
           </button>
           <button
             id="tabbedComponentButton2"
-            class="flex w-1/3 items-center justify-center gap-1 font-light h-14 transition-all md:hover:tracking-widest duration-500 tabbed-component-button border-r border-b"
+            class="flex w-1/3 items-center justify-center gap-1 font-light h-14 transition-all hover:tracking-widest duration-500 tabbed-component-button border-r border-b"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-users-group w-12 h-12 hidden md:block"
+              class="icon icon-tabler icon-tabler-users-group w-12 h-12"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -302,11 +257,11 @@
           </button>
           <button
             id="tabbedComponentButton3"
-            class="flex w-1/3 items-center justify-center gap-1 font-light h-14 transition-all md:hover:tracking-widest duration-500 tabbed-component-button border-b"
+            class="flex w-1/3 items-center justify-center gap-1 font-light h-14 transition-all hover:tracking-widest duration-500 tabbed-component-button border-b"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-article w-12 h-12 hidden md:block"
+              class="icon icon-tabler icon-tabler-article w-12 h-12"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -324,12 +279,12 @@
               <path d="M7 12h10"></path>
               <path d="M7 16h10"></path>
             </svg>
-            CIM și ReviSal
+            Contracte de muncă și ReviSal
           </button>
         </div>
         <div
           id="tabedContentContainerContabilitate"
-          class="w-full h-fit lg:h-4/5 flex flex-col lg:flex-row transition-opacity duration-300 ease-in tabbed-component-container"
+          class="w-full h-4/5 flex flex-col lg:flex-row transition-opacity duration-300 ease-in tabbed-component-container"
         >
           <div
             id="leftImgContabilitate"
@@ -343,10 +298,10 @@
           </div>
           <div
             id="rightTextContabilitate"
-            class="w-full lg:w-2/3 custom-columns p-4 gap-3 h-fit"
+            class="w-full lg:w-2/3 flex p-4 gap-3"
           >
             <ul
-              class="list-inside gap-2 text-sm column-item w-full column-item"
+              class="list-inside flex flex-col gap-2 text-sm column-item w-1/2"
             >
               <h2 class="text-xl font-normal">Societăți comerciale</h2>
               <li>Organizarea și conducerea contabilității în partidă dublă</li>
@@ -381,7 +336,7 @@
               <li>Verificarea și certificarea situațiilor financiare</li>
             </ul>
             <ul
-              class="list-inside gap-2 text-sm column-item w-full mt-4 md:mt-0"
+              class="list-inside flex flex-col gap-2 text-sm column-item w-1/2"
             >
               <h2 class="text-xl font-normal">
                 Profesii liberale/Profesii liberale în asociere
@@ -446,7 +401,7 @@
           </div>
           <div id="rightTextSalarizare" class="w-full lg:w-2/3 flex p-4 gap-3">
             <ul
-              class="list-inside flex flex-col gap-2 text-sm column-item w-full lg:w-1/2"
+              class="list-inside flex flex-col gap-2 text-sm column-item w-1/2"
             >
               <li>
                 Întocmirea statelor de plată/fluturașilor de salariu pe baza
@@ -495,7 +450,7 @@
           </div>
           <div id="rightTextContracte" class="w-full lg:w-2/3 flex p-4 gap-3">
             <ul
-              class="list-inside flex flex-col gap-2 text-sm column-item w-full lg:w-1/2"
+              class="list-inside flex flex-col gap-2 text-sm column-item w-1/2"
             >
               <li>
                 Automatizarea întocmirii contractelor individuale de muncă și a
@@ -523,22 +478,22 @@
     </div>
     <div
       id="section3"
-      class="w-full h-fit lg:h-screen flex flex-col text-zinc-800 pt-28 px-1 gap-4"
+      class="w-full h-screen flex flex-col text-zinc-800 pt-28 px-1 gap-4"
     >
       <h1 class="text-3xl text-[#ED1C24] font-light px-4">Despre noi</h1>
       <div
         id="aboutContainer"
-        class="w-full p-4 flex flex-col md:flex-row text-sm gap-4"
+        class="w-full p-4 flex flex-col lg:flex-row text-sm gap-4"
       >
-        <div id="aboutLeft" class="w-full h-1/3 md:h-full md:w-1/2">
+        <div id="aboutLeft" class="w-full h-1/3 lg:h-full lg:w-1/2">
           <img
             id="despreNoiImg"
             src="https://images.pexels.com/photos/6863260/pexels-photo-6863260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="despreNoi"
-            class="md:h-full w-full object-cover"
+            class="h-full w-full object-cover"
           />
         </div>
-        <div id="aboutRight" class="w-full md:w-1/2 flex flex-col">
+        <div id="aboutRight" class="w-full lg:w-1/2 flex flex-col">
           <p class="mb-3">
             Misiunea noastră este adaptarea serviciilor oferite în funcție de
             solicitările clientului, în vederea unei colaborări eficiente și de
@@ -618,7 +573,7 @@
         <a
           href="tel:+40744978464"
           target="_blank"
-          class="flex items-center md:hover:tracking-widest duration-300 ease-in-out w-fit"
+          class="flex items-center hover:tracking-widest duration-300 ease-in-out w-fit"
         >
           <span class="mr-2"
             ><svg
@@ -642,7 +597,7 @@
         <a
           href="https://www.google.ro/maps/place/Str.+Septimiu+Albini+23,+Cluj-Napoca+400394/@46.7700665,23.6082271,18z/data=!4m6!3m5!1s0x47490c3c91ac5b37:0x27f08b0b04fc1ac5!8m2!3d46.7699894!4d23.6095655!16s%2Fg%2F11swc8yj_v?entry=ttu"
           target="_blank"
-          class="flex items-center md:hover:tracking-widest duration-300 ease-in-out w-fit"
+          class="flex items-center hover:tracking-widest duration-300 ease-in-out w-fit"
         >
           <span class="mr-2"
             ><svg
@@ -666,7 +621,7 @@
         </a>
         <a
           href="https://www.linkedin.com/company/negrean-accounting/"
-          class="flex items-center md:hover:tracking-widest duration-300 ease-in-out w-fit"
+          class="flex items-center hover:tracking-widest duration-300 ease-in-out w-fit"
           target="_blank"
           ><span class="mr-2"
             ><svg
@@ -692,6 +647,6 @@
           >LinkedIN</a
         >
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>
