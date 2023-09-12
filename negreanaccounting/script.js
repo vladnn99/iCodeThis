@@ -57,7 +57,7 @@ function handleScroll() {
   const scrollY = window.scrollY;
   if (scrollY > 0 && !moveMenu && viewportWidth >= 768) {
     moveMenu = true;
-    logo.classList.remove("h-20");
+    logo.classList.remove("lg:h-20");
     logo.classList.add("h-14");
     nav.classList.remove("md:h-32", "expanded");
     nav.classList.add("h-[5.5rem]", "shadow-lg");
@@ -65,10 +65,15 @@ function handleScroll() {
   if (scrollY === 0 && moveMenu && viewportWidth >= 768) {
     moveMenu = false;
     logo.classList.remove("h-14");
-    logo.classList.add("h-20");
+    logo.classList.add("lg:h-20");
     nav.classList.remove("h-[5.5rem]");
     nav.classList.remove("shadow-lg");
     nav.classList.add("md:h-32", "expanded");
+  }
+  const translateY = scrollY;
+  const contentHeight = document.body.scrollHeight - window.innerHeight;
+  if (translateY < contentHeight) {
+    hamburgerMenuContainer.style.transform = `translateY(${translateY}px)`;
   }
 }
 
@@ -150,7 +155,7 @@ function transformHamburgerButton() {
     hamburgerMenuContainer.classList.remove("-z-10");
     hamburgerMenuContainer.classList.add("z-30");
     hamburgerMenu.classList.remove("translate-x-full");
-    body.classList.add("no-scroll");
+    document.body.style.overflow = "hidden";
   } else {
     line2.classList.remove("opacity-0");
     line1.classList.remove("rotate-45", "translate-y-[0.67rem]", "bg-white");
@@ -160,7 +165,7 @@ function transformHamburgerButton() {
       hamburgerMenuContainer.classList.remove("z-30");
       hamburgerMenuContainer.classList.add("-z-10");
     }, 500);
-    body.classList.remove("no-scroll");
+    document.body.style.overflow = "auto";
   }
 }
 
