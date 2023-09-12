@@ -1,0 +1,14 @@
+{
+  "routes": [
+    {
+      "route": "/negreanaccounting",
+      "serve": "/",
+      "statusCode": 200
+    },
+    {
+      "route": "/(.*)",
+      "serve": "/$1",
+      "statusCode": 404
+    }
+  ]
+}
