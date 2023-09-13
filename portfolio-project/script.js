@@ -215,18 +215,18 @@ function handleScroll() {
   const scrollY = window.scrollY;
   if (scrollY > 0 && !moveMenu && viewportWidth >= 768) {
     moveMenu = true;
-    avatar.classList.remove("w-32", "h-32");
-    avatar.classList.add("w-16", "h-16");
-    nav.classList.remove("h-40", "expanded");
+    avatar.classList.remove("md:w-32");
+    avatar.classList.add("w-16");
+    nav.classList.remove("md:h-40", "expanded");
     nav.classList.add("h-[5.5rem]", "shadow-lg");
   }
   if (scrollY === 0 && moveMenu && viewportWidth >= 768) {
     moveMenu = false;
-    avatar.classList.remove("w-16", "h-16");
-    avatar.classList.add("w-32", "h-32");
+    avatar.classList.remove("w-16");
+    avatar.classList.add("md:w-32");
     nav.classList.remove("h-[5.5rem]");
     nav.classList.remove("shadow-lg");
-    nav.classList.add("h-40", "expanded");
+    nav.classList.add("md:h-40", "expanded");
   }
   if (!clickedOnMenu) {
     const sectionInView = checkSectionsInView();
