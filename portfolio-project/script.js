@@ -419,7 +419,7 @@ function generateProjectModalWindow(clickedForModalIndex) {
   closeModalBtn.className =
     "text-white ml-auto mr-12 w-10 h-10 flex items-center justify-center border border-gray-400 rounded-full group";
   modalContent.id = "modalContent";
-  modalContent.className = "w-full h-[92%] flex flex-col p-20 pt-12 gap-4";
+  modalContent.className = "w-full h-[92%] flex flex-col p-5 pt-12 gap-4";
   contentUp.id = "contentUp";
   contentUp.className = "w-full h-[55%] flex flex-col";
   h1AndPContainer.id = "h1AndPContainer";
@@ -433,9 +433,9 @@ function generateProjectModalWindow(clickedForModalIndex) {
   img.className = "w-full object-cover";
   img.style = "object-position: center top";
   contentDown.id = "contentDown";
-  contentDown.className = "w-full h-[45%] flex gap-16";
+  contentDown.className = "w-full h-[45%] flex md:gap-16 gap-3";
   leftDown.id = "leftDown";
-  leftDown.className = "w-1/5 h-full flex flex-col";
+  leftDown.className = "w-1/3 h-full flex flex-col";
   a.href = "#";
   a.className = "text-xs underline flex items-center gap-2 group font-medium";
   a.innerText = "Visit website";
@@ -443,7 +443,7 @@ function generateProjectModalWindow(clickedForModalIndex) {
     "flex items-center w-5 h-5 justify-center bg-[#483ED0] text-white rounded-full transition duration-300 group-hover:bg-[#7166FF]";
   span.innerHTML += svgLink;
   rightDown.id = "rightDown";
-  rightDown.className = "w-4/5 h-full flex flex-col gap-3";
+  rightDown.className = "w-2/3 h-full flex flex-col gap-3";
   h2_1.className = "font-medium";
   h2_1.innerText = `About ${filteredProjects[clickedForModalIndex].Name}`;
   pD_1.className = "text-xs";
