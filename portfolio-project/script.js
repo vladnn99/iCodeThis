@@ -9,12 +9,12 @@ const sections = [...document.querySelectorAll("section")];
 const projects = [
   {
     coverImage:
-      "https://github.com/vladnn99/iCodeThis/blob/main/portfolio-project/files/image33.png?raw=true",
-    Name: "UIDeli.com",
+      "https://raw.githubusercontent.com/vladnn99/iCodeThis/02c7849ccde53faa2557f6c1ded2abdc34894e67/portfolio-project/files/negreanaccounting.jpg",
+    Name: "NegreanAccounting.com",
     Type: "Design + Development",
     Year: 2023,
     Description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus ad exercitationem inventore, ipsam neque quidem animi sapiente magni necessitatibus.",
+      "NegreanAccounting.com is my a presentation website meticulously crafted to showcase the expertise and services of the accounting company. Through thoughtful design and development, I've created a user-friendly platform that serves as a digital gateway to the world of financial solutions. On this website, I've provided insights into the comprehensive offerings, which include tax planning, bookkeeping, and valuable financial consultations. Negrean Accounting, as envisioned by me, is committed to delivering excellence in financial management, and this website is a testament to their dedication and professionalism.",
   },
   {
     coverImage:
@@ -77,10 +77,12 @@ const body = document.querySelector("body");
 const hamburgerMenuContainer = document.querySelector(
   "#hamburgerMenuContainer"
 );
+const upArrow = document.querySelector("#upArrow");
 let viewportWidth;
 let clickedIndex = 0;
 let moveMenu = false;
 let clickedOnMenu = false;
+let arrowClicked = false;
 
 function initialize() {
   handleViewportChange();
@@ -118,17 +120,20 @@ function filterProjects(projects, clickedIndex) {
 function renderProjectGrid(project) {
   const projectDiv = document.createElement("div");
   const img = document.createElement("img");
+  const imgOverlay = document.createElement("div");
   const h2 = document.createElement("h2");
   const p = document.createElement("p");
-  img.className =
-    "object-contain w-full hover:opacity-70 transition-opacity duration-300";
+  img.className = "object-contain w-full";
   img.src = `${project.coverImage}`;
+  imgOverlay.className =
+    "absolute w-full h-full bg-amber-400 opacity-0 transition-opacity duration-300 hover:opacity-20 ease-in";
   h2.innerText = `${project.Name}`;
   p.className = "text-xs font-semibold";
   p.innerHTML = `${project.Type} <span class="ml-2">2023</span>`;
   projectDiv.className =
-    "flex flex-col gap-2 mb-8 column-item cursor-pointer project";
+    "flex flex-col gap-2 mb-8 column-item cursor-pointer project relative";
   projectDiv.appendChild(img);
+  projectDiv.appendChild(imgOverlay);
   projectDiv.appendChild(h2);
   projectDiv.appendChild(p);
   projectsContainer.appendChild(projectDiv);
@@ -211,8 +216,29 @@ function scrollToSection(clickedLinkId) {
   });
 }
 
+upArrow.addEventListener("click", function (event) {
+  event.preventDefault();
+  arrowClicked = true;
+  upArrow.classList.remove("opacity-100");
+  upArrow.classList.add("opacity-0");
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+  setTimeout(function () {
+    arrowClicked = false;
+  }, 1000);
+});
+
 function handleScroll() {
   const scrollY = window.scrollY;
+  if (scrollY > 20 && !arrowClicked) {
+    upArrow.classList.remove("opacity-0");
+    upArrow.classList.add("opacity-100");
+  } else if (scrollY <= 20) {
+    upArrow.classList.remove("opacity-100");
+    upArrow.classList.add("opacity-0");
+  }
   if (scrollY > 0 && !moveMenu && viewportWidth >= 768) {
     moveMenu = true;
     avatar.classList.remove("md:w-32");
@@ -313,13 +339,15 @@ function renderProjectList(project) {
   const projectDiv = document.createElement("div");
   const img = document.createElement("img");
   const imgContainer = document.createElement("div");
+  const imgOverlay = document.createElement("div");
   const h2 = document.createElement("h2");
   const p = document.createElement("p");
   const description = document.createElement("p");
   const rightContainer = document.createElement("div");
-  imgContainer.className = "w-2/5 h-full flex";
-  img.className =
-    "object-cover w-full h-full hover:opacity-70 transition-opacity duration-300";
+  imgContainer.className = "w-2/5 h-full flex relative";
+  imgOverlay.className =
+    "absolute w-full h-full bg-amber-400 opacity-0 transition-opacity duration-300 hover:opacity-20 ease-in";
+  img.className = "object-cover w-full h-full";
   img.src = `${project.coverImage}`;
   img.style = "object-position: center top;";
   h2.innerText = `${project.Name}`;
@@ -334,6 +362,7 @@ function renderProjectList(project) {
   rightContainer.appendChild(p);
   rightContainer.appendChild(description);
   imgContainer.appendChild(img);
+  imgContainer.appendChild(imgOverlay);
   projectDiv.appendChild(imgContainer);
   projectDiv.appendChild(rightContainer);
   projectsContainer.appendChild(projectDiv);
@@ -375,11 +404,11 @@ function generateProjectModalWindow(clickedForModalIndex) {
   const contentUp = document.createElement("div");
   const h1AndPContainer = document.createElement("div");
   const h1 = document.createElement("h1");
-  const p = document.createElement("p");
+  // const p = document.createElement("p");
   const imgContainer = document.createElement("div");
   const img = document.createElement("img");
   const contentDown = document.createElement("div");
-  const leftDown = document.createElement("div");
+  // const leftDown = document.createElement("div");
   const a = document.createElement("a");
   const svgLink = `<svg
   xmlns="http://www.w3.org/2000/svg"
@@ -398,14 +427,14 @@ function generateProjectModalWindow(clickedForModalIndex) {
   <path d="M8 7l9 0l0 9"></path>
 </svg>`;
   const span = document.createElement("span");
-  const rightDown = document.createElement("div");
+  // const rightDown = document.createElement("div");
   const h2_1 = document.createElement("h2");
   const pD_1 = document.createElement("p");
-  const h2_2 = document.createElement("h2");
-  const pD_2 = document.createElement("p");
+  // const h2_2 = document.createElement("h2");
+  // const pD_2 = document.createElement("p");
   const tags = document.createElement("div");
-  const tag1 = document.createElement("button");
-  const tag2 = document.createElement("button");
+  const tag1 = document.createElement("div");
+  const tag2 = document.createElement("div");
 
   modalWindow.classList.remove("hidden", "opacity-0");
   modalWindow.classList.add("flex");
@@ -419,65 +448,69 @@ function generateProjectModalWindow(clickedForModalIndex) {
   closeModalBtn.className =
     "text-white ml-auto mr-12 w-10 h-10 flex items-center justify-center border border-gray-400 rounded-full group";
   modalContent.id = "modalContent";
-  modalContent.className = "w-full h-[92%] flex flex-col p-5 pt-12 gap-4";
+  modalContent.className =
+    "w-full h-[92%] flex flex-col p-5 md:p-20 md:pt-10 pt-6 gap-4";
   contentUp.id = "contentUp";
-  contentUp.className = "w-full h-[55%] flex flex-col";
-  h1AndPContainer.id = "h1AndPContainer";
-  h1AndPContainer.className = "w-full flex flex-col h-1/6 gap-3";
+  contentUp.className = "w-full h-[45%] flex flex-col";
+  // h1AndPContainer.id = "h1AndPContainer";
+  // h1AndPContainer.className = "w-full flex flex-col h-[16%] gap-3";
   h1.className = "font-medium text-lg";
-  h1.innerText = `Helping ${filteredProjects[clickedForModalIndex].Name} give their users the best online experience`;
-  p.className = "text-xs font-medium";
-  p.innerText = filteredProjects[clickedForModalIndex].Name;
-  imgContainer.className = "w-full flex h-5/6 mt-auto";
+  h1.innerText = projects[clickedForModalIndex].Name;
+  // p.className = "text-xs font-medium";
+  // p.innerText = filteredProjects[clickedForModalIndex].Name;
+  imgContainer.className = "w-full flex h-[76%] mt-1";
   img.src = filteredProjects[clickedForModalIndex].coverImage;
   img.className = "w-full object-cover";
   img.style = "object-position: center top";
   contentDown.id = "contentDown";
-  contentDown.className = "w-full h-[45%] flex md:gap-16 gap-3";
-  leftDown.id = "leftDown";
-  leftDown.className = "w-1/3 h-full flex flex-col";
+  contentDown.className = "w-full h-[55%] flex flex-col md:gap-4 gap-3";
+  // leftDown.id = "leftDown";
+  // leftDown.className = "w-1/3 h-full flex flex-col";
   a.href = "#";
-  a.className = "text-xs underline flex items-center gap-2 group font-medium";
+  a.className =
+    "text-xs self-end underline flex items-center gap-2 group font-medium h-[8%]";
   a.innerText = "Visit website";
   span.className =
-    "flex items-center w-5 h-5 justify-center bg-[#483ED0] text-white rounded-full transition duration-300 group-hover:bg-[#7166FF]";
+    "flex items-center w-5 h-5 justify-center bg-amber-400 text-white rounded-full transition duration-300 group-hover:bg-amber-500";
   span.innerHTML += svgLink;
-  rightDown.id = "rightDown";
-  rightDown.className = "w-2/3 h-full flex flex-col gap-3";
+  // rightDown.id = "rightDown";
+  // rightDown.className = "w-full h-full flex flex-col gap-3";
   h2_1.className = "font-medium";
   h2_1.innerText = `About ${filteredProjects[clickedForModalIndex].Name}`;
-  pD_1.className = "text-xs";
+  pD_1.className = "text-xs md:text-sm";
   pD_1.innerText = `${filteredProjects[clickedForModalIndex].Description}`;
-  h2_2.className = "font-medium mt-4";
-  h2_2.innerText = "The Project";
-  pD_2.className = "text-xs";
-  pD_2.innerText = `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste
-  atque temporibus eius deleniti nam praesentium.`;
+  // h2_2.className = "font-medium mt-4";
+  // h2_2.innerText = "The Project";
+  // pD_2.className = "text-xs";
+  // pD_2.innerText = `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste atque temporibus eius deleniti nam praesentium.`;
   tags.className = "flex gap-2 items-center text-xs mt-4";
-  tag1.className = tag2.className = "px-5 h-10 rounded-full border";
+  tag1.className = tag2.className =
+    "px-5 h-10 rounded-full border flex items-center justify-center";
   tag1.innerText = "Design";
   tag2.innerText = "Development";
 
   closeModalBtn.innerHTML += svg;
   modalHeader.appendChild(closeModalBtn);
-  h1AndPContainer.appendChild(p);
+  // h1AndPContainer.appendChild(p);
   h1AndPContainer.appendChild(h1);
-  contentUp.appendChild(h1AndPContainer);
+  // contentUp.appendChild(h1AndPContainer);
+  contentUp.appendChild(h1);
   contentUp.appendChild(imgContainer);
+  contentUp.appendChild(a);
   imgContainer.appendChild(img);
   modalContent.appendChild(contentUp);
   a.appendChild(span);
-  leftDown.appendChild(a);
-  contentDown.appendChild(leftDown);
-  rightDown.appendChild(h2_1);
-  rightDown.appendChild(pD_1);
-  rightDown.appendChild(h2_2);
-  rightDown.appendChild(pD_2);
+  // leftDown.appendChild(a);
+  // contentDown.appendChild(leftDown);
+  contentDown.appendChild(h2_1);
+  contentDown.appendChild(pD_1);
+  // contentDown.appendChild(h2_2);
+  // contentDown.appendChild(pD_2);
   tags.appendChild(tag1);
   tags.appendChild(tag2);
-  rightDown.appendChild(tags);
+  contentDown.appendChild(tags);
 
-  contentDown.appendChild(rightDown);
+  // contentDown.appendChild(rightDown);
   modalContent.appendChild(contentDown);
   modalContainer.appendChild(modalHeader);
   modalContainer.appendChild(modalContent);
