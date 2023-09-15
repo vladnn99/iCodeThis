@@ -13,6 +13,7 @@ const projects = [
     Name: "NegreanAccounting.com",
     Type: "Design + Development",
     Year: 2023,
+    Website: "http://negreanaccounting.eu",
     Description:
       "NegreanAccounting.com is my a presentation website meticulously crafted to showcase the expertise and services of the accounting company. Through thoughtful design and development, I've created a user-friendly platform that serves as a digital gateway to the world of financial solutions. On this website, I've provided insights into the comprehensive offerings, which include tax planning, bookkeeping, and valuable financial consultations. Negrean Accounting, as envisioned by me, is committed to delivering excellence in financial management, and this website is a testament to their dedication and professionalism.",
   },
@@ -22,6 +23,7 @@ const projects = [
     Name: "Koto Studio",
     Type: "Design + Development",
     Year: 2023,
+    Website: "",
     Description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus ad exercitationem inventore, ipsam neque quidem animi sapiente magni necessitatibus.",
   },
@@ -31,6 +33,7 @@ const projects = [
     Name: "Switch Black",
     Type: "Design",
     Year: 2023,
+    Website: "",
     Description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus ad exercitationem inventore, ipsam neque quidem animi sapiente magni necessitatibus.",
   },
@@ -40,6 +43,7 @@ const projects = [
     Name: "Remarket",
     Type: "Development",
     Year: 2023,
+    Website: "",
     Description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus ad exercitationem inventore, ipsam neque quidem animi sapiente magni necessitatibus.",
   },
@@ -49,6 +53,7 @@ const projects = [
     Name: "Another One",
     Type: "Development",
     Year: 2023,
+    Website: "",
     Description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus ad exercitationem inventore, ipsam neque quidem animi sapiente magni necessitatibus.",
   },
@@ -58,6 +63,7 @@ const projects = [
     Name: "Blender Renders",
     Type: "Development",
     Year: 2023,
+    Website: "",
     Description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus ad exercitationem inventore, ipsam neque quidem animi sapiente magni necessitatibus.",
   },
@@ -466,10 +472,11 @@ function generateProjectModalWindow(clickedForModalIndex) {
   contentDown.className = "w-full h-[55%] flex flex-col md:gap-4 gap-3";
   // leftDown.id = "leftDown";
   // leftDown.className = "w-1/3 h-full flex flex-col";
-  a.href = "#";
+  a.href = filteredProjects[clickedForModalIndex].Website;
   a.className =
     "text-xs self-end underline flex items-center gap-2 group font-medium h-[8%]";
   a.innerText = "Visit website";
+  a.target = "_blank";
   span.className =
     "flex items-center w-5 h-5 justify-center bg-amber-400 text-white rounded-full transition duration-300 group-hover:bg-amber-500";
   span.innerHTML += svgLink;
