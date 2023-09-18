@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function insertCopyright() {
     let copyright = "© " + new Date().getFullYear() + ", NEGREANaccounting.com";
     const copyrightContainer = document.createElement("p");
-    copyrightContainer.className = "text-white text-sm self-end pb-4";
+    copyrightContainer.className = "text-white text-sm self-end pb-4 pr-1";
     copyrightContainer.textContent = copyright;
     const footer = document.querySelector("footer");
     footer.appendChild(copyrightContainer);
