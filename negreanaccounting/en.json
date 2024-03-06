@@ -1,0 +1,123 @@
+{
+  "data": {
+    "menuButtons": ["Home", "Services", "About Us", "Contact Us"],
+    "section1": {
+      "sliderHeadlineContabilitate": {
+        "name": "Accounting and consulting",
+        "listElements": [
+          "Private Companies",
+          "Liberal Professions",
+          "Associated Liberal Professions"
+        ]
+      },
+      "sliderHeadlineSalarizare": {
+        "name": "Payroll",
+        "listElements": [
+          "Preparation of payroll and payslips",
+          "Preparation and online submission for the Form 112",
+          "Preparation of income certificates for employees"
+        ]
+      },
+      "sliderHeadlineContracte": {
+        "name": "Employment contract drafting and registration",
+        "listElements": [
+          "Drafting employment contracts/employment contracts termination/employment contracts changes ",
+          "Electronic employees register submissions and other operations"
+        ]
+      }
+    },
+    "section2": {
+      "header": "NEGREAN Accounting Services",
+      "tabbedComponentHeaders": [
+        {
+          "header": "Accounting",
+          "h2_1": "Private Companies",
+          "h2_2": "Liberal Professions/Liberal Professions in Association",
+          "contentObject": {
+            "column1": [
+              "Organization and management of double-entry accounting",
+              "Financial accounting",
+              "Preparation of the monthly trial balance",
+              "Analytical record of customers and suppliers",
+              "Preparation of the all operations journal register",
+              "Preparation of the inventory register",
+              "Preparation of sales and purchases journals",
+              "Preparation and submission of VAT return (Form 300)",
+              "Preparation and submission of the annual informative statement regarding the deliveries of goods, services rendered, and acquisitions made (Form 394)",
+              "Preparation and submission of the recapitulative statement regarding intra-community deliveries/acquisitions/services (Form 390)",
+              "Preparation and submission of the corporation income tax form (Form 100)",
+              "Preparation and submission of annual and semi-annual financial statements",
+              "Preparation and submission of the liquidation financial statement",
+              "Verification and certification of financial statements"
+            ],
+            "column2": {
+              "header3_1": "For individually conducted activity:",
+              "content1": [
+                "Organization and management of single-entry accounting",
+                "Preparation of the cash receipts and payments journal",
+                "Preparation of the inventory register (fixed assets and inventory items)",
+                "Preparation of various operations sheets",
+                "Preparation of miscellaneous operations journals",
+                "Preparation and submission of the statement regarding realized and estimated incomes (Form 212)",
+                "Preparation of sales and purchases journals",
+                "Preparation and submission of VAT return (Form 300)",
+                "Preparation and submission of the annual informative statement regarding the deliveries of goods, services rendered, and acquisitions made (Form 394)",
+                "Preparation and submission of the recapitulative statement regarding intra-community deliveries/acquisitions/services (Form 390)"
+              ],
+              "header3_2": "For activity carried out in associative forms (professional companies), in addition to those mentioned above, the following is added:",
+              "content2": "Preparation and submission of the statement regarding income realized from association and distribution of net income (Form 204)"
+            }
+          }
+        },
+        {
+          "header": "Payroll",
+          "h1": "Private Companies",
+          "contentObject": {
+            "column1": [
+              "Preparation of payroll based on the time sheets received from the client",
+              "Preparation of meal voucher orders based on the time sheets received from the client",
+              "Preparation of bank files for making salary payments",
+              "Preparation and electronic submission of Declaration 112 regarding salary-related obligations",
+              "Calculation and preparation for the client in an easily understandable form of obligations related to salary income obtained following the submission of Declaration 112, for payment purposes",
+              "Monthly preparation of the situation regarding taken and remaining vacation for all client employees",
+              "Preparation of income certificates for employees for various purposes needed (Loan application, enrollment of a child in kindergarten, etc.)"
+            ]
+          }
+        },
+        {
+          "header": "Employment contracts",
+          "contentObject": {
+            "column1": [
+              "Automation of drafting individual employment contracts and termination decisions, based on models agreed upon with the client",
+              "Drafting individual employment contracts/termination decisions/additional acts as mentioned above according to the client's needs",
+              "Transmission of individual employment contracts/termination decisions/additional acts to ReviSal (General Registry of Employee Records) and obtaining the registration number for each transmission",
+              "Obtaining ReviSal (online employee register) reports at the client's request for any of their employees"
+            ]
+          }
+        }
+      ]
+    },
+    "section3": {
+      "header": "About NEGREAN Accounting",
+      "paragraph1_1": "Our mission is to tailor our services to the requirements and needs of our clients, promoting efficient and long-term collaboration. We aim to facilitate the outsourcing of financial and accounting services to ",
+      "paragraph1_2_span": "NEGREAN Accounting",
+      "paragraph1_3": ", allowing clients to focus on the constant development of their businesses.",
+      "paragraph2": "We are a dynamic and adaptable team with extensive experience in the field of organizing and managing accounting, always staying updated with new legislative changes and equipped with the resources necessary to meet complex requirements.",
+      "paragraph3": "We are committed to strictly adhere to the rules of professional ethics and confidentiality of client data, as outlined in the terms and conditions of our contracts throughout the entire duration of our collaboration and beyond. We take pride in being a part of CECCAR (The Body of Expert and Licensed Accountants of Romania) and pledge to continuously maintain the knowledge level of our employees through participation in courses and training provided by this entity.",
+      "paragraph4": "We have a diverse portfolio of clients, enabling us to provide customized solutions for each. We are recognized for our professionalism, prompt responses, and consistency in relationships with clients and Romanian state institutions.",
+      "paragraph5": "Given the volatile nature of the market in which we operate, we also provide economic and financial consulting services to help our clients improve their economic performance as quickly as possible upon identifying their issues. We believe this service is essential in the current competitive environment."
+    },
+    "footer": {
+      "h1": "Contact us",
+      "email": "office@NEGREANaccounting.com",
+      "phone": "+40 744 978 464",
+      "address": "No. 23, Septimiu Albini Street, apt. 17, Cluj-Napoca, Cluj County",
+      "linkedIn": "https://www.linkedin.com/company/negrean-accounting/",
+      "namePlaceholder": "Your Name",
+      "emailPlaceholder": "Your E-mail",
+      "messagePlaceholder": "Write down your message for us"
+    },
+    "detailsButton": "See details",
+    "sectionHeading": { "section2": "Services", "section3": "About Us" }
+  }
+}

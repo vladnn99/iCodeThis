@@ -1,0 +1,124 @@
+{
+  "data": {
+    "menuButtons": ["Home", "Servicii", "Despre noi", "Contact"],
+    "section1": {
+      "sliderHeadlineContabilitate": {
+        "name": "Contabilitate și consultanță",
+        "listElements": [
+          "Societăți comerciale",
+          "Profesii liberale",
+          "Profesii liberale în asociere"
+        ]
+      },
+      "sliderHeadlineSalarizare": {
+        "name": "Salarizare",
+        "listElements": [
+          "Întocmirea statelor de plată/fluturașilor",
+          "Întocmirea și depunerea electronică a Declarației 112",
+          "Întocmirea adeverințelor de venit pentru salariați"
+        ]
+      },
+      "sliderHeadlineContracte": {
+        "name": "Contracte de muncă și ReviSal",
+        "listElements": [
+          "Întocmire contracte de muncă/decizii/acte adiționale",
+          "Transmiteri și alte operațiuni ReviSal"
+        ]
+      }
+    },
+    "section2": {
+      "header": "Serviciile NEGREAN Accounting",
+      "tabbedComponentHeaders": [
+        {
+          "header": "Contabilitate",
+          "h2_1": "Societăți comerciale",
+          "h2_2": "Profesii liberale/Profesii liberale în asociere",
+          "contentObject": {
+            "column1": [
+              "Organizarea și conducerea contabilității în partidă dublă",
+              "Contabilitate financiară",
+              "Întocmirea balanței de verificare lunară",
+              "Evidența analitică a clienților și furnizorilor",
+              "Întocmirea registrului jurnal",
+              "Întocmirea registrului inventar",
+              "Întocmirea jurnalelor de vânzări și de cumpărări",
+              "Întocmirea și depunerea decontului de TVA (Declarație 300)",
+              "Întocmirea și depunerea declarației informative anuale privind livrările de bunuri, prestațiile de servicii și achizițiile efectuate (Declarație 394)",
+              "Întocmirea și depunerea declarației recapitulative privind livrările/achizițiile/prestațiile de servicii intracomunitare (Declarație 390)",
+              "Întocmirea și depunerea declarației privind obligațiile la bugetul de stat (Declarație 100)",
+              "Întocmirea și depunerea situațiilor financiare anuale și semestriale",
+              "Întocmirea și depunerea bilanțului de lichidare",
+              "Verificarea și certificarea situațiilor financiare"
+            ],
+            "column2": {
+              "header3_1": "Pentru activitatea desfășurată individual:",
+              "content1": [
+                "Organizarea și conducerea contabilității în partidă simplă",
+                "Întocmirea registrului jurnal de încasări și plăți",
+                "Întocmirea registrului de inventar (mijloace fixe și obiecte de inventar)",
+                "Întocmirea fișelor de operațiuni diverse",
+                "Întocmirea jurnalelor de operațiuni diverse",
+                "Întocmirea și depunerea declarației privind veniturile realizate și estimate (Declarație unică 212)",
+                "Întocmirea jurnalelor de vânzări și de cumpărări",
+                "Întocmirea și depunerea decontului de TVA (Declarație 300)",
+                "Întocmirea și depunerea declarației informative anuale privind livrările de bunuri, prestările de servicii și achizițiile efectuate (Declarație 394)",
+                "Întocmirea și depunerea declarației recapitulative privind livrările/achizițiile/prestările de servicii intracomunitare (Declarație 390)"
+              ],
+              "header3_2": "Pentru activitatea desfășurată în forme asociative (societăți profesionale), adiacent celor menționate mai sus, se adaugă:",
+              "content2": "Întocmirea și depunerea declarației privind veniturile realizate din asociere și distribuirea venitului net (Declarație 204)"
+            }
+          }
+        },
+        {
+          "header": "Salarizare",
+          "contentObject": {
+            "column1": [
+              "Întocmirea statelor de plată/fluturașilor de salariu pe baza pontajelor primite de la client",
+              "Pregătirea comenzilor de tichete de masă pe baza pontajelor primite de la client",
+              "Pregătirea fișierelor bancare pentru ordonarea plăților salariale",
+              "Întocmirea și depunerea electronică a Declarației 112 privind obligațiile aferente salariilor",
+              "Calculul și pregătirea pentru client într-o formă ușor inteligibilă a obligațiilor aferente veniturilor salariale obținute în urma depunerii Declarației 112, în vederea achitării",
+              "Pregătirea lunară a situației privind concediul de odihnă efectuat și rămas disponibil pentru toți salariații clientului",
+              "Întocmirea adeverințelor de venit pentru salariați pentru diferite scopuri necesare acestora (Accesare credite, înscriere copil la grădiniță etc.)"
+            ],
+            "header2": "Pentru activitatea desfășurată în forme asociative (societăți profesionale), adiacent celor menționate mai sus, se adaugă:",
+            "content2": "Întocmirea și depunerea declarației privind veniturile realizate din asociere și distribuirea venitului net (Declarație 204)"
+          }
+        },
+        {
+          "header": "CIM și ReviSal",
+          "contentObject": {
+            "column1": [
+              "Automatizarea întocmirii contractelor individuale de muncă și a deciziilor de încetare, pe baza modelelor agreeate cu clientul",
+              "Întocmirea contractelor individuale de muncă/deciziilor de încetare/actelor adiționale mai sus menționate conform necesităților clientului",
+              "Transmiterea contractelor individuale de muncă/deciziilor de încetare/actelor adiționale în ReviSal (Registru General de Evidență a Salariților) și obținerea numărului de înregistrare aferent fiecărei transmiteri",
+              "Obținerea rapoartelor ReviSal la solicitarea clientului pentru oricare dintre angajații acestuia"
+            ]
+          }
+        }
+      ]
+    },
+    "section3": {
+      "header": "Despre NEGREAN Accounting",
+      "paragraph1_1": "Misiunea noastră constă în adaptarea serviciilor noastre la cerințele și nevoile clienților, promovând o colaborare eficientă și de lungă durată. Ne-am propus să facilităm externalizarea serviciilor financiar-contabile către ",
+      "paragraph1_2_span": "NEGREAN Accounting",
+      "paragraph1_3": ", astfel încât clienții să se poată concentra asupra dezvoltării constante a afacerilor lor.",
+      "paragraph2": "Suntem o echipă dinamică și adaptabilă, cu o vastă experiență în domeniul organizării și gestionării contabilității, mereu actualizați cu noile modificări legislative și cu resursele necesare pentru a face față cerințelor complexe.",
+      "paragraph3": "Ne angajăm să respectăm cu strictețe regulile deontologiei profesionale și confidențialitatea datelor clienților noștri, incluse în termenii și condițiile contractelor noastre pe întreaga durată a colaborării și ulterior. Suntem mândri că facem parte din CECCAR (Corpul Experților Contabili și Contabililor Autorizați din România) și ne angajăm să menținem în permanență nivelul de cunoștințe al angajaților noștri prin participarea la cursuri și pregătiri oferite de această entitate.",
+      "paragraph4": "Avem un portofoliu variat de clienți, ceea ce ne permite să oferim soluții personalizate pentru fiecare. Suntem recunoscuți pentru profesionalismul nostru, răspunsurile rapide și consecvența în relațiile cu clienții și instituțiile statului român.",
+      "paragraph5": "Dat fiind caracterul instabil al pieței în care activăm, oferim și servicii de consultanță economică și financiară pentru a ajuta clienții noștri să-și îmbunătățească performanța economică într-un timp cât mai scurt de la identificarea problemelor lor. Considerăm că acest serviciu este esențial în mediul concurențial actual."
+    },
+    "footer": {
+      "h1": "Contactează-ne",
+      "email": "office@NEGREANaccounting.com",
+      "phone": "+40 744 978 464",
+      "address": "Str. Septimiu Albini, nr. 23, ap. 17, Cluj-Napoca, jud. Cluj",
+      "linkedIn": "https://www.linkedin.com/company/negrean-accounting/",
+      "namePlaceholder": "Numele tău",
+      "emailPlaceholder": "E-mailul tău",
+      "messagePlaceholder": "Scrie aici mesajul tău pentru noi"
+    },
+    "detailsButton": "Vezi detalii",
+    "sectionHeading": { "section2": "Servicii", "section3": "Despre noi" }
+  }
+}
