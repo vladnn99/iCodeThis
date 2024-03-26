@@ -1,0 +1,36 @@
+/**
+* Scrie aici codul tau CSS...
+*/
+
+/*}*/
+
+.row {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media screen and (min-width: 1090px) {
+  .logo-h {
+    order: -1;
+  }
+}
+
+.main.search-form-box {
+  order: 0;
+}
+
+.main-header {
+  backdrop-filter: blur(0px);
+}
+
+.main-header.fade-menu:not(.-g-pagetype-cart) .navigation-holder {
+  width: fit-content;
+}
+
+/*.img-responsive {*/
+/*    width: 224.72px !important;*/
+/*}*/
+
+.main.search-form-box {
+  order: 0;
+}

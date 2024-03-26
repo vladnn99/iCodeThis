@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<script src="/themes/fashion/js/lazysizes.min.js?v=8771513-4.136" async></script>
+<script>
+			function g_js(callbk){typeof callbk === 'function' ? window.addEventListener("DOMContentLoaded", callbk, false) : false;}
+		</script>
+<style>
+			/*body.loading{overflow:hidden;}
+			body.loading #wrapper{opacity: 0;visibility: hidden;}
+			body #wrapper{opacity: 1;visibility: visible;transition:all .1s ease-out;}*/
+
+			.main-header .main-menu{min-height:43px;}
+			.-g-hide{visibility:hidden;opacity:0;}
+
+					</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="https://gomagcdn.ro/domains/factual/files/banner/banner6594.jpg">
+
+<link rel="stylesheet" href="/themes/fashion/css/main-min-v2.css?v=8771513-4.136-1" data-values="{&quot;blockScripts&quot;: &quot;1&quot;}">
+<link rel="stylesheet" href="https://factual.gomag.ro/theme/default.css?v=31707479496">
+<link rel="stylesheet" href="/themes/fashion/css/dev-style.css?v=8771513-4.136-1">
+<link rel="preload" href="/themes/fashion/js/plugins.js?v=8771513-4.136" as="script">
+<link rel="preload" href="https://factual.gomag.ro/theme/default.js?v=31707479496" as="script">
+<link rel="alternate" hreflang="x-default" href="https://factual.gomag.ro/">
+<link rel="preload" href="/themes/fashion/js/dev.js?v=8771513-4.136" as="script">
+<meta name="expires" content="never">
+<meta name="revisit-after" content="1 days">
+<meta name="author" content="Gomag">
+<title></title>
+<meta name="robots" content="index,follow" />
+<meta name="description" content>
+<meta class="viewport" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta property="og:image" content="https://factual.gomag.ro/domains/factual/files/company/logo4892.png" />
+<link rel="canonical" href="https://factual.gomag.ro/" />
+<meta property="og:url" content="https://factual.gomag.ro/" />
+<meta name="distribution" content="Global">
+<meta name="owner" content="factual.gomag.ro">
+<meta name="publisher" content="factual.gomag.ro">
+<meta name="rating" content="General">
+<meta name="copyright" content="Copyright factual.gomag.ro 2024. All rights reserved">
+<link rel="search" href="https://factual.gomag.ro/opensearch.ro.xml" type="application/opensearchdescription+xml" title="Cautare" />
+<script src="/themes/fashion/js/jquery-2.1.4.min.js"></script>
+<script defer src="/themes/fashion/js/jquery.autocomplete.js?v=20181023"></script>
+<script src="/themes/fashion/js/gomag.config.js?v=8771513-4.136"></script>
+<script src="/themes/fashion/js/gomag.js?v=8771513-4.136"></script>
+</head>
+<body class="-g-pagetype-homepage" style>
+<script>
+			function _addCss(url, attribute, value, loaded){
+				var _s = document.createElement('link');
+				_s.rel = 'stylesheet';
+				_s.href = url;
+				_s.type = 'text/css';
+				if(attribute)
+				{
+					_s.setAttribute(attribute, value)
+				}
+				if(loaded){
+					_s.onload = function(){
+						var dom = document.getElementsByTagName('body')[0];
+						//dom.classList.remove('loading');
+					}
+				}
+				var _st = document.getElementsByTagName('link')[0];
+				_st.parentNode.insertBefore(_s, _st);
+			}
+			//_addCss('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
+			_addCss('/themes/_fonts/Open-Sans.css');
+
+		</script>
+<script>
+				setTimeout(
+				  function()
+				  {
+				   document.getElementsByTagName('body')[0].classList.remove('loading');
+				  }, 1000);
+		</script>
+<div id="wrapper">
+<div id="_cartSummary" class="hide"></div>
+<script>
+	$(document).ready(function() {
+
+		$(document).on('keypress', '.-g-input-loader', function(){
+			$(this).addClass('-g-input-loading');
+		})
+
+		$.Gomag.bind('Product/Add/To/Cart/After', function(eventResponse, properties)
+		{
+									var data = JSON.parse(properties.data);
+			$('.q-cart').html(data.quantity);
+			if(parseFloat(data.quantity) > 0)
+			{
+				$('.q-cart').removeClass('hide');
+			}
+			else
+			{
+				$('.q-cart').addClass('hide');
+			}
+			$('.cartPrice').html(data.subtotal + ' ' + data.currency);
+			$('.cartProductCount').html(data.quantity);
+
+
+		})
+		$('#_cartSummary').on('updateCart', function(event, cart) {
+			var t = $(this);
+
+			$.get('https://factual.gomag.ro/cart-update', {
+				cart: cart
+			}, function(data) {
+
+				$('.q-cart').html(data.quantity);
+				if(parseFloat(data.quantity) > 0)
+				{
+					$('.q-cart').removeClass('hide');
+				}
+				else
+				{
+					$('.q-cart').addClass('hide');
+				}
+				$('.cartPrice').html(data.subtotal + ' ' + data.currency);
+				$('.cartProductCount').html(data.quantity);
+			}, 'json');
+			window.ga = window.ga || function() {
+				(ga.q = ga.q || []).push(arguments)
+			};
+			ga('send', 'event', 'Buton', 'Click', 'Adauga_Cos');
+		});
+
+		if(window.gtag_report_conversion) {
+			$(document).on("click", 'li.phone-m', function() {
+				var phoneNo = $('li.phone-m').children( "a").attr('href');
+				gtag_report_conversion(phoneNo);
+			});
+
+		}
+
+	});
+</script>
+<header class="main-header container-bg clearfix" data-block="headerBlock">
+<div class="discount-tape container-h full -g-hide" id="_gomagHellobar"></div>
+<div class="top-head-bg container-h full">
+<div class="top-head container-h">
+<div class="row">
+<div class="col-sm-2 col-xs-12 logo-h">
+<a href="https://factual.gomag.ro" id="logo">
+<img src="/domains/factual/files/company/logo4892.png" class="img-responsive" alt="factual" title="factual" width="200" height="50" style="width:auto;">
+</a>
+</div>
+<div class="col-sm-4 col-xs-7 main search-form-box">
+<form name="search-form" class="search-form" action="https://factual.gomag.ro/produse" id="_searchFormMainHeader">
+<input id="_autocompleteSearchMainHeader" name="c" class="input-placeholder -g-input-loader" type="text" placeholder="Cauta in site..." aria-label="Search" value>
+<button id="_doSearch" class="search-button" aria-hidden="true">
+<i class="fa fa-search" aria-hidden="true"></i>
+</button>
+<script>
+			$(document).ready(function() {
+
+				$('#_autocompleteSearchMainHeader').autocomplete({
+					serviceUrl: 'https://factual.gomag.ro/autocomplete',
+					minChars: 2,
+					deferRequestBy: 700,
+					appendTo: '#_searchFormMainHeader',
+					width: parseInt($('#_doSearch').offset().left) - parseInt($('#_autocompleteSearchMainHeader').offset().left),
+					formatResult: function(suggestion, currentValue) {
+						return suggestion.value;
+					},
+					onSelect: function(suggestion) {
+						$(this).val(suggestion.data);
+					},
+					onSearchComplete: function(suggestion) {
+						$(this).removeClass('-g-input-loading');
+					}
+				});
+				$(document).on('click', '#_doSearch', function(e){
+					e.preventDefault();
+					if($('#_autocompleteSearchMainHeader').val() != '')
+					{
+						$('#_searchFormMainHeader').submit();
+					}
+				})
+			});
+		</script>
+</form>
+</div>
+<div class="col-xs-5 acount-section">
+<ul>
+<li class="search-m hide">
+<a href="javascript:void(0)">
+<i class="fa fa-search search-open" aria-hidden="true"></i>
+<i style="display:none" class="fa fa-times search-close" aria-hidden="true"></i>
+</a>
+</li>
+<li class="-g-user-icon -g-user-icon-empty">
+</li>
+<li class="wishlist-header hide">
+<a href="https://factual.gomag.ro/wishlist">
+<span class="-g-wishlist-product-count -g-hide"></span>
+<i class="fa fa-heart-o" aria-hidden="true"></i>
+<span class>Favorite</span>
+</a>
+</li>
+<li class="cart-header-btn cart">
+<a class="cart-drop _showCartHeader" href="https://factual.gomag.ro/cos-de-cumparaturi">
+<span class="q-cart hide">0</span>
+<i class="fa fa-shopping-bag" aria-hidden="true"></i>
+<span class="count cartPrice">0,00
+</span>
+</a>
+<div class="cart-dd  _cartShow cart-closed"></div>
+</li>
+</ul>
+<script>
+		$(document).ready(function() {
+			//Cart
+							$('.cart').mouseenter(function() {
+					$.Gomag.showCartSummary('div._cartShow');
+				}).mouseleave(function() {
+					$.Gomag.hideCartSummary('div._cartShow');
+					$('div._cartShow').removeClass('cart-open');
+				});
+						$(document).on('click', '.dropdown-toggle', function() {
+				window.location = $(this).attr('href');
+			})
+		})
+	</script>
+</div>
+<div class="col-xs-5 navigation-holder">
+<div id="navigation">
+<nav id="main-menu" class="main-menu container-h full clearfix">
+<a href="javascript:void(0)" class="menu-trg" title="Produse">
+<span>&nbsp;</span>
+</a>
+<div class="container-h nav-menu-hh clearfix">
+
+<ul class="
+			nav-menu base-menu container-h
+			
+			
+		">
+<li class="menu-drop __GomagMM ">
+<a href="https://factual.gomag.ro/femei" class="  " rel="  " title="Femei" data-Gomag data-block-name="mainMenuD0" data-block="mainMenuD">
+<span class="list">Femei</span>
+<i class="fa fa-angle-down"></i>
+</a>
+<div class="menu-dd">
+<ul class="drop-list clearfix w100">
+<li class="fl">
+<div class="col">
+<p class="title">
+<a href="https://factual.gomag.ro/casual" class="title    " rel="  " title="Casual" data-Gomag data-block-name="mainMenuD1" data-block="mainMenuD">
+Casual
+</a>
+</p>
+</div>
+</li>
+<li class="fl">
+<div class="col">
+<p class="title">
+<a href="https://factual.gomag.ro/clubbing" class="title    " rel="  " title="Clubbing" data-Gomag data-block-name="mainMenuD1" data-block="mainMenuD">
+Clubbing
+</a>
+</p>
+</div>
+</li>
+<li class="fl">
+<div class="col">
+<p class="title">
+<a href="https://factual.gomag.ro/incaltaminte-31" class="title    " rel="  " title="Incaltaminte" data-Gomag data-block-name="mainMenuD1" data-block="mainMenuD">
+Incaltaminte
+</a>
+</p>
+</div>
+</li>
+<li class="fl">
+<div class="col">
+<p class="title">
+<a href="https://factual.gomag.ro/pentru-seara" class="title    " rel="  " title="Pentru Seara" data-Gomag data-block-name="mainMenuD1" data-block="mainMenuD">
+Pentru Seara
+</a>
+</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="menu-drop __GomagMM ">
+<a href="https://factual.gomag.ro/barbati" class="  " rel="  " title="Barbati" data-Gomag data-block-name="mainMenuD0" data-block="mainMenuD">
+<span class="list">Barbati</span>
+<i class="fa fa-angle-down"></i>
+</a>
+<div class="menu-dd">
+<ul class="drop-list clearfix w100">
+<li class="fl">
+<div class="col">
+<p class="title">
+<a href="https://factual.gomag.ro/accesorii-29" class="title    " rel="  " title="Accesorii" data-Gomag data-block-name="mainMenuD1" data-block="mainMenuD">
+Accesorii
+</a>
+</p>
+</div>
+</li>
+<li class="fl">
+<div class="col">
+<p class="title">
+<a href="https://factual.gomag.ro/haine" class="title    " rel="  " title="Haine" data-Gomag data-block-name="mainMenuD1" data-block="mainMenuD">
+Haine
+</a>
+</p>
+</div>
+</li>
+<li class="fl">
+<div class="col">
+<p class="title">
+<a href="https://factual.gomag.ro/incaltaminte" class="title    " rel="  " title="Incaltaminte" data-Gomag data-block-name="mainMenuD1" data-block="mainMenuD">
+Incaltaminte
+</a>
+</p>
+</div>
+</li>
+<li class="fl">
+<div class="col">
+<p class="title">
+<a href="https://factual.gomag.ro/premium" class="title    " rel="  " title="Premium" data-Gomag data-block-name="mainMenuD1" data-block="mainMenuD">
+Premium
+</a>
+</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="menu-drop __GomagMM ">
+<a href="https://factual.gomag.ro/accesorii" class="    " rel="  " title="Accesorii" data-Gomag data-block-name="mainMenuD0" data-block="mainMenuD">
+<span class="list">Accesorii</span>
+</a>
+</li>
+<li class="menu-drop __GomagMM ">
+<a href="https://factual.gomag.ro/colectii" class="  " rel="  " title="Colectii" data-Gomag data-block-name="mainMenuD0" data-block="mainMenuD">
+<span class="list">Colectii</span>
+<i class="fa fa-angle-down"></i>
+</a>
+<div class="menu-dd">
+<ul class="drop-list clearfix w100">
+<li class="fl">
+<div class="col">
+<p class="title">
+<a href="https://factual.gomag.ro/hot-summer" class="title    " rel="  " title="Hot Summer" data-Gomag data-block-name="mainMenuD1" data-block="mainMenuD">
+Hot Summer
+</a>
+</p>
+</div>
+</li>
+<li class="fl">
+<div class="col">
+<p class="title">
+<a href="https://factual.gomag.ro/on-holiday" class="title    " rel="  " title="On Holiday" data-Gomag data-block-name="mainMenuD1" data-block="mainMenuD">
+On Holiday
+</a>
+</p>
+</div>
+</li>
+<li class="fl">
+<div class="col">
+<p class="title">
+<a href="https://factual.gomag.ro/pretty-woman" class="title    " rel="  " title="Pretty Woman" data-Gomag data-block-name="mainMenuD1" data-block="mainMenuD">
+Pretty Woman
+</a>
+</p>
+</div>
+</li>
+<li class="fl">
+<div class="col">
+<p class="title">
+<a href="https://factual.gomag.ro/we-love" class="title    " rel="  " title="We Love" data-Gomag data-block-name="mainMenuD1" data-block="mainMenuD">
+We Love
+</a>
+</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="menu-drop __GomagSM   ">
+<a href="https://factual.gomag.ro/produse-cadou" rel="  " title="Produse cadou" data-Gomag data-block="mainMenuD" class=" ">
+Produse cadou
+</a>
+</li>
+</ul> 
+</div> <ul class="mobile-icon fr">
+<li class="user-m -g-user-icon -g-user-icon-empty">
+</li>
+<li class="wishlist-header-m hide">
+<a href="https://factual.gomag.ro/wishlist">
+<span class="-g-wishlist-product-count"></span>
+<i class="fa fa-heart-o" aria-hidden="true"></i>
+</a>
+</li>
+<li class="cart-m">
+<a href="https://factual.gomag.ro/cos-de-cumparaturi">
+<span class="q-cart hide">0</span>
+<i class="fa fa-shopping-bag" aria-hidden="true"></i>
+</a>
+</li>
+<li class="search-m">
+<a>
+<i class="fa fa-search search-open" aria-hidden="true"></i>
+<i style="display:none" class="fa fa-times search-close" aria-hidden="true"></i>
+</a>
+</li>
+</ul>
+</nav>
+
+<div style="display:none" class="search-form-box search-toggle">
+<form name="search-form" class="search-form" action="https://factual.gomag.ro/produse" id="_searchFormMobileToggle">
+<input id="_autocompleteSearchMobileToggle" name="c" class="input-placeholder -g-input-loader" type="text" autofocus="autofocus" value placeholder="Cauta in site..." aria-label="Search">
+<button id="_doSearchMobile" class="search-button" aria-hidden="true">
+<i class="fa fa-search" aria-hidden="true"></i>
+</button>
+<script>
+					$(document).ready(function() {
+						$('#_autocompleteSearchMobileToggle').autocomplete({
+							serviceUrl: 'https://factual.gomag.ro/autocomplete',
+							minChars: 2,
+							deferRequestBy: 700,
+							appendTo: '#_searchFormMobileToggle',
+							width: parseInt($('#_doSearchMobile').offset().left) - parseInt($('#_autocompleteSearchMobileToggle').offset().left),
+							formatResult: function(suggestion, currentValue) {
+								return suggestion.value;
+							},
+							onSelect: function(suggestion) {
+								$(this).val(suggestion.data);
+							},
+							onSearchComplete: function(suggestion) {
+								$(this).removeClass('-g-input-loading');
+							}
+						});
+
+						$(document).on('click', '#_doSearchMobile', function(e){
+							e.preventDefault();
+							if($('#_autocompleteSearchMobileToggle').val() != '')
+							{
+								$('#_searchFormMobileToggle').submit();
+							}
+						})
+					});
+				</script>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<div class="-g-component-id-hero-banner bnn-group-left gomagComponent container-bg -g-homepage-main-slider " data-gomag-component>
+<div id="main-bnn">
+<div class="bnn-group bnn-group-big" id="sync1">
+<a href="javascript:void(0);" title="banner" target="_self" class="-g-banner-slider-item-image _sliderElement banner_image banner_toate " id="banner_28">
+<img class="_sliderElement banner_image img-responsive 
+									" src="/domains/factual/files/banner/banner6594.jpg" alt="banner" title="banner" width="1920" height="560">
+</a>
+</div>
+</div>
+<script>
+				$(document).ready(function () {
+
+										function setVideoHeight() {
+
+						var prefix = '#sync1';
+
+						if ($(prefix+' .-g-banner-slider-item-video').length && $(prefix+' .-g-banner-slider-item-image').length)
+						{
+							var getHeight = $(prefix+' .-g-banner-slider-item-image:first img').height();
+
+							var videoSlide = $(prefix+' .-g-banner-slider-item-video .-g-banner-slider-item-video-image-holder');
+							videoSlide.css('height', 'auto');
+							videoSlide.css('height', getHeight + 'px');
+
+							if ($(prefix+' .-g-banner-slider-item-video .-g-banner-slider-item-video-image-holder img').length)
+							{
+								$(this).css('max-height', getHeight + 'px');
+							}
+						}
+					}
+
+										function navStatus() {
+
+						var prefix = '#sync1';
+
+						if ($(prefix+' .owl-item.loading').length){
+							if ($(prefix+' .owl-item:first-child').hasClass('active')){
+								$(prefix+' .owl-prev').addClass('disable');
+							}else{
+								$(prefix+' .owl-prev').removeClass('disable');
+							}
+						} else {
+							$(prefix+' .owl-prev').removeClass('disable');
+						}
+					}
+
+										var resizeTimer;
+					$(window).on('resize', function(e) {
+						clearTimeout(resizeTimer);
+						resizeTimer = setTimeout(function() {
+							var prefix = '#sync1';
+							if ($(prefix+' .-g-banner-slider-item-video').length && $(prefix+' .-g-banner-slider-item-image').length){
+								setVideoHeight();
+							};
+						}, 250);
+					});
+
+										var sync1 = $("#sync1");
+					var sync2 = $("#sync2");
+					var bannersItems = {
+						mobile: 0,
+						desktop: 0
+					};
+
+																		bannersItems.desktop += 1;
+							bannersItems.mobile += 1;
+																							
+					var bannersItemsCount = screen.width >= 760 ? bannersItems.desktop : bannersItems.mobile;
+
+					sync1.owlCarousel({
+						singleItem : true,
+						slideSpeed : 1000,
+						lazyLoad : true,
+						addClassActive : true,
+												autoPlay: 8000,
+						navigation: true,
+						pagination: true,
+													afterAction : syncPosition,
+												stopOnHover: true,
+						responsiveRefreshRate : 200,
+						afterInit : function(){
+							setVideoHeight();
+							navStatus();
+						},
+						afterMove : function(){
+							navStatus();
+						}
+					});
+
+											sync2.owlCarousel({
+							items : bannersItemsCount,
+							itemsDesktop: [1199, Math.min(bannersItemsCount, 4)],
+							itemsDesktopSmall: [979,  Math.min(bannersItemsCount, 3)],
+							itemsTablet: [768, 2],
+							itemsMobile: [479, 1],
+							pagination:false,
+							responsiveRefreshRate : 100,
+							stopOnHover: true,
+							afterInit : function(el){
+							  el.find(".owl-item").eq(0).addClass("synced");
+							}
+						});
+
+						function syncPosition(el){
+							var current = this.currentItem;
+							var key = '#sync2';
+							$(key)
+							  .find(".owl-item")
+							  .removeClass("synced")
+							  .eq(current)
+							  .addClass("synced");
+
+							if($(key).data("owlCarousel") !== undefined){
+							  center(current)
+							}
+						}
+
+						$("#sync2").on("click", ".owl-item", function(e){
+							e.preventDefault();
+							var number = $(this).data("owlItem");
+							sync1.trigger("owl.goTo",number);
+						});
+
+						function center(number){
+							var sync2visible = sync2.data("owlCarousel").owl.visibleItems;
+							var num = number;
+							var found = false;
+							for(var i in sync2visible){
+							  if(num === sync2visible[i]){
+								var found = true;
+							  }
+							}
+
+							if(found===false){
+							  if(num>sync2visible[sync2visible.length-1]){
+								sync2.trigger("owl.goTo", num - sync2visible.length+2)
+							  }else{
+								if(num - 1 === -1){
+								  num = 0;
+								}
+								sync2.trigger("owl.goTo", num);
+							  }
+							} else if(num === sync2visible[sync2visible.length-1]){
+							  sync2.trigger("owl.goTo", sync2visible[1])
+							} else if(num === sync2visible[0]){
+							  sync2.trigger("owl.goTo", num-1)
+							}
+						};
+					
+				});
+
+			</script>
+</div>
+<div id="-g-homepage-productsDiscounts-before" class="home-page"></div>
+<div class="clear"></div>
+<div class="clear"></div>
+<div id="-g-homepage-productsNew-before"></div>
+<div class="clear"></div>
+<div id="-g-homepage-productsRecomended-before"></div>
+<div class="-g-component-id-3312 gomagComponent -g-component-banner-group -g-hide   bannerCarouselItemsHolder container-h container-bg" data-gomag-component="1">
+<div class=" pinGrid pin-home -g-banner-carousel-3312">
+<div class=" pin  banner_toate imageGroupClass3 imageGroupMobileClass1 ">
+<a href="https://factual.gomag.ro/" target="_self" class="image _sliderElement" id="banner_29">
+<img class="img-responsive" title alt width="100%" loading="lazy" height="auto" src="/domains/factual/files/banner/1000x1000-copy-175637.jpg">
+</a>
+</div>
+<div class=" pin  banner_toate imageGroupClass3 imageGroupMobileClass1 ">
+<a href="https://factual.gomag.ro/" target="_self" class="image _sliderElement" id="banner_30">
+<img class="img-responsive" title alt width="100%" loading="lazy" height="auto" src="/domains/factual/files/banner/1000x1000-copy-186405.jpg">
+</a>
+</div>
+<div class=" pin  banner_toate imageGroupClass3 imageGroupMobileClass1 ">
+<a href="https://factual.gomag.ro/" target="_self" class="image _sliderElement" id="banner_31">
+<img class="img-responsive" title alt width="100%" loading="lazy" height="auto" src="/domains/factual/files/banner/1000x1000-copy-194084.jpg">
+</a>
+</div>
+</div>
+<script>
+				$(document).ready(function () {
+					$('div.gomagComponent').removeClass('-g-hide');
+					$('.-g-component-id-3312 .pinGrid .pin').hover(function(){
+						$(this).find('.t-tips').toggleClass('visible');
+					});					
+				});
+			</script>
+<script>
+					$(document).ready(function () {
+						$('.-g-banner-carousel-3312').owlCarousel({
+							items: '3',
+							navigation: true,
+							pagination: false,
+							itemsCustom : [[0, '1'],[479, '1'],[768, 2],[979, '3'],[1199, '3']]
+						});
+					});
+				</script>
+<style>
+				.bannerCarouselItemsHolder .pin{width:100%!important;}
+				.bannerCarouselItemsHolder .owl-theme .owl-controls .owl-buttons div{display: flex;align-items: center;justify-content: center;position: absolute;top: calc(55% - 40px);width: 40px;height: 40px;color: #444;font-size: 25px;line-height: 1;text-shadow: 0 0 12px rgb(0 0 0 / 19%);border-radius:50%;background: rgba(255, 255, 255,.85);box-shadow: 0 2px 7px -2px rgb(0 0 0 / 30%);}
+				.bannerCarouselItemsHolder .owl-prev{left:10px;}
+				.bannerCarouselItemsHolder .owl-next{right:10px;}
+			</style>
+</div>
+<div class="clear"></div>
+<div class="default-slider  ">
+<div class="carousel-slide gomagComponent -g-component-id-3309 clearfix  container-h container-bg " data-gomag-component="2">
+<div class="holder">
+<div class="title-carousel">
+<H1 class="title">
+Colectia Summer
+</H1>
+<hr>
+</div>
+<div class="carousel slide-item-component slide-item-4" id="slide-item-09613">
+<div class="product-box-h ">
+<div class="product-box  center  dataProductId __GomagListingProductBox -g-product-box-31" data-product-id="31">
+<div class="box-holder">
+<a href="https://factual.gomag.ro/rochie-exotique-31.html" class="image _productMainUrl_31">
+<img src="data:image/svg+xml,%3Csvg%20viewBox='0%200%20280%20280'%20xmlns='http://www.w3.org/2000/svg'%3E%3Crect%20fill='%23ffffff'%20fill-opacity='0'%20width='100%25'%20height='100%25'%20/%3E%3C/svg%3E" data-src="https://gomagcdn.ro/domains/factual/files/product/medium/rochie-exotique-704858.jpg" alt="Hot Summer - Rochie Exotique" title="Rochie Exotique" class="img-responsive lazyload listImage _productMainImage_31" width="280" height="280">
+</a>
+<div class="product-icon-holder">
+<div class="product-icon-box -g-product-icon-box-31">
+</div>
+<div class="product-icon-box bottom -g-product-icon-bottom-box-31">
+</div>
+</div>
+<div class="top-side-box">
+<h2 style="line-height:initial;"><a href="https://factual.gomag.ro/rochie-exotique-31.html" class="title _productUrl_31" data-block="ListingName">Rochie Exotique</a></h2>
+<div class="price  -g-hide -g-list-price-31" data-block="ListingPrice">
+<s class="price-full -g-product-box-full-price-31">
+</s>
+<span class="text-main -g-product-box-final-price-31">279,00 RON</span>
+<span class="-g-product-listing-um -g-product-box-um-31 hide"></span>
+</div>
+</div>
+<div class="bottom-side-box">
+<a href="javascript:void(0);" class="details-button quick-order-btn" onclick="$.Gomag.openDefaultPopup('.quick-order-btn', {iframe : {css : {width : '800px'}}, src: 'https://factual.gomag.ro/cart-add?product=31'});"><i class="fa fa-search"></i>detalii</a>
+</div>
+</div>
+</div>
+</div>
+<div class="product-box-h ">
+<div class="product-box  center  dataProductId __GomagListingProductBox -g-product-box-15" data-product-id="15">
+<div class="box-holder">
+<a href="https://factual.gomag.ro/rochie-vanity.html" class="image _productMainUrl_15">
+<img src="data:image/svg+xml,%3Csvg%20viewBox='0%200%20280%20280'%20xmlns='http://www.w3.org/2000/svg'%3E%3Crect%20fill='%23ffffff'%20fill-opacity='0'%20width='100%25'%20height='100%25'%20/%3E%3C/svg%3E" data-src="https://gomagcdn.ro/domains/factual/files/product/medium/rochie-vanity-329942.jpg" alt="Hot Summer - Rochie Vanity" title="Rochie Vanity" class="img-responsive lazyload listImage _productMainImage_15" width="280" height="280">
+</a>
+<div class="product-icon-holder">
+<div class="product-icon-box -g-product-icon-box-15">
+<span class="icon discount bg-main -g-icon-discount-15 ">-50%</span>
+</div>
+<div class="product-icon-box bottom -g-product-icon-bottom-box-15">
+</div>
+</div>
+<div class="top-side-box">
+<h2 style="line-height:initial;"><a href="https://factual.gomag.ro/rochie-vanity.html" class="title _productUrl_15" data-block="ListingName">Rochie Vanity</a></h2>
+<div class="price  -g-hide -g-list-price-15" data-block="ListingPrice">
+<s class="price-full -g-product-box-full-price-15">
+109,00 RON
+</s>
+<span class="text-main -g-product-box-final-price-15">54,50 RON</span>
+<span class="-g-product-listing-um -g-product-box-um-15 hide"></span>
+</div>
+<div class="rating">
+<div class="total-rate">
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<span class="fullRate" style="width:100%;">
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+</span>
+</div>
+<span class="-g-listing-review-count "><b>1</b></span>
+</div>
+</div>
+<div class="bottom-side-box">
+<a href="javascript:void(0);" class="details-button quick-order-btn" onclick="$.Gomag.openDefaultPopup('.quick-order-btn', {iframe : {css : {width : '800px'}}, src: 'https://factual.gomag.ro/cart-add?product=15'});"><i class="fa fa-search"></i>detalii</a>
+</div>
+</div>
+</div>
+</div>
+<div class="product-box-h ">
+<div class="product-box  center  dataProductId __GomagListingProductBox -g-product-box-9" data-product-id="9">
+<div class="box-holder">
+<a href="https://factual.gomag.ro/rochie-casual-farah-9.html" class="image _productMainUrl_9">
+<img src="data:image/svg+xml,%3Csvg%20viewBox='0%200%20280%20280'%20xmlns='http://www.w3.org/2000/svg'%3E%3Crect%20fill='%23ffffff'%20fill-opacity='0'%20width='100%25'%20height='100%25'%20/%3E%3C/svg%3E" data-src="https://gomagcdn.ro/domains/factual/files/product/medium/rochie-farah-608274.jpg" alt="Hot Summer - Rochie Farah" title="Rochie Farah" class="img-responsive lazyload listImage _productMainImage_9" width="280" height="280">
+</a>
+<div class="product-icon-holder">
+<div class="product-icon-box -g-product-icon-box-9">
+</div>
+<div class="product-icon-box bottom -g-product-icon-bottom-box-9">
+</div>
+</div>
+<div class="top-side-box">
+<h2 style="line-height:initial;"><a href="https://factual.gomag.ro/rochie-casual-farah-9.html" class="title _productUrl_9" data-block="ListingName">Rochie Farah</a></h2>
+<div class="price  -g-hide -g-list-price-9" data-block="ListingPrice">
+<s class="price-full -g-product-box-full-price-9">
+</s>
+<span class="text-main -g-product-box-final-price-9">279,00 RON</span>
+<span class="-g-product-listing-um -g-product-box-um-9 hide"></span>
+</div>
+</div>
+<div class="bottom-side-box">
+<a href="javascript:void(0);" class="details-button quick-order-btn" onclick="$.Gomag.openDefaultPopup('.quick-order-btn', {iframe : {css : {width : '800px'}}, src: 'https://factual.gomag.ro/cart-add?product=9'});"><i class="fa fa-search"></i>detalii</a>
+</div>
+</div>
+</div>
+</div>
+<div class="product-box-h ">
+<div class="product-box  center  dataProductId __GomagListingProductBox -g-product-box-6" data-product-id="6">
+<div class="box-holder">
+<a href="https://factual.gomag.ro/rochie-casual-tara-6.html" class="image _productMainUrl_6">
+<img src="data:image/svg+xml,%3Csvg%20viewBox='0%200%20280%20280'%20xmlns='http://www.w3.org/2000/svg'%3E%3Crect%20fill='%23ffffff'%20fill-opacity='0'%20width='100%25'%20height='100%25'%20/%3E%3C/svg%3E" data-src="https://gomagcdn.ro/domains/factual/files/product/medium/rochie-casual-tara-248855.jpg" alt="Pretty Woman - Rochie casual Tara" title="Rochie casual Tara" class="img-responsive lazyload listImage _productMainImage_6" width="280" height="280">
+</a>
+<div class="product-icon-holder">
+<div class="product-icon-box -g-product-icon-box-6">
+<span class="icon discount bg-main -g-icon-discount-6 ">-32%</span>
+</div>
+<div class="product-icon-box bottom -g-product-icon-bottom-box-6">
+</div>
+</div>
+<div class="top-side-box">
+<h2 style="line-height:initial;"><a href="https://factual.gomag.ro/rochie-casual-tara-6.html" class="title _productUrl_6" data-block="ListingName">Rochie casual Tara</a></h2>
+<div class="price  -g-hide -g-list-price-6" data-block="ListingPrice">
+<s class="price-full -g-product-box-full-price-6">
+279,00 RON
+</s>
+<span class="text-main -g-product-box-final-price-6">189,00 RON</span>
+<span class="-g-product-listing-um -g-product-box-um-6 hide"></span>
+</div>
+</div>
+<div class="bottom-side-box">
+<a href="javascript:void(0);" class="details-button quick-order-btn" onclick="$.Gomag.openDefaultPopup('.quick-order-btn', {iframe : {css : {width : '800px'}}, src: 'https://factual.gomag.ro/cart-add?product=6'});"><i class="fa fa-search"></i>detalii</a>
+</div>
+</div>
+</div>
+</div>
+<div class="product-box-h ">
+<div class="product-box  center  dataProductId __GomagListingProductBox -g-product-box-3" data-product-id="3">
+<div class="box-holder">
+<a href="https://factual.gomag.ro/rochie-casual-tina-3.html" class="image _productMainUrl_3">
+<img src="data:image/svg+xml,%3Csvg%20viewBox='0%200%20280%20280'%20xmlns='http://www.w3.org/2000/svg'%3E%3Crect%20fill='%23ffffff'%20fill-opacity='0'%20width='100%25'%20height='100%25'%20/%3E%3C/svg%3E" data-src="https://gomagcdn.ro/domains/factual/files/product/medium/rochie-casual-tina-317904.jpg" alt="Pretty Woman - Rochie casual Tina" title="Rochie casual Tina" class="img-responsive lazyload listImage _productMainImage_3" width="280" height="280">
+</a>
+<div class="product-icon-holder">
+<div class="product-icon-box -g-product-icon-box-3">
+<span class="icon discount bg-main -g-icon-discount-3 ">-32%</span>
+</div>
+<div class="product-icon-box bottom -g-product-icon-bottom-box-3">
+</div>
+</div>
+<div class="top-side-box">
+<h2 style="line-height:initial;"><a href="https://factual.gomag.ro/rochie-casual-tina-3.html" class="title _productUrl_3" data-block="ListingName">Rochie casual Tina</a></h2>
+<div class="price  -g-hide -g-list-price-3" data-block="ListingPrice">
+<s class="price-full -g-product-box-full-price-3">
+279,00 RON
+</s>
+<span class="text-main -g-product-box-final-price-3">189,00 RON</span>
+<span class="-g-product-listing-um -g-product-box-um-3 hide"></span>
+</div>
+</div>
+<div class="bottom-side-box">
+<a href="javascript:void(0);" class="details-button quick-order-btn" onclick="$.Gomag.openDefaultPopup('.quick-order-btn', {iframe : {css : {width : '800px'}}, src: 'https://factual.gomag.ro/cart-add?product=3'});"><i class="fa fa-search"></i>detalii</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="-g-banner-fixed lazyload gomagComponent  -g-blur-layer -g-component-id-3310 " data-gomag-component="3" style="
+						padding: 10% 0;
+	">
+<style>
+					.-g-banner-fixed.lazyloaded.-g-component-id-3310{background-image:url('https://gomagcdn.ro/domains/factual/files/files/untitled-11000x1000-copy-11-766472.jpg');}
+				.-g-banner-fixed{position:relative;margin-bottom: 20px;background-size: cover;background-position: center;}
+		.-g-banner-fixed .-g-banner-fixed-holder{position:relative;display: flex;flex-wrap: wrap;align-items: center;z-index:2;}
+
+		.-g-banner-fixed.-g-component-id-3310 .-g-banner-fixed-content{
+			width: 30%;
+			padding:30px;
+			text-align:left;
+		}
+		
+					.-g-banner-fixed.-g-component-id-3310.-g-blur-layer .-g-banner-fixed-content{
+				background-color: rgb(255 255 255 / 80%);
+			}
+				.-g-banner-fixed.-g-blur-layer .-g-banner-fixed-content{backdrop-filter: blur(6px);border-radius: 3px;}
+		.-g-banner-fixed .-g-banner-fixed-media img{margin:0 auto;}
+		.-g-banner-fixed .title{font-weight: 600;font-size: 48px;line-height:1;margin-bottom: 15px;}
+		.-g-banner-fixed .subtitle{font-weight: 300;font-size: 25px;line-height:1.3;}
+		.-g-banner-fixed .btn{line-height: 40px;padding: 0 40px;margin:30px 0 0;}
+		@media screen and (max-width: 991px){
+			.-g-banner-fixed .-g-banner-fixed-media,
+			.-g-banner-fixed .-g-banner-fixed-content{width:100%!important;margin:10px 0;}
+			.-g-banner-fixed .title{font-size: 38px;}
+			.-g-banner-fixed .subtitle{font-size: 19px;}
+		}
+		@media screen and (max-width: 600px){
+			.-g-banner-fixed{background-attachment: initial!important;}
+			.-g-banner-fixed .-g-banner-fixed-media,
+			.-g-banner-fixed:not(.-g-blur-layer) .-g-banner-fixed-content{padding:0;}
+			.-g-banner-fixed.-g-blur-layer .-g-banner-fixed-content{padding:20px;}
+			.-g-banner-fixed .title{font-size: 30px;margin-bottom:10px;}
+			.-g-banner-fixed .subtitle{font-size: 16px;}
+		}
+	</style>
+<div class="container-h" style="padding:0 15px;">
+<div class="-g-banner-fixed-holder" style="justify-content: right;">
+<div class="-g-banner-fixed-content" style>
+<div class="title" style="color: #000000;">ULTIMELE LOOK-URI</div>
+<div class="subtitle" style="color: #000000;">Stii ca a venit sezonul cald atunci cand iti doresti sa porti o rochie. Vezi ce produse am selectat pentru colectia noastra.</div>
+<a href="https://factual.gomag.ro/" class="btn std" style="color:#ffffff;background:#c09e83;">Exploreaza</a>
+</div>
+</div>
+</div>
+</div>
+<div class="default-slider  ">
+<div class="carousel-slide gomagComponent -g-component-id-3311 clearfix  container-h container-bg " data-gomag-component="4">
+<div class="holder">
+<div class="title-carousel">
+<H1 class="title">
+Favoritele noastre
+</H1>
+<hr>
+</div>
+<div class="carousel slide-item-component slide-item-4" id="slide-item-03438">
+<div class="product-box-h ">
+<div class="product-box  center  dataProductId __GomagListingProductBox -g-product-box-27" data-product-id="27">
+<div class="box-holder">
+<a href="https://factual.gomag.ro/geanta-lovelypink.html" class="image _productMainUrl_27">
+<img src="data:image/svg+xml,%3Csvg%20viewBox='0%200%20280%20280'%20xmlns='http://www.w3.org/2000/svg'%3E%3Crect%20fill='%23ffffff'%20fill-opacity='0'%20width='100%25'%20height='100%25'%20/%3E%3C/svg%3E" data-src="https://gomagcdn.ro/domains/factual/files/product/medium/geanta-lovelypink-267856.jpg" alt="Hot Summer - Geanta Sunny" title="Geanta Sunny" class="img-responsive lazyload listImage _productMainImage_27" width="280" height="280">
+</a>
+<div class="product-icon-holder">
+<div class="product-icon-box -g-product-icon-box-27">
+</div>
+<div class="product-icon-box bottom -g-product-icon-bottom-box-27">
+</div>
+</div>
+<div class="top-side-box">
+<h2 style="line-height:initial;"><a href="https://factual.gomag.ro/geanta-lovelypink.html" class="title _productUrl_27" data-block="ListingName">Geanta Sunny</a></h2>
+<div class="price  -g-hide -g-list-price-27" data-block="ListingPrice">
+<s class="price-full -g-product-box-full-price-27">
+</s>
+<span class="text-main -g-product-box-final-price-27">249,00 RON</span>
+<span class="-g-product-listing-um -g-product-box-um-27 hide"></span>
+</div>
+</div>
+<div class="bottom-side-box">
+<a href="javascript:void(0);" class="details-button quick-order-btn" onclick="$.Gomag.openDefaultPopup('.quick-order-btn', {iframe : {css : {width : '800px'}}, src: 'https://factual.gomag.ro/cart-add?product=27'});"><i class="fa fa-search"></i>detalii</a>
+</div>
+</div>
+</div>
+</div>
+<div class="product-box-h ">
+<div class="product-box  center  dataProductId __GomagListingProductBox -g-product-box-77" data-product-id="77">
+<div class="box-holder">
+<a href="https://factual.gomag.ro/pantofi-cu-toc-white.html" class="image _productMainUrl_77">
+<img src="data:image/svg+xml,%3Csvg%20viewBox='0%200%20280%20280'%20xmlns='http://www.w3.org/2000/svg'%3E%3Crect%20fill='%23ffffff'%20fill-opacity='0'%20width='100%25'%20height='100%25'%20/%3E%3C/svg%3E" data-src="https://gomagcdn.ro/domains/factual/files/product/medium/pantofi-cu-toc-white-261161.jpg" alt="Incaltaminte - Pantofi cu toc White" title="Pantofi cu toc White" class="img-responsive lazyload listImage _productMainImage_77" width="280" height="280">
+</a>
+<div class="product-icon-holder">
+<div class="product-icon-box -g-product-icon-box-77">
+</div>
+<div class="product-icon-box bottom -g-product-icon-bottom-box-77">
+</div>
+</div>
+<div class="top-side-box">
+<h2 style="line-height:initial;"><a href="https://factual.gomag.ro/pantofi-cu-toc-white.html" class="title _productUrl_77" data-block="ListingName">Pantofi cu toc White</a></h2>
+<div class="price  -g-hide -g-list-price-77" data-block="ListingPrice">
+<s class="price-full -g-product-box-full-price-77">
+</s>
+<span class="text-main -g-product-box-final-price-77">147,00 RON</span>
+<span class="-g-product-listing-um -g-product-box-um-77 hide"></span>
+</div>
+</div>
+<div class="bottom-side-box">
+<a href="javascript:void(0);" class="details-button quick-order-btn" onclick="$.Gomag.openDefaultPopup('.quick-order-btn', {iframe : {css : {width : '800px'}}, src: 'https://factual.gomag.ro/cart-add?product=77'});"><i class="fa fa-search"></i>detalii</a>
+</div>
+</div>
+</div>
+</div>
+<div class="product-box-h ">
+<div class="product-box  center  dataProductId __GomagListingProductBox -g-product-box-34" data-product-id="34">
+<div class="box-holder">
+<a href="https://factual.gomag.ro/colier-mystic-topaz.html" class="image _productMainUrl_34">
+<img src="data:image/svg+xml,%3Csvg%20viewBox='0%200%20280%20280'%20xmlns='http://www.w3.org/2000/svg'%3E%3Crect%20fill='%23ffffff'%20fill-opacity='0'%20width='100%25'%20height='100%25'%20/%3E%3C/svg%3E" data-src="https://gomagcdn.ro/domains/factual/files/product/medium/colier-mystic-topaz-696205.jpg" alt="Accesorii - Colier Mystic Topaz" title="Colier Mystic Topaz" class="img-responsive lazyload listImage _productMainImage_34" width="280" height="280">
+</a>
+<div class="product-icon-holder">
+<div class="product-icon-box -g-product-icon-box-34">
+</div>
+<div class="product-icon-box bottom -g-product-icon-bottom-box-34">
+</div>
+</div>
+<div class="top-side-box">
+<h2 style="line-height:initial;"><a href="https://factual.gomag.ro/colier-mystic-topaz.html" class="title _productUrl_34" data-block="ListingName">Colier Mystic Topaz</a></h2>
+<div class="price  -g-hide -g-list-price-34" data-block="ListingPrice">
+</div>
+</div>
+<div class="bottom-side-box">
+<a href="javascript:void(0);" class="details-button quick-order-btn" onclick="$.Gomag.openDefaultPopup('.quick-order-btn', {iframe : {css : {width : '800px'}}, src: 'https://factual.gomag.ro/cart-add?product=34'});"><i class="fa fa-search"></i>detalii</a>
+</div>
+</div>
+</div>
+</div>
+<div class="product-box-h ">
+<div class="product-box  center  dataProductId __GomagListingProductBox -g-product-box-75" data-product-id="75">
+<div class="box-holder">
+<a href="https://factual.gomag.ro/pantofi-ocean-blue.html" class="image _productMainUrl_75">
+<img src="data:image/svg+xml,%3Csvg%20viewBox='0%200%20280%20280'%20xmlns='http://www.w3.org/2000/svg'%3E%3Crect%20fill='%23ffffff'%20fill-opacity='0'%20width='100%25'%20height='100%25'%20/%3E%3C/svg%3E" data-src="https://gomagcdn.ro/domains/factual/files/product/medium/pantofi-ocean-blue-113321.jpg" alt="Incaltaminte - Pantofi Ocean Blue" title="Pantofi Ocean Blue" class="img-responsive lazyload listImage _productMainImage_75" width="280" height="280">
+</a>
+<div class="product-icon-holder">
+<div class="product-icon-box -g-product-icon-box-75">
+</div>
+<div class="product-icon-box bottom -g-product-icon-bottom-box-75">
+</div>
+</div>
+<div class="top-side-box">
+<h2 style="line-height:initial;"><a href="https://factual.gomag.ro/pantofi-ocean-blue.html" class="title _productUrl_75" data-block="ListingName">Pantofi Ocean Blue</a></h2>
+<div class="price  -g-hide -g-list-price-75" data-block="ListingPrice">
+<s class="price-full -g-product-box-full-price-75">
+</s>
+<span class="text-main -g-product-box-final-price-75">197,00 RON</span>
+<span class="-g-product-listing-um -g-product-box-um-75 hide"></span>
+</div>
+</div>
+<div class="bottom-side-box">
+<a href="javascript:void(0);" class="details-button quick-order-btn" onclick="$.Gomag.openDefaultPopup('.quick-order-btn', {iframe : {css : {width : '800px'}}, src: 'https://factual.gomag.ro/cart-add?product=75'});"><i class="fa fa-search"></i>detalii</a>
+</div>
+</div>
+</div>
+</div>
+<div class="product-box-h ">
+<div class="product-box  center  dataProductId __GomagListingProductBox -g-product-box-74" data-product-id="74">
+<div class="box-holder">
+<a href="https://factual.gomag.ro/pantofi-eleganti-green.html" class="image _productMainUrl_74">
+<img src="data:image/svg+xml,%3Csvg%20viewBox='0%200%20280%20280'%20xmlns='http://www.w3.org/2000/svg'%3E%3Crect%20fill='%23ffffff'%20fill-opacity='0'%20width='100%25'%20height='100%25'%20/%3E%3C/svg%3E" data-src="https://gomagcdn.ro/domains/factual/files/product/medium/pantofi-eleganti-green-579282.jpg" alt="Incaltaminte - Pantofi eleganti Green" title="Pantofi eleganti Green" class="img-responsive lazyload listImage _productMainImage_74" width="280" height="280">
+</a>
+<div class="product-icon-holder">
+<div class="product-icon-box -g-product-icon-box-74">
+</div>
+<div class="product-icon-box bottom -g-product-icon-bottom-box-74">
+</div>
+</div>
+<div class="top-side-box">
+<h2 style="line-height:initial;"><a href="https://factual.gomag.ro/pantofi-eleganti-green.html" class="title _productUrl_74" data-block="ListingName">Pantofi eleganti Green</a></h2>
+<div class="price  -g-hide -g-list-price-74" data-block="ListingPrice">
+<s class="price-full -g-product-box-full-price-74">
+</s>
+<span class="text-main -g-product-box-final-price-74">247,00 RON</span>
+<span class="-g-product-listing-um -g-product-box-um-74 hide"></span>
+</div>
+</div>
+<div class="bottom-side-box">
+<a href="javascript:void(0);" class="details-button quick-order-btn" onclick="$.Gomag.openDefaultPopup('.quick-order-btn', {iframe : {css : {width : '800px'}}, src: 'https://factual.gomag.ro/cart-add?product=74'});"><i class="fa fa-search"></i>detalii</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="-g-component-id-3313 gomagComponent -g-component-banner-group -g-hide   container-h container-bg" data-gomag-component="5">
+<div class=" pinGrid pin-home ">
+<div class=" pin  banner_toate imageGroupClass2 imageGroupMobileClass1 ">
+<a href="https://factual.gomag.ro/" target="_self" class="image _sliderElement" id="banner_32">
+<img class="img-responsive" title="Eleganta si Stil" alt="Eleganta si Stil" width="100%" loading="lazy" height="auto" src="/domains/factual/files/banner/untitled-11000x1000-copy-138295.jpg">
+</a>
+<div class="figcaption">
+<div class="title">Eleganta si Stil</div>
+<p>Povestea din spatele brand-ului</p>
+<a href="https://factual.gomag.ro/" target="_self">Vezi mai multe</a>
+</div>
+</div>
+<div class=" pin  banner_toate imageGroupClass2 imageGroupMobileClass1 ">
+<a href="https://factual.gomag.ro/" target="_self" class="image _sliderElement" id="banner_33">
+<img class="img-responsive" title="Detalii fine" alt="Detalii fine" width="100%" loading="lazy" height="auto" src="/domains/factual/files/banner/untitled-11000x1000-copy-121956.jpg">
+</a>
+<div class="figcaption">
+<div class="title">Detalii fine</div>
+<p>Exploreaza noua colectie</p>
+<a href="https://factual.gomag.ro/" target="_self">Vezi Colectia</a>
+</div>
+</div>
+</div>
+<script>
+				$(document).ready(function () {
+					$('div.gomagComponent').removeClass('-g-hide');
+					$('.-g-component-id-3313 .pinGrid .pin').hover(function(){
+						$(this).find('.t-tips').toggleClass('visible');
+					});					
+				});
+			</script>
+</div>
+<div class="clear"></div>
+<script>
+		$(document).ready(function(){
+
+			$.Gomag.bind('Gomag.ajaxContentLoadedComplete', function(event, data){
+				$.Gomag.eqProductRow();
+			});
+			$(document).on('Gomag.ajaxContentLoaded', function(event, data){
+
+				if(data.lastProducts != ''){
+					if($('.slide-item-recent .owl-item').length)
+					{
+						$('.slide-item-recent').data('owlCarousel').destroy();
+					}
+					$('.slide-item-recent').html(data.lastProducts);
+
+					$('.slide-item-recent').owlCarousel({
+						items: 4,
+						navigation:true,
+						pagination:false,
+						itemsCustom : [
+							[0,2],
+							[479,2],
+							[768,3],
+							[979,3],
+							[1199, 4],
+							[1299, 4]
+						]
+					});
+
+					if(data.stockAlertProducts !== undefined) {
+						$.each(data.stockAlertProducts, function(i, v){
+							$('.btn-flstockAlertBTN-list'+v).each(function (){
+								$(this).find('i').removeClass('fa-bell-o').addClass('fa-check');
+								$(this).prop("onclick", null).off("click");
+							});
+						});
+					}
+					$('.__recentProducts').removeClass('hide');
+					$.Gomag.trigger('Gomag.ajaxContentLoadedComplete');
+				}
+			});
+
+		});
+	</script>
+<div class="carousel-slide container-h container-bg clearfix hide __recentProducts">
+<div class="holder">
+<div class="title-carousel">
+<p class="title">
+Ultimele produse vizualizate
+</p>
+<hr>
+</div>
+<div class="carousel slide-item-recent"></div>
+</div>
+</div> 
+<div id="-g-footer-general-before"></div>
+<div class="bottom-section container-h full">
+<div class="holder">
+<div class="container-h flex-box clearfix">
+<div class="col newsletter">
+<p class="title">Newsletter
+<span>Nu rata ofertele si promotiile noastre</span>
+</p>
+<form id="main-newsletter-form" class="newsletter-form">
+<input id="_emailAddress" type="text" placeholder="Adresa de email">
+<input type="submit" id="_subscribe" value="Aboneaza-te">
+<div class="custom-chk"><label class="-g-agreement-NewsletterInformation"><input type="checkbox" name="agreeNewsletterInformation" value="af08e2ae6f9422ec0fb020ab6b2e799c"> Vreau sa primesc newsletter cu promotiile magazinului. Afla mai multe in <a href="javascript:void(0);" onclick="$.Gomag.openPopupWithData('#info-btn', {iframe : {css : {width : '600px'}}, src: 'https://factual.gomag.ro/politica-de-confidentialitate?type=popup'});" class="-g-agreement-link">Politica de Confidentialitate</a></label></div>
+</form>
+</div>
+<script>
+	$(document).ready(function(){
+		$('#_subscribe').on('click', function(e){
+			e.preventDefault();
+			$('#_emailAddress').attr('name', 'email');
+
+
+
+			$.post('https://factual.gomag.ro/abonare-newsletter', $('#main-newsletter-form').serializeArray(), function(data){
+				var result = data.result;
+
+				var p = 'error';
+
+				if(result == 1) {
+					p = 'succes';
+				} else if(result == 11) {
+					p = 'succesOptIn';
+				} else if(result == 2) {
+					p = 'mail_exists';
+				} else if(result == -1) {
+					p = 'mail_exists';
+				} else if(result == 'noUserAgreement') {
+					p = 'noUserAgreement';
+				}
+				if(p == 'succes' || p == 'succesOptIn' || p == 'mail_exists')
+				{
+					var values ={email:$('#_emailAddress').val()};
+					$.Gomag.trigger('INFO_USER',{data:values});
+
+					$('#_emailAddress').val('');
+					$('.-g-agreement-NewsletterInformation').find('input[name="agreeNewsletterInformation"]').attr('checked', false);
+				}
+				if((p == 'succes' || p == 'succesOptIn' || p == 'mail_exists') && $.Gomag.getWidgets('popup:newletterSubscriptionConfirm') !== false)
+				{
+					$.Gomag.triggerPopup('popup:newletterSubscriptionConfirm');
+				}
+				else
+				{
+					$.Gomag.openDefaultPopup(undefined, {
+						src : 'https://factual.gomag.ro/iframe-newsletter?p='+p,
+						iframe : {css : {width : '400px'}}
+					});
+				}
+			}, "json");
+		});
+	});
+</script>
+<div class="col social">
+<p class="title">Social
+<span>Urmareste-ne in social media</span>
+</p>
+<ul>
+<li>
+<a target="_blank" href="fb" aria-label="Facebook" rel="noopener nofollow">
+<i class="fa fa-facebook"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="yt" aria-label="Youtube" rel="noopener nofollow">
+<i class="fa fa-youtube"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="tw" aria-label="Twitter" rel="noopener nofollow">
+<i class="fa fa-twitter"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="tk" aria-label="TickTok" rel="noopener nofollow">
+<i class="fa fa-tiktok"></i>
+</a>
+</li>
+<li>
+<a target="_blank" href="in" aria-label="Instagram" rel="noopener nofollow">
+<i class="fa fa-instagram"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="col support">
+<p class="title">Suport clienti
+<span></span>
+</p>
+<a href="/cdn-cgi/l/email-protection#1c7f7372687d7f685c7b73717d7b326e73" data-contact="bWFpbHRvOmNvbnRhY3RAZ29tYWcucm8=" class="support-contact">
+<i class="fa fa-envelope-o" aria-hidden="true"></i>
+&#x63;&#x6f;ntac&#x74;&#x40;gom&#x61;g&#46;&#x72;&#x6f;
+</a>
+</div> </div>
+</div>
+</div> 
+<footer class="container-h full" id="-g-footer-general">
+<div class="main-footer container-h container-bg clearfix">
+<div class="row">
+<div class="col-md-3 col-xs-4 col">
+<div class="-g-footer-group">
+<p class="title">
+Magazinul meu <i class="fa fa-angle-down" aria-hidden="true"></i>
+</p>
+<ul class="footer-submenu" data-block="footerFirstColumnLinks">
+<li>
+<a href="https://factual.gomag.ro/despre-noi" rel="  " class=" ">
+Despre noi
+</a></li>
+<li>
+<a href="https://factual.gomag.ro/termeni-si-conditii" rel="  " class=" ">
+Termeni si Conditii
+</a></li>
+<li>
+<a href="https://factual.gomag.ro/politica-de-confidentialitate" rel="  " class=" ">
+Politica de Confidentialitate
+</a></li>
+<li>
+<a href="https://factual.gomag.ro/contact" rel="  " class=" ">
+Contact
+</a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-3 col-xs-4 col">
+<div class="-g-footer-group">
+<p class="title">
+Clienti <i class="fa fa-angle-down" aria-hidden="true"></i>
+</p>
+<ul class="footer-submenu" data-block="footerFirstColumnLinks">
+<li>
+<a href="https://factual.gomag.ro/metode-de-plata" rel="  " class=" ">
+Metode de Plata
+</a></li>
+<li>
+<a href="https://factual.gomag.ro/politica-de-retur" rel="  " class=" ">
+Politica de Retur
+</a></li>
+<li>
+<a href="https://factual.gomag.ro/garantia-produselor" rel="  " class=" ">
+Garantia Produselor
+</a></li>
+<li>
+<a href="https://anpc.ro/" rel="nofollow  " target="_blank" class=" ">
+ANPC
+</a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-2 col-xs-4 col -g-footer-company-data">
+<p class="title">Date comerciale <i class="fa fa-angle-down" aria-hidden="true"></i></p>
+<ul class="footer-submenu">
+<li class="-g-company-name"><strong>Factual Theme</strong></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</div>
+<div class="col-md-4 col-xs-12 col col-right">
+<div class="payment-accepted" id="-g-payment-accepted">
+<a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="nofollow"><img src="data:image/svg+xml,%3Csvg%20viewBox='0%200%20250%2050'%20xmlns='http://www.w3.org/2000/svg'%3E%3Crect%20fill='%23ffffff'%20fill-opacity='0'%20width='100%25'%20height='100%25'%20/%3E%3C/svg%3E" data-src="/themes/fashion/gfx/sal.png" alt="SAL" title="SAL" class="img-responsive lazyload" width="250" height="50"></a>
+<a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO" target="_blank" rel="nofollow"><img src="data:image/svg+xml,%3Csvg%20viewBox='0%200%20250%2050'%20xmlns='http://www.w3.org/2000/svg'%3E%3Crect%20fill='%23ffffff'%20fill-opacity='0'%20width='100%25'%20height='100%25'%20/%3E%3C/svg%3E" data-src="/themes/fashion/gfx/sol.png" alt="SOL" title="SOL" class="img-responsive lazyload" width="250" height="50"></a>
+</div>
+<p class="copyright">&copy;Copyright Factual Theme 2024
+<span>Platforma E-commerce by<a href="https://www.gomag.ro" target="_blank" rel="nofollow noopener"> Gomag</a></span>
+</p>
+<div class="-g-footer-copyright-block" data-block="FooterCopyrightBlock">
+</div>
+</div>
+<div class="-g-footer-affiliate-block" data-block="FooterAffiliateBlock">
+</div>
+</div>
+</div>
+</footer> 
+<div id="top"><a href="#top" aria-label="scroll top" style><i class="fa fa-angle-up"></i></a></div>
+</div> 
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
+			if($.Gomag.isMobile()){
+				$($GomagConfig.bannerDesktop).remove()
+				$($GomagConfig.bannerMobile).removeClass('hideSlide');
+			} else {
+				$($GomagConfig.bannerMobile).remove()
+				$($GomagConfig.bannerDesktop).removeClass('hideSlide');
+			}
+
+			$(document).ready(function(){
+				$(document).on('click', '.setCompare', function(){
+					if(!$(this).hasClass('ignoreChecked')){
+						if($(this).children('.new-checkbox').hasClass('checked')){
+							$(this).children('.new-checkbox').removeClass('checked');
+							$(this).children('.compareCk').prop('checked', false);
+						} else {
+							$(this).children('.new-checkbox').addClass('checked');
+							$(this).children('.compareCk').prop('checked', true);
+						}
+					}
+					var remove = $(this).children('.new-checkbox').hasClass('checked') ? 0 : $(this).attr('data-product');
+					$.get('https://factual.gomag.ro/set-compare', {product: $(this).attr('data-product'), removeProduct: remove}, function(data){
+
+						if(data.count > 1){
+							$.Gomag.openDefaultPopup(undefined, {
+								src : 'https://factual.gomag.ro/get-compare',
+								iframe : {css : {width : '1400px'}}
+							});
+						} else if(data.count == 1) {
+							showInfoCompare();
+						}
+					}, 'json')
+				});
+			});
+
+			//scroll to top
+			$("a[href='#top']").click(function(){return $("html, body").animate({scrollTop:0},"fast"),!1})
+			var lastScrollTop = 0;
+			$(window).scroll(function(){
+				if($(window).scrollTop()>100){
+					var st = $(this).scrollTop();
+					if (st < lastScrollTop){
+						$("#top a").css({opacity:"1",visibility:"visible",transform:"translateX(0)"})
+					} else {
+						$("#top a").css({opacity:"0",visibility:"hidden",transform:"translateX(50px)"})
+					}
+					lastScrollTop = st;
+				}else {
+					$("#top a").css({opacity:"0",visibility:"hidden",transform:"translateX(50px)"})
+				}
+			});
+
+		</script>
+<script src="/themes/fashion/js/plugins.js?v=8771513-4.136"></script>
+<script async src="/themes/fashion/js/plugins-async.js?v=8771513-4.136"></script>
+<script src="https://factual.gomag.ro/theme/default.js?v=31707479496"></script>
+<script src="/themes/fashion/js/menu-mobile.js?v=8771513-4.136"></script>
+<script id="gjs-dev" src="/themes/fashion/js/dev.js?v=8771513-4.136" data-values="{&quot;seeMore&quot;: &quot;Vezi mai multe&quot;,&quot;seeLess&quot;: &quot;Vezi mai putine&quot;}"></script>
+<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"url": "https://factual.gomag.ro",
+		"name": "Factual Theme",
+		"email": "contact@gomag.ro",
+		"taxID": "",
+		"telephone": "",
+		"logo": "https://gomagcdn.ro/domains/factual/files/company/logo4892.png",
+		"address": {
+		"@type": "PostalAddress",
+		"addressCountry":"RO",
+		"addressLocality": "",
+		"addressRegion": "",
+
+		"streetAddress": ""
+	  },  
+	  			"image": "https://gomagcdn.ro/domains/factual/files/company/logo4892.png"
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://factual.gomag.ro",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://factual.gomag.ro/produse?c={query_string}",
+      "query-input": "required name=query_string"
+    }
+}
+</script>
+<script>
+			function showInfoCompare(){
+				$('.setCompareInfoH').addClass('visible');
+				setTimeout(function(){
+					$('.setCompareInfoH').removeClass('visible');
+					$('.closeList-pp').click();
+				},5000);
+			}
+			$(document).ready(function(){
+				/*$('.compareProductClse').click(function(){
+					$('.setCompareInfoH').removeClass('visible');
+				});*/
+
+				if($('.add2cart-pp').length > 1){
+					$('.catListPP').remove();
+				};
+			})
+		</script>
+<script>
+			$(document).on('click', '.qtyplus', function(e){
+
+				$.Gomag.increaseQuantity($(this).data('id'));
+				if($.Gomag.isMaxQuantity($(this).data('id'))){
+					$(this).css('opacity', '0.5');
+				}else {
+					$(this).css('opacity', '1');
+				}
+
+				if($.Gomag.isMinQuantity($(this).data('id'))){
+					$(this).siblings('.qtyminus').css('opacity', '0.5');
+				}else {
+					$(this).siblings('.qtyminus').css('opacity', '1');
+				}
+				e.stopImmediatePropagation();
+			});
+
+			$(document).on('click', '.qtyminus', function(e) {
+
+				$.Gomag.decreaseQuantity($(this).data('id'));
+				if($.Gomag.isMinQuantity($(this).data('id'))){
+					$(this).css('opacity', '0.5');
+				}else {
+					$(this).css('opacity', '1');
+				}
+
+				if($.Gomag.isMaxQuantity($(this).data('id'))){
+					$(this).siblings('.qtyplus').css('opacity', '0.5');
+				}else {
+					$(this).siblings('.qtyplus').css('opacity', '1');
+				}
+				e.stopImmediatePropagation();
+			});
+		</script>
+<script>
+				$(document).ready(function(){
+
+					$.Gomag.bind('User/Ajax/Data/Loaded', function(event, data){
+						if(data != undefined && data.data != undefined)
+						{
+							var responseData = data.data;
+							if(responseData.itemsQuantities != undefined)
+							{
+								var cartQuantity = 0;
+								$.each(responseData.itemsQuantities, function(i, v){
+
+									if($.Gomag.getEnvData().products != undefined && $.Gomag.getEnvData().products[i] != undefined && $.Gomag.getEnvData().products[i].stock != undefined  && v > 0 && v >= $.Gomag.getEnvData().products[i].stock)
+									{
+										if ($($GomagConfig.listingAddToCart +i).length != 0) {
+										 $($GomagConfig.listingAddToCart + i).removeClass('add2cartList').removeClass('btn-cmd').addClass('__GomagAddToCartDisabled').attr('onclick', null).html('Produs adaugat in cos');
+										}
+									}
+								});
+
+							}
+						}
+					});
+
+					$(document).on("click",".requestOfferList",function(e) {
+						e.preventDefault();
+						var url = $(this).attr('href');
+						$.Gomag.openDefaultPopup('.requestOfferList', {
+							src : url,
+							iframe : {css : {width : '360px'}}
+						});
+					});
+
+				});
+			</script>
+<script>
+			$.Gomag.bind('Product/Add/To/Cart/After', function addToCartPopup(response, data){
+
+				$.Gomag.displayAddToCartPopup(response, data);
+
+			})
+
+			$.Gomag.bind('Product/Add/To/Wishlist/After', function addToCartPopup(response, data){
+					if(data.data.action == undefined || data.data.action == 'add')
+					{
+						$('.pop-r-txt-add').removeClass('hide');
+						$('.pop-r-txt-delete').addClass('hide');
+						$('.wishlistPopupIcon').addClass('icon-selected');
+					}
+					else if(data.data.action == 'remove')
+					{
+						$('.pop-r-txt-add').addClass('hide');
+						$('.pop-r-txt-delete').removeClass('hide');
+						$('.wishlistPopupIcon').removeClass('icon-selected');
+					}
+					$('.wishlist-pp').addClass('visible');
+					setTimeout(function(){
+						$('.wishlist-pp').removeClass('visible');
+					},5000);
+
+			})
+		</script>
+<div class="setCompareInfoH">
+<div style="display: flex;justify-content: space-between;flex-direction: row;align-items: center;">
+<div style="overflow:hidden;padding-right: 12px;width:100%;">
+<p class="prod-det-ttl" id="wishlistProducts">Compara produse</p>
+<p class="pop-r-txt">Trebuie sa mai adaugi cel putin un produs pentru a compara produse.</p>
+</div>
+<i class="fa fa-times close-pp" aria-hidden="true"></i>
+</div>
+</div> 
+<div class="wishlist-pp">
+<div style="display: flex;justify-content: space-between;flex-direction: row;align-items: center;">
+<i class="fa fa-heart wishlistPopupIcon" aria-hidden="true"></i>
+<div style="overflow:hidden;padding:0 12px;width:100%;">
+<p class="prod-det-ttl" id="addedProductWishlist"></p>
+<p class="pop-r-txt pop-r-txt-add">A fost adaugat la favorite!</p>
+<p class="pop-r-txt pop-r-txt-delete hide">A fost sters din favorite!</p>
+</div>
+<i class="fa fa-times close-pp" aria-hidden="true"></i>
+</div>
+</div>
+<script>
+	$(document).ready(function(){
+		$.Gomag.bind('User/Data/Response', function(event, data){
+			cart = data.cart;
+				if(cart != undefined){
+					$('.q-cart').html(cart.quantity);
+					if(parseFloat(cart.quantity) > 0)
+					{
+						$('.q-cart').removeClass('hide');
+					}
+					else
+					{
+						$('.q-cart').addClass('hide');
+					}
+					$('.cartPrice').html(cart.subtotal+' '+cart.currency);
+					$('.cartPrice').show();
+					$('.cart .fa-angle-down').show();
+					$('.cartProductCount').html(cart.itemCount);
+
+					$(document).trigger('Gomag.ajaxContentLoaded', [data]);
+				}
+		});
+		$.Gomag.bind('User/Data/Response', function(event, data){
+				 wishlistProductCount = data.wishlistProductCount;
+				 stockAlertProductsCount = data.stockAlertProductsCount;
+				 estimateShippingPriceForProduct = data.estimateShippingPriceForProduct;
+
+				 if(wishlistProductCount == undefined)
+				 {
+					wishlistProductCount = 0;
+				 }
+
+				 if(stockAlertProductsCount != undefined && parseInt(stockAlertProductsCount) > 0)
+				 {
+					wishlistProductCount = parseInt(wishlistProductCount) + parseInt(stockAlertProductsCount);
+				 }
+
+				 if(wishlistProductCount != undefined && $('.wishlist-header .-g-wishlist-product-count').length)
+				 {
+					$('span.-g-wishlist-product-count').html(wishlistProductCount);
+					if(parseInt(wishlistProductCount) > 0)
+					{
+						$('.wishlist-header').removeClass('hide');
+						$('.wishlist-header-m').removeClass('hide');
+						$('.-g-wishlist-product-count').removeClass('-g-hide');
+					}
+					else
+					{
+						$('.-g-wishlist-product-count').addClass('-g-hide');
+					}
+				 }
+
+				 if(estimateShippingPriceForProduct != undefined && estimateShippingPriceForProduct != '' && $('.__shippingPriceTemplate').length)
+				 {
+					$('.__shippingPriceTemplate').html(estimateShippingPriceForProduct);
+
+				 }
+
+			});
+	})
+</script>
+<script>
+
+			$(document).ready(function(){
+				$.Gomag.init({"env":{"Page\/Homepage":"homepage"},"CID":"4dc8d2834f101944dd9c2bfac4044445","widgetUrl":"https:\/\/factual.gomag.ro\/widget.js","ajaxLoadUserDataUrl":"https:\/\/factual.gomag.ro\/request\/data","ajaxLoadUserProductsUrl":"https:\/\/factual.gomag.ro\/request\/product?h=","cartSummaryUrl":"https:\/\/factual.gomag.ro\/cart-dropdown","orderCkeckoutValidUrl":"https:\/\/factual.gomag.ro\/finalizeaza-comanda?validateOnly=1","orderCkeckoutSaveUrl":"https:\/\/factual.gomag.ro\/finalizeaza-comanda?ajaxSave=1","orderCheckoutUrl":"https:\/\/factual.gomag.ro\/finalizeaza-comanda","orderUrl":"https:\/\/factual.gomag.ro\/cos-de-cumparaturi","addToCartUrl":"https:\/\/factual.gomag.ro\/cart-update","envData":{"products":{"31":{"id":"31","sku":"ExotiqueTara01M-mov","parent":"11","name":"Rochie Exotique","price":"279.00","basePrice":"279.00","currency":"RON","brand":"Pierre Cardin","category":"Hot Summer","image":"https:\/\/gomagcdn.ro\/domains\/factual\/files\/product\/medium\/rochie-exotique-704858.jpg","hasImage":1,"stepQuantity":"1.00","realStock":"10","stock":9223372036854775807,"stockStatus":"instock","orderMinimQuantity":"1","url":"https:\/\/factual.gomag.ro\/rochie-exotique-31.html","vat":"19","packages":[],"versions":null,"version":[{"name":"Culoarea","value":"Mov","icon":"\/domains\/factual\/files\/files\/mov.jpg"},{"name":"Marime","value":"M","icon":""}],"currencies":{"Lei":{"currency":"Lei","key":"RON","multiplier":"1","price":"279.0000","special_price":"0.0000","final_price":"279.00","base_price":"279.0000","list_price":"0.0000","price_no_vat":"234.4500","special_price_no_vat":"0.0000","final_price_no_vat":234.45,"base_price_no_vat":"234.4500","list_price_no_vat":"0.0000","price_with_ecotax":"0.0000"},"RON":{"currency":"RON","key":"RON","multiplier":"1","price":"279.0000","special_price":"0.0000","final_price":"279.00","base_price":"279.0000","list_price":"0.0000","price_no_vat":"234.4500","special_price_no_vat":"0.0000","final_price_no_vat":234.45,"base_price_no_vat":"234.4500","list_price_no_vat":"0.0000","price_with_ecotax":"0.0000"}},"priceListQuantity":[],"hasConfigurationOptions":0,"basePriceWithVatCurrency":"","finalPriceWithVatCurrency":""},"15":{"id":"15","sku":"Vanity01S","parent":"15","name":"Rochie Vanity","price":"54.50","basePrice":"109.00","currency":"RON","brand":"Trussardi","category":"Hot Summer","image":"https:\/\/gomagcdn.ro\/domains\/factual\/files\/product\/medium\/rochie-vanity-329942.jpg","hasImage":1,"stepQuantity":"1.00","realStock":"10","stock":9223372036854775807,"stockStatus":"instock","orderMinimQuantity":"1","url":"https:\/\/factual.gomag.ro\/rochie-vanity.html","vat":"19","packages":{"23":{"rule":23,"type":"package:discount","reqQuantity":"1","products":"[\"21\",\"9\",\"6\"]","quantity":"[\"1\",\"1\",\"1\"]"}},"versions":null,"version":[{"name":"Marime","value":"S","icon":""}],"currencies":{"Lei":{"currency":"Lei","key":"RON","multiplier":"1","price":"109.0000","special_price":"0.0000","final_price":"54.50","base_price":"109.0000","list_price":"0.0000","price_no_vat":"91.6000","special_price_no_vat":"0.0000","final_price_no_vat":45.8,"base_price_no_vat":"91.6000","list_price_no_vat":"0.0000","price_with_ecotax":"0.0000"},"RON":{"currency":"RON","key":"RON","multiplier":"1","price":"109.0000","special_price":"0.0000","final_price":"54.50","base_price":"109.0000","list_price":"0.0000","price_no_vat":"91.6000","special_price_no_vat":"0.0000","final_price_no_vat":45.8,"base_price_no_vat":"91.6000","list_price_no_vat":"0.0000","price_with_ecotax":"0.0000"}},"priceListQuantity":[],"hasConfigurationOptions":0,"basePriceWithVatCurrency":"","finalPriceWithVatCurrency":""},"9":{"id":"9","sku":"Farah01S","parent":"7","name":"Rochie Farah","price":"279.00","basePrice":"279.00","currency":"RON","brand":"Trussardi","category":"Hot Summer","image":"https:\/\/gomagcdn.ro\/domains\/factual\/files\/product\/medium\/rochie-farah-608274.jpg","hasImage":1,"stepQuantity":"1.00","realStock":"10","stock":9223372036854775807,"stockStatus":"instock","orderMinimQuantity":"1","url":"https:\/\/factual.gomag.ro\/rochie-casual-farah-9.html","vat":"19","packages":[],"versions":null,"version":[{"name":"Marime","value":"S","icon":""}],"currencies":{"Lei":{"currency":"Lei","key":"RON","multiplier":"1","price":"279.0000","special_price":"0.0000","final_price":"279.00","base_price":"279.0000","list_price":"0.0000","price_no_vat":"234.4500","special_price_no_vat":"0.0000","final_price_no_vat":234.45,"base_price_no_vat":"234.4500","list_price_no_vat":"0.0000","price_with_ecotax":"0.0000"},"RON":{"currency":"RON","key":"RON","multiplier":"1","price":"279.0000","special_price":"0.0000","final_price":"279.00","base_price":"279.0000","list_price":"0.0000","price_no_vat":"234.4500","special_price_no_vat":"0.0000","final_price_no_vat":234.45,"base_price_no_vat":"234.4500","list_price_no_vat":"0.0000","price_with_ecotax":"0.0000"}},"priceListQuantity":[],"hasConfigurationOptions":0,"basePriceWithVatCurrency":"","finalPriceWithVatCurrency":""},"6":{"id":"6","sku":"Tara01S","parent":"4","name":"Rochie casual Tara","price":"189.00","basePrice":"279.00","currency":"RON","brand":"Trussardi","category":"Pretty Woman","image":"https:\/\/gomagcdn.ro\/domains\/factual\/files\/product\/medium\/rochie-casual-tara-248855.jpg","hasImage":1,"stepQuantity":"1.00","realStock":"10","stock":9223372036854775807,"stockStatus":"instock","orderMinimQuantity":"1","url":"https:\/\/factual.gomag.ro\/rochie-casual-tara-6.html","vat":"19","packages":[],"versions":null,"version":[{"name":"Marime","value":"S","icon":""}],"currencies":{"Lei":{"currency":"Lei","key":"RON","multiplier":"1","price":"279.0000","special_price":"189.0000","final_price":"189.00","base_price":"279.0000","list_price":"0.0000","price_no_vat":"234.4500","special_price_no_vat":"158.8200","final_price_no_vat":158.82,"base_price_no_vat":"234.4500","list_price_no_vat":"0.0000","price_with_ecotax":"0.0000"},"RON":{"currency":"RON","key":"RON","multiplier":"1","price":"279.0000","special_price":"189.0000","final_price":"189.00","base_price":"279.0000","list_price":"0.0000","price_no_vat":"234.4500","special_price_no_vat":"158.8200","final_price_no_vat":158.82,"base_price_no_vat":"234.4500","list_price_no_vat":"0.0000","price_with_ecotax":"0.0000"}},"priceListQuantity":[],"hasConfigurationOptions":0,"basePriceWithVatCurrency":"","finalPriceWithVatCurrency":""},"3":{"id":"3","sku":"Tina01S","parent":"1","name":"Rochie casual Tina","price":"189.00","basePrice":"279.00","currency":"RON","brand":"Pierre Cardin","category":"Pretty Woman","image":"https:\/\/gomagcdn.ro\/domains\/factual\/files\/product\/medium\/rochie-casual-tina-317904.jpg","hasImage":1,"stepQuantity":"1.00","realStock":"10","stock":9223372036854775807,"stockStatus":"instock","orderMinimQuantity":"1","url":"https:\/\/factual.gomag.ro\/rochie-casual-tina-3.html","vat":"19","packages":[],"versions":null,"version":[{"name":"Marime","value":"S","icon":""}],"currencies":{"Lei":{"currency":"Lei","key":"RON","multiplier":"1","price":"279.0000","special_price":"189.0000","final_price":"189.00","base_price":"279.0000","list_price":"0.0000","price_no_vat":"234.4500","special_price_no_vat":"158.8200","final_price_no_vat":158.82,"base_price_no_vat":"234.4500","list_price_no_vat":"0.0000","price_with_ecotax":"0.0000"},"RON":{"currency":"RON","key":"RON","multiplier":"1","price":"279.0000","special_price":"189.0000","final_price":"189.00","base_price":"279.0000","list_price":"0.0000","price_no_vat":"234.4500","special_price_no_vat":"158.8200","final_price_no_vat":158.82,"base_price_no_vat":"234.4500","list_price_no_vat":"0.0000","price_with_ecotax":"0.0000"}},"priceListQuantity":[],"hasConfigurationOptions":0,"basePriceWithVatCurrency":"","finalPriceWithVatCurrency":""},"27":{"id":"27","sku":"3-Colors","parent":"27","name":"Geanta Sunny","price":"249.00","basePrice":"249.00","currency":"RON","brand":"D&amp;G","category":"Hot Summer","image":"https:\/\/gomagcdn.ro\/domains\/factual\/files\/product\/medium\/geanta-lovelypink-267856.jpg","hasImage":1,"stepQuantity":"1.00","realStock":"10","stock":9223372036854775807,"stockStatus":"instock","orderMinimQuantity":"1","url":"https:\/\/factual.gomag.ro\/geanta-lovelypink.html","vat":"19","packages":[],"versions":null,"version":[],"currencies":{"Lei":{"currency":"Lei","key":"RON","multiplier":"1","price":"249.0000","special_price":"0.0000","final_price":"249.00","base_price":"249.0000","list_price":"0.0000","price_no_vat":"209.2400","special_price_no_vat":"0.0000","final_price_no_vat":209.24,"base_price_no_vat":"209.2400","list_price_no_vat":"0.0000","price_with_ecotax":"0.0000"},"RON":{"currency":"RON","key":"RON","multiplier":"1","price":"249.0000","special_price":"0.0000","final_price":"249.00","base_price":"249.0000","list_price":"0.0000","price_no_vat":"209.2400","special_price_no_vat":"0.0000","final_price_no_vat":209.24,"base_price_no_vat":"209.2400","list_price_no_vat":"0.0000","price_with_ecotax":"0.0000"}},"priceListQuantity":[],"hasConfigurationOptions":0,"basePriceWithVatCurrency":"","finalPriceWithVatCurrency":""},"77":{"id":"77","sku":"C77","parent":"77","name":"Pantofi cu toc White","price":"147.00","basePrice":"147.00","currency":"RON","brand":"","category":"Incaltaminte","image":"https:\/\/gomagcdn.ro\/domains\/factual\/files\/product\/medium\/pantofi-cu-toc-white-261161.jpg","hasImage":1,"stepQuantity":"1.00","realStock":"50","stock":"50","stockStatus":"instock","orderMinimQuantity":"1","url":"https:\/\/factual.gomag.ro\/pantofi-cu-toc-white.html","vat":"19","packages":[],"versions":null,"version":[],"currencies":{"Lei":{"currency":"Lei","key":"RON","multiplier":"1","price":"147.0000","special_price":"0.0000","final_price":"147.00","base_price":"147.0000","list_price":"0.0000","price_no_vat":"123.5300","special_price_no_vat":"0.0000","final_price_no_vat":123.53,"base_price_no_vat":"123.5300","list_price_no_vat":"0.0000","price_with_ecotax":"0.0000"},"RON":{"currency":"RON","key":"RON","multiplier":"1","price":"147.0000","special_price":"0.0000","final_price":"147.00","base_price":"147.0000","list_price":"0.0000","price_no_vat":"123.5300","special_price_no_vat":"0.0000","final_price_no_vat":123.53,"base_price_no_vat":"123.5300","list_price_no_vat":"0.0000","price_with_ecotax":"0.0000"}},"priceListQuantity":[],"hasConfigurationOptions":0,"basePriceWithVatCurrency":"","finalPriceWithVatCurrency":""},"34":{"id":"34","sku":"7","parent":"34","name":"Colier Mystic Topaz","price":"0.00","basePrice":"0.00","currency":"RON","brand":"","category":"Accesorii","image":"https:\/\/gomagcdn.ro\/domains\/factual\/files\/product\/medium\/colier-mystic-topaz-696205.jpg","hasImage":1,"stepQuantity":"1.00","realStock":"3","stock":"3","stockStatus":"instock","orderMinimQuantity":"1","url":"https:\/\/factual.gomag.ro\/colier-mystic-topaz.html","vat":"19","packages":[],"versions":null,"version":[],"currencies":{"Lei":{"currency":"Lei","key":"RON","multiplier":"1","price":"0.0000","special_price":"0.0000","final_price":"0.00","base_price":"0.0000","list_price":"0.0000","price_no_vat":"0.0000","special_price_no_vat":"0.0000","final_price_no_vat":0,"base_price_no_vat":"0.0000","list_price_no_vat":"0.0000","price_with_ecotax":"0.0000"},"RON":{"currency":"RON","key":"RON","multiplier":"1","price":"0.0000","special_price":"0.0000","final_price":"0.00","base_price":"0.0000","list_price":"0.0000","price_no_vat":"0.0000","special_price_no_vat":"0.0000","final_price_no_vat":0,"base_price_no_vat":"0.0000","list_price_no_vat":"0.0000","price_with_ecotax":"0.0000"}},"priceListQuantity":[],"hasConfigurationOptions":0,"basePriceWithVatCurrency":"","finalPriceWithVatCurrency":""},"75":{"id":"75","sku":"C75","parent":"75","name":"Pantofi Ocean Blue","price":"197.00","basePrice":"197.00","currency":"RON","brand":"","category":"Incaltaminte","image":"https:\/\/gomagcdn.ro\/domains\/factual\/files\/product\/medium\/pantofi-ocean-blue-113321.jpg","hasImage":1,"stepQuantity":"1.00","realStock":"50","stock":"50","stockStatus":"instock","orderMinimQuantity":"1","url":"https:\/\/factual.gomag.ro\/pantofi-ocean-blue.html","vat":"19","packages":[],"versions":null,"version":[],"currencies":{"Lei":{"currency":"Lei","key":"RON","multiplier":"1","price":"197.0000","special_price":"0.0000","final_price":"197.00","base_price":"197.0000","list_price":"0.0000","price_no_vat":"165.5500","special_price_no_vat":"0.0000","final_price_no_vat":165.55,"base_price_no_vat":"165.5500","list_price_no_vat":"0.0000","price_with_ecotax":"0.0000"},"RON":{"currency":"RON","key":"RON","multiplier":"1","price":"197.0000","special_price":"0.0000","final_price":"197.00","base_price":"197.0000","list_price":"0.0000","price_no_vat":"165.5500","special_price_no_vat":"0.0000","final_price_no_vat":165.55,"base_price_no_vat":"165.5500","list_price_no_vat":"0.0000","price_with_ecotax":"0.0000"}},"priceListQuantity":[],"hasConfigurationOptions":0,"basePriceWithVatCurrency":"","finalPriceWithVatCurrency":""},"74":{"id":"74","sku":"C74","parent":"74","name":"Pantofi eleganti Green","price":"247.00","basePrice":"247.00","currency":"RON","brand":"","category":"Incaltaminte","image":"https:\/\/gomagcdn.ro\/domains\/factual\/files\/product\/medium\/pantofi-eleganti-green-579282.jpg","hasImage":1,"stepQuantity":"1.00","realStock":"90","stock":"90","stockStatus":"instock","orderMinimQuantity":"1","url":"https:\/\/factual.gomag.ro\/pantofi-eleganti-green.html","vat":"19","packages":[],"versions":null,"version":[],"currencies":{"Lei":{"currency":"Lei","key":"RON","multiplier":"1","price":"247.0000","special_price":"0.0000","final_price":"247.00","base_price":"247.0000","list_price":"0.0000","price_no_vat":"207.5600","special_price_no_vat":"0.0000","final_price_no_vat":207.56,"base_price_no_vat":"207.5600","list_price_no_vat":"0.0000","price_with_ecotax":"0.0000"},"RON":{"currency":"RON","key":"RON","multiplier":"1","price":"247.0000","special_price":"0.0000","final_price":"247.00","base_price":"247.0000","list_price":"0.0000","price_no_vat":"207.5600","special_price_no_vat":"0.0000","final_price_no_vat":207.56,"base_price_no_vat":"207.5600","list_price_no_vat":"0.0000","price_with_ecotax":"0.0000"}},"priceListQuantity":[],"hasConfigurationOptions":0,"basePriceWithVatCurrency":"","finalPriceWithVatCurrency":""}}},"ajaxLoadProductDetails":"https:\/\/factual.gomag.ro\/product\/ajax\/details","productsStockDecimals":"2","theme":{"GFX":"https:\/\/factual.gomag.ro\/themes\/fashion\/gfx\/"},"orderSummaryUrl":"https:\/\/factual.gomag.ro\/checkout-summary","secureForms":{"isSecure":false,"name":"c08c570971dc8aa2165e2fada6288409","value":"40e419b995766796038814f6eaa63188"},"settings":{"doNotSelectVersion":false,"displayCategoryIconInMenu":false,"asyncClick":null,"ajaxCheckoutCheck":false,"saveOrderUsingAjax":false,"orderCheckoutEmailNotRequired":false,"phoneLengthsByCountry":{"176":"10,11"},"displayPRPAsBasePrice":"0","discountDisplayType":"percent","addToCartPopupDisplayTime":"5","countdownTimeUnit":{"timeUnitDays":"d","timeUnitHours":"h","timeUnitMinutes":"m","timeUnitSeconds":"s"},"countdownTimeUnitIncludeDays":false},"addToCartPopup":"{\"blocking\":false,\"template\":\"\\n<div id=\\\"-g-addtocart-popup-default\\\">\\n<div style=\\\"display:none;\\\" class=\\\"add2cart catListPP\\\"><\\\/div>\\n<div class=\\\"clear catListPP\\\"><\\\/div>\\n<div class=\\\"add2cart-pp catListPP\\\">\\n\\t<div class=\\\"-g-addtocart-popup-holder\\\" style=\\\"display: flex;justify-content: space-between;flex-direction: row;align-items: center;\\\">\\n\\t\\t<i class=\\\"fa fa-shopping-bag -g-shopping-bag\\\" aria-hidden=\\\"true\\\"><\\\/i>\\n\\t\\t<div style=\\\"overflow: hidden;padding:0 15px;width:100%;text-align: left;\\\">\\n\\t\\t\\t\\t\\t\\t\\t<p class=\\\"prod-det-ttl\\\" id=\\\"addedProduct\\\"><\\\/p>\\n\\t\\t\\t\\t<p class=\\\"pop-r-txt\\\">A fost adaugat in cosul de cumparaturi!<\\\/p>\\n\\t\\t\\t\\t\\t<\\\/div>\\n\\t\\t<i class=\\\"fa fa-times close-pp\\\" aria-hidden=\\\"true\\\"><\\\/i>\\n\\t<\\\/div>\\n\\n\\t<div class=\\\"pop-r-txt pop-r-txt-cart-changed\\\" style=\\\"color: #e96f56;\\\"><\\\/div>\\n\\n\\t<div style=\\\"display: flex;justify-content: space-between;align-items: center;margin: 12px 0 3px;gap: 6px;\\\">\\n\\t\\t<a href=\\\"https:\\\/\\\/factual.gomag.ro\\\/cos-de-cumparaturi\\\" class=\\\"btn  fl\\\">Vezi cosul<\\\/a>\\n\\t\\t<a href=\\\"https:\\\/\\\/factual.gomag.ro\\\/finalizeaza-comanda\\\" class=\\\"btn btn-cmd fr\\\">Finalizeaza Comanda<\\\/a>\\n\\t<\\\/div>\\n<\\\/div> <!-- end add to cart popup -->\\n\\n<script>\\n\\t$(document).ready(function(){\\n\\t\\t$('.close-pp').click(function(){\\n\\t\\t\\t$('.add2cart-pp').removeClass('visible');\\n\\t\\t});\\n\\t});\\n<\\\/script>\\n\\n<\\\/div>\\n\",\"simpleTemplateLimitReached\":\"\\n<div id=\\\"-g-addtocart-popup-default-limit-reached\\\">\\n<div style=\\\"display:none;\\\" class=\\\"add2cart catListPP\\\"><\\\/div>\\n<div class=\\\"clear catListPP\\\"><\\\/div>\\n<div class=\\\"add2cart-pp catListPP\\\">\\n\\t<div style=\\\"display: flex;justify-content: space-between;flex-direction: row;align-items: center;\\\">\\n\\t\\t<i class=\\\"fa fa-shopping-bag\\\" aria-hidden=\\\"true\\\"><\\\/i>\\n\\t\\t<div style=\\\"overflow: hidden;padding:0 15px;width:100%;text-align: left;\\\">\\n\\t\\t\\t<p class=\\\"prod-det-ttl\\\">Cosul tau este plin!<\\\/p>\\n\\t\\t\\t<p class=\\\"pop-r-txt\\\">Finalizeaza comanda cu produsele din cos!<\\\/p>\\n\\t\\t<\\\/div>\\n\\t\\t<i class=\\\"fa fa-times close-pp\\\" aria-hidden=\\\"true\\\"><\\\/i>\\n\\t<\\\/div>\\n\\n\\t<div style=\\\"display: flex;justify-content: space-between;flex-direction: row;align-items: center;margin: 12px 0 3px;\\\">\\n\\t\\t<a href=\\\"https:\\\/\\\/factual.gomag.ro\\\/cos-de-cumparaturi\\\" class=\\\"btn  fl\\\">Vezi cosul<\\\/a>\\n\\t\\t<a href=\\\"https:\\\/\\\/factual.gomag.ro\\\/finalizeaza-comanda\\\" class=\\\"btn btn-cmd fr\\\">Finalizeaza Comanda<\\\/a>\\n\\t<\\\/div>\\n<\\\/div> <!-- end add to cart popup -->\\n\\n<script>\\n\\t$(document).ready(function(){\\n\\t\\t$('.close-pp').click(function(){\\n\\t\\t\\t$('.add2cart-pp').removeClass('visible');\\n\\t\\t});\\n\\t});\\n<\\\/script>\\n\\n<\\\/div>\\n\",\"simpleTemplateProductOutOfStock\":\"\\n<div id=\\\"-g-addtocart-popup-default-product-out-of-stock\\\">\\n<div style=\\\"display:none;\\\" class=\\\"add2cart catListPP\\\"><\\\/div>\\n<div class=\\\"clear catListPP\\\"><\\\/div>\\n<div class=\\\"add2cart-pp catListPP\\\" style=\\\"background-color: #e96f56;padding: 20px;\\\">\\n\\t<div style=\\\"display: flex;justify-content: space-between;flex-direction: row;align-items: center;\\\">\\n\\t\\t<i class=\\\"fa fa-shopping-bag\\\" aria-hidden=\\\"true\\\" style=\\\"color: #fff;\\\"><\\\/i>\\n\\t\\t<div  style=\\\"color: #fff;padding: 10px;\\\">\\n\\t\\t\\t<p class=\\\"prod-det-ttl\\\" style=\\\"color: #fff;\\\">Ne pare rau, stoc insuficient!<\\\/p>\\n\\t\\t\\t\\n\\t\\t\\t<p class=\\\"pop-r-txt\\\" style=\\\"color: #fff;\\\">Produsul nu a fost adaugat in cosul de cumparaturi!<\\\/p>\\n\\t\\t<\\\/div>\\n\\t\\t<i class=\\\"fa fa-times close-pp\\\" aria-hidden=\\\"true\\\" style=\\\"color: #fff;\\\"><\\\/i>\\n\\t<\\\/div>\\n<\\\/div> <!-- end add to cart popup -->\\n<script>\\n\\t$(document).ready(function(){\\n\\t\\t$('.close-pp').click(function(){\\n\\t\\t\\t$('.add2cart-pp').removeClass('visible');\\n\\t\\t});\\n\\t});\\n<\\\/script>\\n<\\\/div>\"}","ajaxComponentsReload":"https:\/\/factual.gomag.ro\/components.js","languages":{"ro":{"id":"4","name":"Romana","key":"ro","data":"Ro_ro","selected":true,"redirectUrl":"https:\/\/factual.gomag.ro"}},"currencies":{"3":{"name":"RON","currency":"RON","id":3,"url":"https:\/\/factual.gomag.ro\/?sc=3","selected":1}},"mainDomain":"https:\/\/factual.gomag.ro","checkPhoneNumberUrl":"https:\/\/factual.gomag.ro\/ajax-check-phone-number"});
+				setTimeout(function(){$.Gomag.displayPricesBox()}, 2000);
+			})
+			let libraryValues = {
+				orderSummaryUrl : "https://factual.gomag.ro/checkout-summary"
+			}
+		</script>
+<script src="/themes/fashion/js/library.js?v=8771513-4.136" data-values="{&quot;orderSummaryUrl&quot;: &quot;https://factual.gomag.ro/checkout-summary&quot;}"></script>
+<script>
+			/*$(document).ready(function(){
+				document.getElementsByTagName('body')[0].classList.remove('loading');
+			});*/
+		</script>
+
+</body>
+</html>
