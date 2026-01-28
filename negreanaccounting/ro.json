@@ -19,10 +19,10 @@
         ]
       },
       "sliderHeadlineContracte": {
-        "name": "Contracte de muncă și ReviSal",
+        "name": "Contracte de muncă și REGES",
         "listElements": [
           "Întocmire contracte de muncă/decizii/acte adiționale",
-          "Transmiteri și alte operațiuni ReviSal"
+          "Transmiteri și alte operațiuni REGES"
         ]
       }
     },
@@ -86,13 +86,13 @@
           }
         },
         {
-          "header": "CIM și ReviSal",
+          "header": "CIM și REGES",
           "contentObject": {
             "column1": [
               "Automatizarea întocmirii contractelor individuale de muncă și a deciziilor de încetare, pe baza modelelor agreeate cu clientul",
               "Întocmirea contractelor individuale de muncă/deciziilor de încetare/actelor adiționale mai sus menționate conform necesităților clientului",
-              "Transmiterea contractelor individuale de muncă/deciziilor de încetare/actelor adiționale în ReviSal (Registru General de Evidență a Salariților) și obținerea numărului de înregistrare aferent fiecărei transmiteri",
-              "Obținerea rapoartelor ReviSal la solicitarea clientului pentru oricare dintre angajații acestuia"
+              "Transmiterea contractelor individuale de muncă/deciziilor de încetare/actelor adiționale în REGES (Registru General de Evidență a Salariților) și obținerea numărului de înregistrare aferent fiecărei transmiteri",
+              "Obținerea rapoartelor REGES la solicitarea clientului pentru oricare dintre angajații acestuia"
             ]
           }
         }
