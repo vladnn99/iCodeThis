@@ -1,250 +1,27 @@
-/**
- * Scrie aici codul tau Javascript...
- */
-
-let logoContainer = document.querySelector(".logo-h");
-let logoImg = document.querySelector(".img-responsive");
-logoImg.src =
-  "https://sacoul.blob.core.windows.net/img/sacoul-web-logo-transparent.png";
-logoContainer.classList.remove("col-sm-2", "col-xs-12");
-logoContainer.classList.add("col-xs-4");
-
-const searchContainer = document.querySelector(
-  ".col-sm-4.col-xs-7.main.search-form-box"
-);
-searchContainer.classList.remove("col-xs-7", "col-sm-4");
-searchContainer.classList.add("col-xs-4");
-
-const rightMenu = document.querySelector(".col-xs-5.acount-section");
-rightMenu.classList.remove("col-xs-5");
-rightMenu.classList.add("col-xs-4");
-
-// Unhide the wishlist
-const wishlist = document.querySelector(".wishlist-header.hide");
-wishlist.classList.remove("hide");
-
-document.addEventListener("DOMContentLoaded", function () {
-  const bannerLabels = document.querySelectorAll(".banner_toate");
-  bannerLabels.forEach((bannerLabel) => {
-    if (bannerLabel.className === "banner_toate") {
-      //   bannerLabel.parentElement.style.backgroundColor = "rgba(36, 97, 59, 0.8)";
-      bannerLabel.parentElement.style.backgroundColor =
-        "rgba(53, 53, 53, 0.75)";
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <title></title>
+  <style>
+    /* * {
+      outline: 1px solid rgba(255, 0, 0, 0.7);
+    } */
+    .hidden {
+      display: none;
     }
-  });
-});
 
-// Remove company data from footer
-const companyDetails = document.querySelector(
-  ".col-md-3.col-xs-4.col.-g-footer-company-data"
-);
-if (companyDetails) {
-  companyDetails.remove();
-}
-
-// Remove company data from contact
-document.addEventListener("DOMContentLoaded", function () {
-  const contactPageData = document.querySelector(
-    ".contact-information.col-sm-5.pull-right"
-  );
-  if (contactPageData) {
-    contactPageData.classList.remove("pull-right");
-    contactPageData.innerHTML = `<div class="contact-information">
-  <div class="title-box line-r under">
-    <h3 class="title">Contact</h3>
-    <hr />
-  </div>
-  <ul class="info-list -g-company-contact">
-    <li>
-      <strong>Email: </strong>
-      <span>
-        <a
-          href="mailto:office@sacoul.ro"
-          data-contact="bWFpbHRvOm9mZmljZUBzYWNvdWwucm8="
-          >office@sacoul.ro</a
-        >
-      </span>
-    </li>
-    <li class="contactPhone" data-block="contactPhone">
-      <strong>Telefon:</strong>
-      <span>
-        <a href="tel:+40750441589">+40750441589</a>
-      </span>
-    </li>
-  </ul>
-  <div class="title-box line-r under">
-    <h3 class="title">Suport clienti</h3>
-    <hr />
-  </div>
-  <ul class="info-list -g-company-schedule">
-    <li>LUNI - VINERI 10 - 17</li>
-        <li>
-      <strong>Email: </strong>
-      <span>
-        <a
-          href="mailto:office@sacoul.ro"
-          data-contact="bWFpbHRvOm9mZmljZUBzYWNvdWwucm8="
-          >office@sacoul.ro</a
-        >
-      </span>
-    </li>
-    <li class="contactPhone" data-block="contactPhone">
-      <strong>Telefon:</strong>
-      <span>
-        <a href="tel:+40750441589">+40750441589</a>
-      </span>
-    </li>
-  </ul>
-</div>`;
-  }
-});
-
-// Move footer available time down
-const suportClienti = document.querySelector(
-  ".col-md-3.col-xs-12.col.-g-footer-support"
-);
-if (suportClienti) {
-  suportClienti.classList.remove("col-md-3");
-  suportClienti.classList.add("col-md-4");
-  suportClienti.innerHTML = "";
-  suportClienti.innerHTML = `<div class="col support">
-  <p class="title">
-    Suport clienti
-  </p>
-<span>LUNI - VINERI 10 - 17</span>
-  <a href="tel:+40750441589" class="support-contact">
-    <i class="fa fa-phone" aria-hidden="true"></i> +40750441589
-  </a>
-
-  <a
-    href="mailto:office@sacoul.ro"
-    data-contact="bWFpbHRvOm9mZmljZUBzYWNvdWwucm8="
-    class="support-contact"
-  >
-    <i class="fa fa-envelope-o" aria-hidden="true"></i>
-    office@sacoul.ro
-  </a>
-</div>
-`;
-}
-
-// Set footer columns to col-md-4 instead of col-md-3
-const informatiiAndClientiArr = [
-  ...document.querySelectorAll(".col-md-3.col-xs-4.col"),
-];
-if (informatiiAndClientiArr) {
-  informatiiAndClientiArr.forEach((element) => {
-    element.classList.remove("col-md-3");
-    element.classList.add("col-md-4");
-  });
-}
-
-const suportClientiComandaFinalizata = document.querySelector(
-  ".col-ss.col-sm-5.col-xs-12.pull-right"
-);
-if (suportClientiComandaFinalizata) {
-  suportClientiComandaFinalizata.innerHTML = "";
-  suportClientiComandaFinalizata.innerHTML = `<div class="contact-information">
-  <div class="contact-information">
-    <div class="title-box line-r under">
-      <h3 class="title">Contact</h3>
-      <hr />
-    </div>
-    <ul class="info-list -g-company-contact">
-      <li>
-        <strong>Email: </strong>
-        <span>
-          <a
-            href="mailto:office@sacoul.ro"
-            data-contact="bWFpbHRvOm9mZmljZUBzYWNvdWwucm8="
-            >office@sacoul.ro</a
-          >
-        </span>
-      </li>
-      <li class="contactPhone" data-block="contactPhone">
-        <strong>Telefon:</strong>
-        <span>
-          <a href="tel:+40750441589">+40750441589</a>
-        </span>
-      </li>
-    </ul>
-    <div class="title-box line-r under">
-      <h3 class="title">Suport clienti</h3>
-      <hr />
-    </div>
-    <ul class="info-list -g-company-schedule">
-      <li>LUNI - VINERI 10 - 17</li>
-        <li>
-        <strong>Email: </strong>
-        <span>
-          <a
-            href="mailto:office@sacoul.ro"
-            data-contact="bWFpbHRvOm9mZmljZUBzYWNvdWwucm8="
-            >office@sacoul.ro</a
-          >
-        </span>
-      </li>
-      <li class="contactPhone" data-block="contactPhone">
-        <strong>Telefon:</strong>
-        <span>
-          <a href="tel:+40750441589">+40750441589</a>
-        </span>
-      </li>
-    </ul>
-  </div>
-</div>
-`;
-}
-
-// Add Fabricat in Romania text and flag
-document.addEventListener("DOMContentLoaded", function () {
-  const socialDiv = document.querySelector(".col.social");
-  const madeInRoContainer = document.createElement("div");
-  madeInRoContainer.style =
-    "display: flex; justify-content: center; align-items: center; margin-top:10px;";
-  const roMap = document.createElement("img");
-  const roText = document.createElement("p");
-  roText.textContent = "Fabricat în România";
-  roText.style =
-    "color: #ffffff; margin-right: 6px; font-weight: 500; font-size: 18px";
-  roMap.src = "https://sacoul.blob.core.windows.net/img/ro-map.png";
-  roMap.style = "width: 75px";
-
-  madeInRoContainer.appendChild(roText);
-  madeInRoContainer.appendChild(roMap);
-  socialDiv.appendChild(madeInRoContainer);
-});
-
-// Remove margin de la tabel marimi si remove reset popup la popup marimi
-document.addEventListener("DOMContentLoaded", function () {
-  const tabelMarimi = document.querySelector(".-g-component-id-828");
-  if (tabelMarimi) {
-    tabelMarimi.classList.remove("landing-content");
-  }
-});
-
-// Adaugare detalii transport si retur pe pagina de produs
-const iconsLink = document.createElement("link");
-iconsLink.rel = "stylesheet";
-iconsLink.href =
-  "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css";
-document.head.appendChild(iconsLink);
-
-document.addEventListener("DOMContentLoaded", function () {
-  const productPage = document.querySelector(".row.-g-product-row-box");
-  if (productPage) {
-    const iconsContainer = document.querySelector(".row.icon-g-scroll");
-    if (iconsContainer) {
-      const mainContainer = document.querySelector(".container-h.product-top");
-      const livrareReturContainer = document.createElement("div");
-      livrareReturContainer.style = `  display: flex;
-      flex-direction: column;
-      width: 100%;
-      padding-top: 2.5rem;
-      padding-left: 15px;
-      padding-right: 15px;`;
-      // livrareReturContainer.textContent = "Hello";
-      livrareReturContainer.innerHTML = ` <div
+    .produs-ul {
+      list-style-type: disc !important;
+    }
+  </style>
+  <body>
+    <div
       id="div1"
       style="
         display: flex;
@@ -504,8 +281,8 @@ document.addEventListener("DOMContentLoaded", function () {
           ></i>
         </div>
       </div>
-    </div>`;
-      mainContainer.appendChild(livrareReturContainer);
+    </div>
+    <script>
       const containers = [...document.querySelectorAll(".containers")];
       const containersIconsUp = [
         ...document.querySelectorAll(".containers-icons-up"),
@@ -532,6 +309,6 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       });
-    }
-  }
-});
+    </script>
+  </body>
+</html>

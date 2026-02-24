@@ -2,11 +2,25 @@
 * Scrie aici codul tau CSS...
 */
 
+/**
+* Scrie aici codul tau CSS...
+*/
+
 /*}*/
+
+/** {*/
+/*  outline: 1px solid rgba(255, 0, 0, 0.7);*/
+/*} */
 
 .row {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+@media screen and (min-width: 991px) {
+  .main-header.fade-menu:not(.-g-pagetype-cart) .logo-h {
+    display: flex;
+  }
 }
 
 @media screen and (min-width: 1090px) {
@@ -15,22 +29,118 @@
   }
 }
 
-.main.search-form-box {
-  order: 0;
-}
-
-.main-header {
-  backdrop-filter: blur(0px);
-}
-
 .main-header.fade-menu:not(.-g-pagetype-cart) .navigation-holder {
   width: fit-content;
 }
 
-/*.img-responsive {*/
-/*    width: 224.72px !important;*/
-/*}*/
-
 .main.search-form-box {
   order: 0;
+}
+
+.top-head-bg {
+  background-color: #3a434c;
+}
+
+.main-header.fade-menu.active-menu:not(.-g-pagetype-cart) {
+  transform: translate(0, 0px);
+}
+.main-header.fade-menu:not(.-g-pagetype-cart) {
+  max-width: 100% !important;
+}
+
+.main-header .main-menu ul li > a {
+  position: relative;
+  color: #b5c0c9;
+  font-size: 14px;
+  text-transform: none;
+  transition: all 0.3s ease;
+}
+.main-header .main-menu ul li > a:hover {
+  color: #b5c0c9 !important;
+}
+.main-header .main-menu ul:not(.drop-list) > li > a:after {
+  border-bottom: 1px solid #b5c0c9;
+  bottom: -13px;
+  content: "";
+  position: absolute;
+  right: 0;
+  transition: width 0.4s linear 0s;
+  width: 0;
+}
+
+.main-header.fade-menu a {
+  color: #f5ecd7;
+}
+
+.main-header.fade-menu a:hover {
+  color: #b5c0c9;
+}
+
+.wishlist-header .-g-wishlist-product-count,
+.cart-header-btn .q-cart,
+.cart-m .q-cart {
+  background: #b5c0c9;
+}
+
+@media screen and (max-width: 991px) {
+  .nav-menu.base-menu.container-h {
+    background-color: #3a434c;
+  }
+}
+
+.nav-menu.base-menu.container-h a {
+  background: #3a434c;
+  color: #ffffff;
+}
+
+.nav-menu.base-menu.container-h a:hover {
+  color: #b5c0c9;
+}
+
+.pin .figcaption {
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .pin .figcaption {
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .pin {
+    padding: 0 2px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .pin.banner_toate.imageGroupClass3.imageGroupMobileClass1 {
+    padding-right: 15px;
+    max-height: 400px;
+  }
+}
+
+/*Footer*/
+.main-footer .col ul li a:hover {
+  color: #b5c0c9;
+}
+.col.support a:hover {
+  color: #b5c0c9;
+}
+
+/*Search box*/
+.main-header.fade-menu:not(.-g-pagetype-cart) .search-form-box.search-toggle {
+  height: 100vh !important;
+  border-radius: 0px;
+}
+
+/*Background Header Produse*/
+#category-page .category-content:first-of-type {
+  color: #ffffff;
+  background: #646e78;
+}
+
+/*CSS ghid marimi*/
+.tabel-marimi {
+  border-bottom: 1px solid #e5e7eb;
 }
