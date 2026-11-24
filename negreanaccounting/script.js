@@ -232,7 +232,7 @@ async function loadLanguageFiles() {
       retailDescription.querySelector("a").textContent = language.data.detailsButton;
       const mandate = language.data.mandate;
       document.querySelector("#mandate-heading").textContent = mandate.heading;
-      const mandateFields = { intro: "intro", subtitle: "subtitle", description: "description", note: "note", contact: "contact", cta: "cta" };
+      const mandateFields = { intro: "intro", subtitle: "subtitle", description: "description", contact: "contact", cta: "cta" };
       Object.entries(mandateFields).forEach(([attribute, key]) => {
         document.querySelectorAll(`[data-mandate-${attribute}]`).forEach((element) => {
           element.textContent = mandate[key];

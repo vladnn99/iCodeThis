@@ -46,14 +46,14 @@ body {
 .mandate-card-photo { display: block; width: 100%; height: 200px; object-fit: cover; }
 .mandate-photo-1 { object-position: left center; }
 .mandate-photo-2 { object-position: 38% center; }
+.mandate-photo-3 { object-position: center 25%; }
 .mandate-card-body { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 20px 24px; }
 .mandate-document-icon { flex-shrink: 0; margin-bottom: 12px; color: #ed1c24; }
 .mandate-card h3 { margin: 0 0 16px; font-size: 23px; font-weight: 600; line-height: 1.3; }
-.mandate-card-body > p:not(.mandate-file-note) { margin: 0 0 24px; font-size: 17px; line-height: 1.5; }
+.mandate-card-body > p { margin: 0 0 24px; font-size: 17px; line-height: 1.5; }
 .mandate-presentation { display: block; width: 100%; margin-top: auto; padding: 8px 12px; border: 1px solid #ed1c24; border-radius: 6px; color: #ed1c24; font: inherit; font-size: 18px; font-weight: 500; text-align: center; text-decoration: none; transition: background-color 200ms ease, color 200ms ease; }
 .mandate-presentation:disabled { cursor: default; }
 .mandate-presentation:hover { background: #ed1c24; color: #fff; }
-.mandate-file-note { margin: 8px 0 0; color: #52525b; font-size: 12px; line-height: 1.5; }
 .mandate-contact { margin-top: 36px; text-align: center; }
 .mandate-contact p { margin: 0 0 20px; font-size: 24px; font-weight: 500; }
 .mandate-contact-button { display: inline-block; padding: 10px 32px; border-radius: 6px; color: #fff; background: #ed1c24; font-size: 20px; text-decoration: none; }
@@ -64,11 +64,11 @@ body {
   #magazine-in-mandat { padding-bottom: 16px; }
   #mandate-heading { margin-bottom: 8px; }
   .mandate-intro { margin-bottom: 20px; font-size: 16px; line-height: 1.5; }
-  .mandate-card-photo { height: clamp(96px, 15vh, 160px); }
+  .mandate-card-photo { height: clamp(160px, 23vh, 230px); }
   .mandate-card-body { padding: 16px 20px; }
   .mandate-document-icon { width: 22px; height: 26px; margin-bottom: 8px; }
   .mandate-card h3 { margin-bottom: 12px; font-size: 20px; }
-  .mandate-card-body > p:not(.mandate-file-note) { margin-bottom: 16px; font-size: 15px; }
+  .mandate-card-body > p { margin-bottom: 16px; font-size: 15px; }
   .mandate-presentation { padding: 7px 12px; font-size: 16px; }
   .mandate-contact { margin-top: 20px; }
   .mandate-contact p { margin-bottom: 12px; font-size: 22px; }
@@ -79,7 +79,7 @@ body {
   .mandate-grid { gap: 16px; }
   .mandate-card-body { padding: 18px; }
   .mandate-card h3 { font-size: 19px; }
-  .mandate-card-body > p:not(.mandate-file-note) { font-size: 15px; }
+  .mandate-card-body > p { font-size: 15px; }
 }
 
 @media (max-width: 767px) {
