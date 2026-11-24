@@ -142,7 +142,7 @@ body {
 
 @media (max-width: 767px) {
   #navTop {
-    height: 128px;
+    height: 80px;
     padding-top: 8px;
     padding-bottom: 8px;
   }
@@ -167,13 +167,11 @@ body {
   }
 
   .franchise-text {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    font-size: 10px;
+    display: none;
   }
 
   #section1 {
-    margin-top: 128px;
+    margin-top: 80px;
   }
 }
 
