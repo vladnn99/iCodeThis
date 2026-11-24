@@ -1,7 +1,15 @@
 {
   "data": {
-    "menuButtons": ["Home", "Services", "About Us", "Contact Us"],
+    "menuButtons": ["Home", "Services", "Mandate stores", "About Us", "Contact Us"],
     "section1": {
+      "sliderHeadlineMagazine": {
+  "listElements": [
+    "Accounting partner for Carrefour store operators",
+    "Accounting partner for Mega Image store operators",
+    "Business development through mandate agreements"
+  ],
+  "name": "Integrated services for mandate stores"
+},
       "sliderHeadlineContabilitate": {
         "name": "Accounting and consulting",
         "listElements": [

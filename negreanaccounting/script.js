@@ -223,6 +223,13 @@ async function loadLanguageFiles() {
       img3Description.appendChild(h1Img3Description);
       img3Description.appendChild(img3DescriptionList);
       img3Description.appendChild(img3DescriptionButton);
+      const retailContent = language.data.section1.sliderHeadlineMagazine;
+      const retailDescription = document.querySelector("#img4Description");
+      retailDescription.querySelector("h1").textContent = retailContent.name;
+      retailDescription.querySelectorAll("li").forEach((item, index) => {
+        item.textContent = retailContent.listElements[index];
+      });
+      retailDescription.querySelector("a").textContent = language.data.detailsButton;
       menuItems.forEach((item, index) => {
         item.textContent = menuButtons[index];
 
@@ -397,15 +404,18 @@ function handleViewportChange() {
 }
 
 function imageSlider() {
-  sliderElements[0].classList.add("-translate-x-full");
-  sliderElements[1].classList.remove("translate-x-full");
-  sliderElements.push(sliderElements[0]);
-  sliderElements.shift();
+  const outgoingSlide = sliderElements.shift();
+  const incomingSlide = sliderElements[0];
+  incomingSlide.classList.remove("hidden");
+  // Commit the off-screen position before starting the entrance transition.
+  void incomingSlide.offsetWidth;
+  outgoingSlide.classList.add("-translate-x-full");
+  incomingSlide.classList.remove("translate-x-full");
+  sliderElements.push(outgoingSlide);
   setTimeout(function () {
-    sliderElements[2].className =
+    outgoingSlide.className =
       "w-full h-full flex slider-element absolute translate-x-full transition-transform duration-1000 ease-in-out hidden";
   }, 1000);
-  sliderElements[1].classList.remove("hidden");
 }
 
 function renderClickedService(indexButtons) {
@@ -501,10 +511,16 @@ function scrollToSection(index) {
   if (index === 0) {
     scrollPosition = 0;
   }
-  if (index === 1 || index === 2) {
-    scrollPosition = document.querySelector(`#section${index + 1}`).offsetTop;
+  if (index === 1) {
+    scrollPosition = document.querySelector("#section2").offsetTop;
+  }
+  if (index === 2) {
+    scrollPosition = document.querySelector("#magazine-in-mandat").offsetTop;
   }
   if (index === 3) {
+    scrollPosition = document.querySelector("#section3").offsetTop;
+  }
+  if (index === 4) {
     scrollPosition = document.querySelector("#footer").offsetTop;
   }
   window.scrollTo({

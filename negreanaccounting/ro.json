@@ -1,7 +1,15 @@
 {
   "data": {
-    "menuButtons": ["Home", "Servicii", "Despre noi", "Contact"],
+    "menuButtons": ["Home", "Servicii", "Magazine in mandat", "Despre noi", "Contact"],
     "section1": {
+      "sliderHeadlineMagazine": {
+  "listElements": [
+    "Partener contabil pentru mandatarii Carrefour",
+    "Partener contabil pentru mandatarii Mega Image",
+    "Dezvoltarea Business-ului prin contracte de mandat"
+  ],
+  "name": "Servicii integrate pentru magazine în mandat"
+},
       "sliderHeadlineContabilitate": {
         "name": "Contabilitate și consultanță",
         "listElements": [
