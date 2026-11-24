@@ -24,13 +24,14 @@ body {
 #magazine-in-mandat {
   width: 100%;
   padding: 64px 24px 24px;
-  scroll-margin-top: 144px;
+  /* Align the heading with the bottom of the 88px collapsed navigation. */
+  scroll-margin-top: 24px;
   color: #27272f;
   background: #fff;
 }
 
 .mandate-container { max-width: 1200px; margin: 0 auto; }
-#mandate-heading { margin: 0 0 16px; color: #ed1c24; text-align: center; font-size: clamp(28px, 3vw, 38px); font-weight: 500; line-height: 1.3; }
+#mandate-heading { margin: 0 0 16px; }
 .mandate-intro { margin: 0 auto 40px; text-align: center; font-size: 18px; line-height: 1.6; }
 .mandate-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .mandate-card { display: flex; flex-direction: column; min-width: 0; border: 1px solid #d4d4d8; border-radius: 8px; overflow: hidden; }
@@ -59,7 +60,7 @@ body {
 }
 
 @media (max-width: 767px) {
-  #magazine-in-mandat { padding: 48px 20px 16px; }
+  #magazine-in-mandat { padding: 48px 20px 16px; scroll-margin-top: 80px; }
   .mandate-grid { grid-template-columns: 1fr; gap: 24px; }
   .mandate-intro { font-size: 16px; margin-bottom: 28px; }
   .mandate-card h3 { font-size: 23px; }
