@@ -34,6 +34,21 @@
         ]
       }
     },
+    "mandate": {
+  "heading": "Servicii integrate pentru magazine în mandat",
+  "intro": "Soluții dedicate pentru administrarea magazinelor în mandat.",
+  "subtitle": "Descoperă serviciile noastre și află cum te putem sprijini.",
+  "titles": [
+    "Partener contabil pentru mandatarii Carrefour",
+    "Partener contabil pentru mandatarii Mega Image",
+    "Dezvoltarea Business-ului prin contracte de mandat"
+  ],
+  "description": "Detalii despre soluțiile dedicate magazinelor în mandat.",
+  "presentation": "Vezi prezentarea",
+  "note": "Linkul prezentării va fi disponibil în curând",
+  "contact": "Vrei să discutăm despre magazinul tău?",
+  "cta": "Discută cu noi"
+},
     "section2": {
       "header": "Serviciile NEGREAN Accounting",
       "tabbedComponentHeaders": [

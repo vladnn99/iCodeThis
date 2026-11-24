@@ -34,6 +34,21 @@
         ]
       }
     },
+    "mandate": {
+  "heading": "Integrated services for mandate stores",
+  "intro": "Dedicated solutions for managing mandate stores.",
+  "subtitle": "Explore our services and discover how we can support you.",
+  "titles": [
+    "Accounting partner for Carrefour store operators",
+    "Accounting partner for Mega Image store operators",
+    "Business development through mandate agreements"
+  ],
+  "description": "Learn about our dedicated solutions for mandate stores.",
+  "presentation": "View presentation",
+  "note": "The presentation link will be available soon",
+  "contact": "Would you like to discuss your store?",
+  "cta": "Talk to us"
+},
     "section2": {
       "header": "NEGREAN Accounting Services",
       "tabbedComponentHeaders": [

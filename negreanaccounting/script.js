@@ -230,6 +230,20 @@ async function loadLanguageFiles() {
         item.textContent = retailContent.listElements[index];
       });
       retailDescription.querySelector("a").textContent = language.data.detailsButton;
+      const mandate = language.data.mandate;
+      document.querySelector("#mandate-heading").textContent = mandate.heading;
+      const mandateFields = { intro: "intro", subtitle: "subtitle", description: "description", note: "note", contact: "contact", cta: "cta" };
+      Object.entries(mandateFields).forEach(([attribute, key]) => {
+        document.querySelectorAll(`[data-mandate-${attribute}]`).forEach((element) => {
+          element.textContent = mandate[key];
+        });
+      });
+      document.querySelectorAll("[data-mandate-title]").forEach((element, index) => {
+        element.textContent = mandate.titles[index];
+      });
+      document.querySelectorAll(".mandate-presentation").forEach((element) => {
+        element.textContent = mandate.presentation;
+      });
       menuItems.forEach((item, index) => {
         item.textContent = menuButtons[index];
 
@@ -515,7 +529,8 @@ function scrollToSection(index) {
     scrollPosition = document.querySelector("#section2").offsetTop;
   }
   if (index === 2) {
-    scrollPosition = document.querySelector("#magazine-in-mandat").offsetTop;
+    document.querySelector("#magazine-in-mandat").scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
   }
   if (index === 3) {
     scrollPosition = document.querySelector("#section3").offsetTop;

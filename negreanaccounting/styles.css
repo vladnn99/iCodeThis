@@ -21,6 +21,52 @@ body {
   column-gap: 2rem;
 }
 
+#magazine-in-mandat {
+  width: 100%;
+  padding: 64px 24px 24px;
+  scroll-margin-top: 144px;
+  color: #27272f;
+  background: #fff;
+}
+
+.mandate-container { max-width: 1200px; margin: 0 auto; }
+#mandate-heading { margin: 0 0 16px; color: #ed1c24; text-align: center; font-size: clamp(28px, 3vw, 38px); font-weight: 500; line-height: 1.3; }
+.mandate-intro { margin: 0 auto 40px; text-align: center; font-size: 18px; line-height: 1.6; }
+.mandate-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.mandate-card { display: flex; flex-direction: column; min-width: 0; border: 1px solid #d4d4d8; border-radius: 8px; overflow: hidden; }
+.mandate-card-photo { display: block; width: 100%; height: 200px; object-fit: cover; }
+.mandate-photo-1 { object-position: left center; }
+.mandate-photo-2 { object-position: 38% center; }
+.mandate-card-body { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 20px 24px; }
+.mandate-document-icon { flex-shrink: 0; margin-bottom: 12px; color: #ed1c24; }
+.mandate-card h3 { margin: 0 0 16px; font-size: 23px; font-weight: 600; line-height: 1.3; }
+.mandate-card-body > p:not(.mandate-file-note) { margin: 0 0 24px; font-size: 17px; line-height: 1.5; }
+.mandate-presentation { display: block; width: 100%; margin-top: auto; padding: 8px 12px; border: 1px solid #ed1c24; border-radius: 6px; color: #ed1c24; font: inherit; font-size: 18px; font-weight: 500; text-align: center; text-decoration: none; }
+.mandate-presentation:disabled { cursor: default; }
+.mandate-presentation[href]:hover { background: #fff1f2; }
+.mandate-file-note { margin: 8px 0 0; color: #52525b; font-size: 12px; line-height: 1.5; }
+.mandate-contact { margin-top: 36px; text-align: center; }
+.mandate-contact p { margin: 0 0 20px; font-size: 24px; font-weight: 500; }
+.mandate-contact-button { display: inline-block; padding: 10px 32px; border-radius: 6px; color: #fff; background: #ed1c24; font-size: 20px; text-decoration: none; }
+.mandate-contact-button:hover { background: #dc2626; }
+.mandate-presentation:focus-visible, .mandate-contact-button:focus-visible { outline: 2px solid #ed1c24; outline-offset: 4px; }
+
+@media (max-width: 1023px) {
+  .mandate-grid { gap: 16px; }
+  .mandate-card-body { padding: 18px; }
+  .mandate-card h3 { font-size: 19px; }
+  .mandate-card-body > p:not(.mandate-file-note) { font-size: 15px; }
+}
+
+@media (max-width: 767px) {
+  #magazine-in-mandat { padding: 48px 20px 16px; }
+  .mandate-grid { grid-template-columns: 1fr; gap: 24px; }
+  .mandate-intro { font-size: 16px; margin-bottom: 28px; }
+  .mandate-card h3 { font-size: 23px; }
+  .mandate-card-body { padding: 20px; }
+  .mandate-contact p { font-size: 21px; }
+}
+
 #navTop {
   gap: 40px;
 }
