@@ -1,0 +1,19 @@
+{
+  "name": "nec-contact-api",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/register.cjs",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "prestart": "npm run build",
+    "start": "func start",
+    "test": "node --test test/contact.test.cjs",
+    "pretest": "npm run build"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.0.0"
+  }
+}

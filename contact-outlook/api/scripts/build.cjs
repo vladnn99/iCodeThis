@@ -1,0 +1,1 @@
+const fs=require('node:fs'),path=require('node:path');const root=path.resolve(__dirname,'../..');const dest=path.resolve(__dirname,'../lib');fs.mkdirSync(dest,{recursive:true});for(const file of ['graph.cjs','company-fields.cjs','turnstile.cjs'])fs.copyFileSync(path.join(root,file),path.join(dest,file));console.log('API modules built. No environment files copied.');

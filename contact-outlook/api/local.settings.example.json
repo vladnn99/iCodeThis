@@ -1,0 +1,12 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "GRAPH_AUTH_MODE": "managed-identity",
+    "AZURE_CLIENT_ID": "3dcc7242-a063-4c5a-a65a-fbe768a860f9",
+    "TURNSTILE_SECRET_KEY": "",
+    "TURNSTILE_ALLOWED_HOSTNAMES": "negreanaccounting.com,www.negreanaccounting.com",
+    "ALLOWED_ORIGINS": "https://negreanaccounting.com,https://www.negreanaccounting.com"
+  }
+}

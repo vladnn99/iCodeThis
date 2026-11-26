@@ -1,0 +1,8 @@
+local.settings.json
+.env
+.env.*
+!.env.example
+test/
+scripts/
+README.md
+node_modules/.cache/
