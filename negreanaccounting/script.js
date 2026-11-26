@@ -368,6 +368,7 @@ async function loadLanguageFiles() {
       numeleTau.placeholder = language.data.footer.namePlaceholder;
       emailulTau.placeholder = language.data.footer.emailPlaceholder;
       mesajulTau.placeholder = language.data.footer.messagePlaceholder;
+      document.dispatchEvent(new CustomEvent("nec-language-change", { detail: { language: language === languageEn ? "en" : "ro" } }));
     }
   } catch (error) {
     // Handle errors if any language file fails to load
