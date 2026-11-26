@@ -1,6 +1,6 @@
 {
   "data": {
-    "menuButtons": ["Home", "Servicii", "Magazine in mandat", "Despre noi", "Contact"],
+    "menuButtons": ["Home", "Servicii", "Magazine in mandat", "Despre noi", "Solicitați o ofertă"],
     "section1": {
       "sliderHeadlineMagazine": {
   "listElements": [
@@ -132,7 +132,7 @@
       "paragraph5": "Dat fiind caracterul instabil al pieței în care activăm, oferim și servicii de consultanță economică și financiară pentru a ajuta clienții noștri să-și îmbunătățească performanța economică într-un timp cât mai scurt de la identificarea problemelor lor. Considerăm că acest serviciu este esențial în mediul concurențial actual."
     },
     "footer": {
-      "h1": "Contactați-ne",
+      "h1": "Solicitați o ofertă",
       "email": "office@NEGREANaccounting.com",
       "phone": "+40 726 196 005",
       "address": "Str. Septimiu Albini, nr. 23, ap. 17, Cluj-Napoca, jud. Cluj",

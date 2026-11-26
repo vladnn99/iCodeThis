@@ -1,6 +1,6 @@
 {
   "data": {
-    "menuButtons": ["Home", "Services", "Mandate stores", "About Us", "Contact Us"],
+    "menuButtons": ["Home", "Services", "Mandate stores", "About Us", "Request a quote"],
     "section1": {
       "sliderHeadlineMagazine": {
   "listElements": [
@@ -131,7 +131,7 @@
       "paragraph5": "Given the volatile nature of the market in which we operate, we also provide economic and financial consulting services to help our clients improve their economic performance as quickly as possible upon identifying their issues. We believe this service is essential in the current competitive environment. We are also part of the V&TM – Vulpoi & Toader Management franchise network, which gives us access to the expertise and resources of a nationwide team of over 200 professionals."
     },
     "footer": {
-      "h1": "Contact us",
+      "h1": "Request a quote",
       "email": "office@NEGREANaccounting.com",
       "phone": "+40 726 196 005",
       "address": "No. 23, Septimiu Albini Street, apt. 17, Cluj-Napoca, Cluj County",

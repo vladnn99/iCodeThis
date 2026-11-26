@@ -10,7 +10,7 @@ const currencyCheckboxes=[...form.querySelectorAll('[name="bankAccounts"]')];
 let currentStep=0,configurationReady=false,busy=false,token='',widgetId=null,captchaStarted=false;
 let currentLanguage='ro',lastStatus={message:'',state:''};
 const english={
-'O colaborare bună începe cu câteva detalii.':'A good partnership starts with a few details.',
+'Pentru a vă pregăti o ofertă, avem nevoie de câteva informații despre societatea dumneavoastră.':'To prepare a quote, we need a few details about your business.',
 'Societatea':'Company','Datele de identificare':'Company details','Activitatea':'Activity','Activitatea societății':'Business activity','Date financiare':'Financial details','Volum și servicii':'Volume and services','Câmpuri obligatorii':'All fields required',
 'Despre societatea dumneavoastră':'About your company','Completați datele societății și adresa la care vă putem răspunde.':'Tell us about your company and how we can reach you.',
 'Numele dumneavoastră':'Your name','Adresa de email':'Email address','Denumire societate':'Company name','Cod fiscal':'Tax identification number',
@@ -22,7 +22,7 @@ const english={
 'Vă rugăm să descrieți pe scurt activitatea efectivă a societății (maximum un paragraf). De exemplu: ce vindeți sau ce servicii prestați, cum obțineți veniturile și care sunt principalele activități desfășurate lunar.':'Please briefly describe your actual business activity (up to one paragraph): what you sell or which services you provide, how you earn revenue, and your main monthly activities.',
 'Ultimele detalii.':'The final details.','Completați datele financiare și transmiteți-ne mesajul dumneavoastră.':'Complete your financial details and leave us a message.',
 'Cifra de afaceri estimativă pentru sfârșit an curent (RON)':'Estimated turnover at the end of the current year (RON)','Nr. salariați':'Number of employees','Tip impozit':'Tax regime','Impozit profit':'Corporate income tax','Impozit venit microîntreprinderi':'Microenterprise income tax','Impozit venit (profesie liberală/PFA)':'Income tax (liberal profession / sole trader)','Nu stiu':'Not sure','Conturi bancare':'Bank accounts','Mesajul dumneavoastră':'Your message',
-'← Înapoi':'← Back','Continuați':'Continue','Trimiteți mesajul':'Send message','Datele completate se păstrează între pași.':'Your details are kept as you move between steps.',
+'← Înapoi':'← Back','Continuați':'Continue','Trimiteți solicitarea':'Send request','Datele completate se păstrează între pași.':'Your details are kept as you move between steps.',
 'Selectați cel puțin o monedă pentru conturile bancare.':'Please select at least one currency for your bank accounts.',
 'Verificarea anti-bot a expirat. Repetați verificarea.':'The anti-bot check expired. Please complete it again.',
 'Verificarea anti-bot nu s-a încărcat. Reîncărcați pagina.':'The anti-bot check did not load. Please reload the page.',
