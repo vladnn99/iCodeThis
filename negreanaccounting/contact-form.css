@@ -47,8 +47,23 @@
 }
 
 @media (min-width:901px){
-  .contact-wizard{min-height:670px;display:flex;flex-direction:column}
+  .contact-wizard{min-height:610px;display:flex;flex-direction:column}
   .contact-wizard .form-content{flex:1;display:flex;flex-direction:column}
   .contact-wizard form{flex:1;display:flex;flex-direction:column}
   .contact-wizard .form-footer{margin-top:auto}
+}
+
+@media (min-width:901px) and (max-height:950px){
+  .wizard-intro{padding:10px 24px 6px}
+  .contact-wizard .step-list{padding:4px 0}
+  .contact-wizard .step-list button{padding:5px 10px}
+  .contact-wizard .form-content{padding:12px 24px 4px}
+  .contact-wizard .progress-track{margin:6px 0 10px}
+  .contact-wizard .step-panel header{margin-bottom:10px}
+  .contact-wizard .fields-grid{gap:10px 28px}
+  .contact-wizard .field-description{line-height:1.4;margin-bottom:6px}
+  .contact-wizard #activityDescription{height:80px}
+  .contact-wizard #message{height:56px;min-height:56px}
+  .contact-wizard .form-footer{padding-top:8px}
+  .contact-wizard #status{margin-top:4px}
 }
